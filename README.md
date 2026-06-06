@@ -125,7 +125,23 @@ node scripts/update_rainfall.js
 - 個人本機暫存檔
 - 瀏覽器 profile 或 server log
 
-如果希望 GitHub Pages 上的雨量資料定期更新，建議使用 GitHub Actions：
+GitHub Pages 是靜態網站，不能在使用者打開網頁時安全地讀取 `.env` 或直接使用私密 API key。因此線上版採用 GitHub Actions 定時更新雨量資料，再重新部署 Pages。
+
+本專案的 `.github/workflows/deploy.yml` 已設定：
+
+- 每 30 分鐘嘗試更新一次中央氣象署雨量資料
+- 每次部署前嘗試更新 `data/real_rainfall.json` 與 `data/real_rainfall.js`
+- 網頁開啟後每 10 分鐘重新讀取一次 `data/real_rainfall.json`
+
+請在 GitHub repository 設定 Secret：
+
+```text
+CWA_API_KEY
+```
+
+設定完成後，GitHub Actions 會使用這個 Secret 執行 `scripts/update_rainfall.py`。
+
+設定步驟：
 
 1. 將 `CWA_API_KEY` 放到 GitHub Secrets
 2. 由 GitHub Actions 定時執行 `scripts/update_rainfall.py`

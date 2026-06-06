@@ -5,6 +5,8 @@ on:
     branches: [ master, github-pages-v1 ]
   pull_request:
     branches: [ master ]
+  schedule:
+    - cron: "*/30 * * * *"
   workflow_dispatch:
 
 permissions:
@@ -17,6 +19,25 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
+
+    - name: Setup Python for rainfall update
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.12"
+
+    - name: Install rainfall dependencies
+      run: python -m pip install --upgrade numpy pandas
+
+    - name: Update CWA rainfall data
+      env:
+        CWA_API_KEY: ${{ secrets.CWA_API_KEY }}
+      run: |
+        if [ -z "$CWA_API_KEY" ]; then
+          echo "CWA_API_KEY secret is not set; deploying existing rainfall files."
+          exit 0
+        fi
+        python scripts/update_rainfall.py
+      continue-on-error: true
     
     - name: Setup Pages
       uses: actions/configure-pages@v5

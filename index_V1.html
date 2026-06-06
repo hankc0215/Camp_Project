@@ -519,7 +519,11 @@
     setTimeout(()=>{ map.invalidateSize(); $('status').style.display='none'; }, 1200);
   });
   if(location.protocol !== 'file:'){
-    setInterval(()=>{ refreshRainfallAndRender(); }, RAIN_REFRESH_MS);
+    setInterval(()=>{
+      refreshRainfallAndRender().finally(()=>{
+        if($('status')) setTimeout(()=>{ $('status').style.display='none'; }, 1600);
+      });
+    }, RAIN_REFRESH_MS);
   }
 })();
 </script>
