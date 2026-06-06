@@ -19,9 +19,10 @@ except ImportError:
 
 
 ROOT = Path(__file__).resolve().parents[1]
-CSV_PATH = ROOT / "all_taiwan_camping_risk_demo.csv"
-JSON_OUT = ROOT / "real_rainfall.json"
-JS_OUT = ROOT / "real_rainfall.js"
+DATA_DIR = ROOT / "data"
+CSV_PATH = DATA_DIR / "all_taiwan_camping_risk_demo.csv"
+JSON_OUT = DATA_DIR / "real_rainfall.json"
+JS_OUT = DATA_DIR / "real_rainfall.js"
 CWA_URL = "https://opendata.cwa.gov.tw/api/v1/rest/datastore/O-A0002-001"
 
 

@@ -6,11 +6,12 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 FINAL_ROOT = ROOT.parents[1]
-DEMO_PAYLOAD = ROOT / "demo_payload.json"
+DATA_DIR = ROOT / "data"
+DEMO_PAYLOAD = DATA_DIR / "demo_payload.json"
 FAULT_SHP = FINAL_ROOT / "Data" / "Fault" / "TaiwanFault.shp"
 RIVER_SHP = FINAL_ROOT / "Data" / "2024_1753條土石流潛勢溪流圖" / "debrisstream1753_20260126_twd97.shp"
-JSON_OUT = ROOT / "hazard_layers.json"
-JS_OUT = ROOT / "hazard_layers.js"
+JSON_OUT = DATA_DIR / "hazard_layers.json"
+JS_OUT = DATA_DIR / "hazard_layers.js"
 
 
 def wgs84_to_twd97_tm2(lon, lat):

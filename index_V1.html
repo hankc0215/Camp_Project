@@ -60,7 +60,7 @@
   </style>
 </head>
 <body>
-<script src="demo_data.js"></script>
+<script src="data/demo_data.js"></script>
 <div class="app">
   <aside>
     <h1>全台灣露營區<br>風險監測｜V5</h1>
@@ -115,11 +115,11 @@
     <div id="error" class="error"><h2>地圖函式庫沒有載入</h2><p>如果你是離線開啟，Leaflet 無法從 CDN 載入。請改開同資料夾內的 <b>offline_map.html</b>，那一版不需要網路。</p></div>
   </main>
 </div>
-<script src="real_rainfall.js"></script>
-<script src="road_access.js"></script>
-<script src="hazard_layers.js"></script>
-<script src="road_fault_layers.js"></script>
-<script src="river_layers.js"></script>
+<script src="data/real_rainfall.js"></script>
+<script src="data/road_access.js"></script>
+<script src="data/hazard_layers.js"></script>
+<script src="data/road_fault_layers.js"></script>
+<script src="data/river_layers.js"></script>
 <script>
 (function(){
   const DATA = window.DEMO_DATA;
@@ -477,7 +477,7 @@
       let rainfall = await fetchLiveRainfall();
       try{
         if(!rainfall){
-          const res = await fetch(`real_rainfall.json?ts=${Date.now()}`, {cache:'no-store'});
+          const res = await fetch(`data/real_rainfall.json?ts=${Date.now()}`, {cache:'no-store'});
           if(res.ok) rainfall = await res.json();
         }
       }catch(fetchErr){

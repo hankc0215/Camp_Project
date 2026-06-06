@@ -45,12 +45,14 @@
 | `index.html` | GitHub Pages 入口頁，會導向 `index_V1.html` |
 | `index_legacy.html` | 原始/前一版展示頁 |
 | `offline_map.html` | 離線地圖展示版本 |
-| `demo_data.js` | 露營場與風險主資料 |
-| `real_rainfall.js` / `real_rainfall.json` | 雨量更新結果 |
-| `road_access.js` / `road_access.json` | 聯外道路距離資料 |
-| `hazard_layers.js` / `hazard_layers.json` | 土石流/崩塌圖層資料 |
-| `road_fault_layers.js` | 道路線與斷層線圖層 |
-| `river_layers.js` | 河川線與河川面圖層 |
+| `data/` | 露營場、雨量、道路、災害、河川與斷層資料 |
+| `data/demo_data.js` | 露營場與風險主資料 |
+| `data/real_rainfall.js` / `data/real_rainfall.json` | 雨量更新結果 |
+| `data/road_access.js` / `data/road_access.json` | 聯外道路距離資料 |
+| `data/hazard_layers.js` / `data/hazard_layers.json` | 土石流/崩塌圖層資料 |
+| `data/road_fault_layers.js` | 道路線與斷層線圖層 |
+| `data/river_layers.js` | 河川線與河川面圖層 |
+| `legacy/` | 舊版或離線展示頁面 |
 | `scripts/` | 資料更新、檢查與本機預覽工具 |
 | `.env.example` | 環境變數範例，不包含真實金鑰 |
 | `.gitignore` | 忽略 `.env` 與本機暫存檔 |
@@ -109,8 +111,8 @@ node scripts/update_rainfall.js
 
 成功後會更新：
 
-- `real_rainfall.json`
-- `real_rainfall.js`
+- `data/real_rainfall.json`
+- `data/real_rainfall.js`
 
 ## GitHub Pages 展示注意事項
 
@@ -127,7 +129,7 @@ node scripts/update_rainfall.js
 
 1. 將 `CWA_API_KEY` 放到 GitHub Secrets
 2. 由 GitHub Actions 定時執行 `scripts/update_rainfall.py`
-3. 自動更新 `real_rainfall.json` 與 `real_rainfall.js`
+3. 自動更新 `data/real_rainfall.json` 與 `data/real_rainfall.js`
 4. GitHub Pages 讀取更新後的靜態資料檔
 
 這樣可以保留靜態網站部署的簡單性，同時避免 API key 暴露在前端程式碼中。

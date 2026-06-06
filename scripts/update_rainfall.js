@@ -2,14 +2,15 @@ const fs = require("fs");
 const path = require("path");
 
 const ROOT = path.resolve(__dirname, "..");
+const DATA_DIR = path.join(ROOT, "data");
 const ENV_PATHS = [
   path.join(ROOT, ".env"),
   path.resolve(ROOT, "..", ".env"),
   path.resolve(ROOT, "..", "..", ".env"),
 ];
-const DATA_PATH = path.join(ROOT, "demo_payload.json");
-const OUT_PATH = path.join(ROOT, "real_rainfall.json");
-const JS_OUT_PATH = path.join(ROOT, "real_rainfall.js");
+const DATA_PATH = path.join(DATA_DIR, "demo_payload.json");
+const OUT_PATH = path.join(DATA_DIR, "real_rainfall.json");
+const JS_OUT_PATH = path.join(DATA_DIR, "real_rainfall.js");
 const CWA_URL = "https://opendata.cwa.gov.tw/api/v1/rest/datastore/O-A0002-001";
 
 function loadEnv() {

@@ -4,10 +4,11 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DEMO_PAYLOAD = ROOT / "demo_payload.json"
+DATA_DIR = ROOT / "data"
+DEMO_PAYLOAD = DATA_DIR / "demo_payload.json"
 ROAD_GEOJSON = ROOT.parents[1] / "eRoad_MapDataDownload" / "_merged" / "eroad_line_data_merged_latest.geojson"
-JSON_OUT = ROOT / "road_access.json"
-JS_OUT = ROOT / "road_access.js"
+JSON_OUT = DATA_DIR / "road_access.json"
+JS_OUT = DATA_DIR / "road_access.js"
 
 ROAD_RADIUS_M = 1000.0
 
