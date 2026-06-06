@@ -1,0 +1,8 @@
+.env
+.env.*
+!.env.example
+edge_profile_tmp/
+server.*.log
+__pycache__/
+*.pyc
+.ipynb_checkpoints/

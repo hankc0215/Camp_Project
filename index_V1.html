@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>全台灣露營區風險監測｜V5 道路＋斷層線版</title>
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <style>
+    /* Leaflet core fallback: local file/CDN CSS 失效時仍可正常排版 */
+    .leaflet-pane,.leaflet-tile,.leaflet-marker-icon,.leaflet-marker-shadow,.leaflet-tile-container,.leaflet-pane>svg,.leaflet-pane>canvas,.leaflet-zoom-box,.leaflet-image-layer,.leaflet-layer{position:absolute;left:0;top:0;}
+    .leaflet-container{overflow:hidden;background:#dbeafe;outline-offset:1px;touch-action:pan-x pan-y;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;}
+    .leaflet-container img,.leaflet-container svg{max-width:none!important;max-height:none!important;}
+    .leaflet-tile,.leaflet-marker-icon,.leaflet-marker-shadow{-webkit-user-select:none;-moz-user-select:none;user-select:none;-webkit-user-drag:none;}
+    .leaflet-tile{filter:inherit;visibility:hidden;border:0;}
+    .leaflet-tile-loaded{visibility:inherit;}
+    .leaflet-zoom-animated{transform-origin:0 0;}
+    .leaflet-interactive{cursor:pointer;}
+    .leaflet-grab{cursor:grab;}.leaflet-dragging .leaflet-grab{cursor:move;}
+    .leaflet-map-pane{z-index:400;}.leaflet-tile-pane{z-index:200;}.leaflet-overlay-pane{z-index:400;}.leaflet-shadow-pane{z-index:500;}.leaflet-marker-pane{z-index:600;}.leaflet-tooltip-pane{z-index:650;}.leaflet-popup-pane{z-index:700;}
+    .leaflet-control{position:relative;z-index:800;pointer-events:auto;float:left;clear:both;}
+    .leaflet-top,.leaflet-bottom{position:absolute;z-index:1000;pointer-events:none;}
+    .leaflet-top{top:0}.leaflet-right{right:0}.leaflet-bottom{bottom:0}.leaflet-left{left:0}
+    .leaflet-right .leaflet-control{float:right}.leaflet-top .leaflet-control{margin-top:10px}.leaflet-bottom .leaflet-control{margin-bottom:10px}.leaflet-left .leaflet-control{margin-left:10px}.leaflet-right .leaflet-control{margin-right:10px}
+    .leaflet-bar{box-shadow:0 1px 5px rgba(0,0,0,.25);border-radius:4px;overflow:hidden;}.leaflet-bar a{display:block;width:30px;height:30px;line-height:30px;text-align:center;text-decoration:none;font-weight:700;border-bottom:1px solid rgba(255,255,255,.12);}
+    .leaflet-control-attribution{font-size:10px;background:rgba(255,255,255,.8);padding:0 5px;margin:0;}
+    .leaflet-popup{position:absolute;text-align:center;margin-bottom:20px;}.leaflet-popup-content-wrapper{padding:1px;text-align:left;border-radius:12px;box-shadow:0 3px 14px rgba(0,0,0,.35);}.leaflet-popup-content{margin:13px 18px;line-height:1.45;font-size:13px;min-width:160px;}.leaflet-popup-tip-container{width:40px;height:20px;position:absolute;left:50%;margin-left:-20px;overflow:hidden;pointer-events:none;}.leaflet-popup-tip{width:17px;height:17px;padding:1px;margin:-10px auto 0;transform:rotate(45deg);box-shadow:0 3px 14px rgba(0,0,0,.35);}.leaflet-popup-close-button{position:absolute;top:0;right:0;border:0;text-align:center;width:24px;height:24px;font:18px/24px Tahoma,Verdana,sans-serif;color:#9ca3af;text-decoration:none;background:transparent;}
+    :root{--bg:#0f172a;--panel:#111827;--panel2:#1f2937;--muted:#94a3b8;--text:#e5e7eb;--line:rgba(255,255,255,.12);--green:#22c55e;--yellow:#facc15;--orange:#fb923c;--red:#ef4444;--cyan:#38bdf8;}
+    *{box-sizing:border-box} html,body{height:100%;width:100%;margin:0;overflow:hidden;background:var(--bg);color:var(--text);font-family:"Noto Sans TC",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;}
+    .app{display:grid;grid-template-columns:390px minmax(0,1fr);height:100vh;width:100vw;}
+    aside{height:100vh;overflow:auto;background:linear-gradient(180deg,#0f172a,#111827 44%,#0b1220);border-right:1px solid var(--line);padding:18px;}
+    main{position:relative;min-width:0;height:100vh;overflow:hidden;}
+    #map{position:absolute;inset:0;width:100%;height:100%;background:#0b1220;}
+    h1{font-size:24px;line-height:1.23;margin:0 0 8px;font-weight:900;letter-spacing:.02em;}
+    .subtitle{font-size:13px;line-height:1.62;color:var(--muted);margin-bottom:16px;}
+    .badge{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:999px;padding:4px 9px;font-size:12px;color:#cbd5e1;background:rgba(255,255,255,.04);margin:2px 4px 2px 0;}
+    .kpis{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0;}
+    .card{background:rgba(255,255,255,.055);border:1px solid var(--line);border-radius:18px;padding:13px;box-shadow:0 16px 40px rgba(0,0,0,.22);}
+    .kpi .label{font-size:12px;color:var(--muted);margin-bottom:5px;}.kpi .value{font-size:26px;font-weight:900}.kpi .hint{font-size:11px;color:#a3aab8;margin-top:3px;}
+    .controls{display:grid;gap:10px;margin:12px 0 16px;} label{font-size:12px;color:#cbd5e1;font-weight:700;margin-bottom:5px;display:block;}
+    select,input[type="text"]{width:100%;background:#0b1220;border:1px solid var(--line);color:#e5e7eb;border-radius:12px;padding:10px 11px;outline:none;}
+    input[type="range"]{width:100%;accent-color:#38bdf8;}.range-row{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);margin-top:3px;}
+    .btnrow{display:flex;gap:8px;}.btn{cursor:pointer;border:1px solid var(--line);background:#0b1220;color:#e5e7eb;border-radius:12px;padding:9px 11px;font-weight:800;font-size:13px;}.btn:hover{background:#111827;}
+    .priority{margin-top:12px;}.priority h2,.details h2,.method h2{font-size:15px;margin:0 0 10px;}.list{display:grid;gap:8px;}
+    .item{cursor:pointer;border:1px solid var(--line);background:rgba(255,255,255,.045);border-radius:14px;padding:10px;}.item:hover{border-color:rgba(56,189,248,.55);background:rgba(56,189,248,.08)}.item .top{display:flex;justify-content:space-between;gap:8px;align-items:center}.item .name{font-size:13px;font-weight:850;line-height:1.35}.item .meta{font-size:12px;color:var(--muted);margin-top:3px}.score{font-weight:900;font-size:16px;}
+    .level{display:inline-flex;align-items:center;border-radius:999px;padding:3px 8px;font-size:11px;font-weight:900;margin-top:6px;}.lv-critical{background:rgba(239,68,68,.20);color:#fecaca}.lv-high{background:rgba(251,146,60,.18);color:#fed7aa}.lv-med{background:rgba(250,204,21,.18);color:#fde68a}.lv-low{background:rgba(34,197,94,.16);color:#bbf7d0}
+    .details{position:absolute;right:18px;top:18px;z-index:760;width:min(430px,calc(100% - 36px));max-height:calc(100vh - 36px);overflow:auto;background:rgba(15,23,42,.94);backdrop-filter:blur(16px);border:1px solid var(--line);border-radius:22px;padding:16px;box-shadow:0 30px 70px rgba(0,0,0,.35);}.details.hidden{display:none}.close{float:right;border:0;background:rgba(255,255,255,.08);color:white;border-radius:10px;width:30px;height:30px;cursor:pointer}.detail-title{font-size:19px;font-weight:900;margin:2px 34px 6px 0;line-height:1.3}.detail-sub{font-size:13px;color:var(--muted);margin-bottom:8px}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:12px 0}.metric{border:1px solid var(--line);border-radius:14px;padding:10px;background:rgba(255,255,255,.045)}.metric b{font-size:15px}.metric span{display:block;font-size:11px;color:var(--muted);margin-top:2px}.notice{font-size:13px;line-height:1.55;color:#dbeafe;background:rgba(56,189,248,.08);border:1px solid rgba(56,189,248,.25);border-radius:14px;padding:11px;margin-top:10px}.alertbox{font-size:13px;line-height:1.65;background:rgba(251,146,60,.08);border:1px solid rgba(251,146,60,.24);border-radius:14px;padding:11px;white-space:pre-wrap}.copybtn{margin-top:8px;width:100%;}
+    .method{font-size:12px;line-height:1.6;color:#cbd5e1;margin-top:12px}.weights{display:grid;gap:8px}.bar{height:8px;background:rgba(255,255,255,.09);border-radius:999px;overflow:hidden}.bar>i{display:block;height:100%;background:linear-gradient(90deg,#38bdf8,#a78bfa);border-radius:999px}.score-breakdown{display:grid;gap:9px;margin:12px 0}.factor-row{border:1px solid var(--line);border-radius:14px;padding:10px;background:rgba(255,255,255,.045)}.factor-top{display:flex;justify-content:space-between;gap:10px;align-items:baseline;margin-bottom:4px}.factor-name{font-size:13px;font-weight:900;color:#e5e7eb}.factor-score{font-size:12px;color:#cbd5e1;text-align:right;white-space:nowrap}.factor-meta{font-size:11px;color:#94a3b8;line-height:1.45;margin-top:4px}.factor-bar{height:7px;background:rgba(255,255,255,.08);border-radius:999px;overflow:hidden}.factor-bar>i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#38bdf8,#a78bfa)}.popup-breakdown{margin-top:7px;border-top:1px solid rgba(255,255,255,.12);padding-top:6px;font-size:12px;color:#cbd5e1}.popup-breakdown div{display:flex;justify-content:space-between;gap:12px}
+    .map-legend{position:absolute;left:18px;bottom:18px;z-index:720;background:rgba(15,23,42,.92);border:1px solid var(--line);border-radius:16px;padding:10px 12px;font-size:12px;color:#e5e7eb;box-shadow:0 16px 40px rgba(0,0,0,.28)}.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:-1px}.linekey{display:inline-block;width:22px;height:0;border-top:3px solid;margin-right:6px;vertical-align:3px}.linekey.dashed{border-top-style:dashed}
+    .layer-panel{position:absolute;right:18px;top:18px;z-index:730;background:rgba(15,23,42,.94);border:1px solid var(--line);border-radius:16px;padding:12px 14px;box-shadow:0 18px 45px rgba(0,0,0,.3);font-size:13px;line-height:1.8;min-width:190px;}
+    .layer-panel b{display:block;margin-bottom:4px;color:#e5e7eb}.layer-panel label{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:#d1d5db;margin:3px 0;}.layer-panel input{width:16px;height:16px;accent-color:#38bdf8;}
+    .leaflet-popup-content-wrapper,.leaflet-popup-tip{background:#111827;color:#e5e7eb}.leaflet-bar a{background:#111827!important;color:#e5e7eb!important;border-color:var(--line)!important}
+    .camp-marker-wrap{background:transparent;border:0;}
+    .camp-marker{width:var(--s);height:var(--s);border-radius:50%;background:var(--c);border:2px solid #0f172a;box-shadow:0 0 0 2px rgba(255,255,255,.78),0 3px 12px rgba(0,0,0,.45);transform:translate(-50%,-50%);}
+    .camp-marker.critical{animation:pulse 1.2s infinite;}@keyframes pulse{0%{box-shadow:0 0 0 2px rgba(255,255,255,.78),0 0 0 0 rgba(239,68,68,.7)}70%{box-shadow:0 0 0 2px rgba(255,255,255,.78),0 0 0 13px rgba(239,68,68,0)}100%{box-shadow:0 0 0 2px rgba(255,255,255,.78),0 0 0 0 rgba(239,68,68,0)}}
+    .status{position:absolute;left:18px;top:18px;z-index:740;background:rgba(15,23,42,.88);border:1px solid var(--line);border-radius:999px;padding:7px 10px;font-size:12px;color:#cbd5e1;display:none;}
+    .error{position:absolute;inset:20px;z-index:900;background:#111827;border:1px solid var(--line);border-radius:20px;padding:22px;display:none;line-height:1.7;}
+    @media (max-width:900px){html,body{overflow:auto}.app{display:block;height:auto}aside{height:auto}main{height:72vh;min-height:520px}.details{position:fixed}.layer-panel{right:10px;top:10px}}
+  </style>
+</head>
+<body>
+<script src="demo_data.js"></script>
+<div class="app">
+  <aside>
+    <h1>全台灣露營區<br>風險監測｜V5</h1>
+    <div class="subtitle">整合露營區位置、中央氣象署實測雨量內插、20m DEM 坡度／坡向／高程、土石流潛勢影響範圍、崩塌警戒範圍與法規狀態，產生撤離優先順序。</div>
+    <span class="badge">MCDA 多準則評分</span><span class="badge">全台互動地圖</span><span class="badge">示範預警簡訊</span>
+    <div class="kpis">
+      <div class="card kpi"><div class="label">全資料點位</div><div class="value" id="kpiTotal">—</div><div class="hint">套用最新資料後重算</div></div>
+      <div class="card kpi"><div class="label">立即/預警撤離</div><div class="value" id="kpiEvac">—</div><div class="hint">動態 AHP/MCDA 統計</div></div>
+      <div class="card kpi"><div class="label">鄰近土石流 500m</div><div class="value" id="kpiDebris">—</div><div class="hint">以目前距離資料判定</div></div>
+      <div class="card kpi"><div class="label">法規需注意</div><div class="value" id="kpiIllegal">—</div><div class="hint">即時掃描法規欄位</div></div>
+    </div>
+    <div class="card method" id="rainUpdateCard">
+      <h2>雨量資料</h2>
+      <div id="rainUpdateInfo">尚未載入真實雨量，使用備援雨量值。</div>
+    </div>
+    <div class="card controls">
+      <div><label>搜尋露營場 / 鄉鎮 / 縣市</label><input id="search" type="text" placeholder="例如：南投、尖石、觀雲..." /></div>
+      <div><label>縣市篩選</label><select id="countyFilter"></select></div>
+      <div><label>風險等級</label><select id="riskFilter"><option value="all">全部</option><option value="立即撤離">立即撤離</option><option value="預警撤離">預警撤離</option><option value="加強監測">加強監測</option><option value="正常監測">正常監測</option></select></div>
+      <div class="btnrow"><button class="btn" id="resetBtn">重設篩選</button><button class="btn" id="fitBtn">縮放至結果</button></div>
+    </div>
+    <div class="card priority"><h2>風險優先清單 Top 12</h2><div id="priorityList" class="list"></div></div>
+    <div class="card method"><h2>風險評分邏輯</h2><div class="weights">
+      <div>雨量 28.8%<div class="bar"><i style="width:28.8%"></i></div></div>
+      <div>土石流 14.7%<div class="bar"><i style="width:14.7%"></i></div></div>
+      <div>事件型崩塌 14.7%<div class="bar"><i style="width:14.7%"></i></div></div>
+      <div>法規 14.3%<div class="bar"><i style="width:14.3%"></i></div></div>
+      <div>聯外道路 14.3%<div class="bar"><i style="width:14.3%"></i></div></div>
+      <div>坡度 5.6%<div class="bar"><i style="width:5.6%"></i></div></div>
+      <div>河川距離 5.6%<div class="bar"><i style="width:5.6%"></i></div><div style="color:#94a3b8;font-size:11px;margin-top:3px">已用 riverlin.shp / riverpoly.shp 重新計算距離</div></div>
+      <div>斷層 2.0%<div class="bar"><i style="width:2%"></i></div></div>
+      <div style="color:#94a3b8;margin-top:6px">權重參考「權重計算.xlsx」與截圖分類準則；目前套用法規、坡度、雨量、斷層、土石流、事件型崩塌、河川距離、聯外道路 8 項。即時雨量版門檻：75/60/40 分。</div>
+    </div></div>
+  </aside>
+  <main>
+    <div id="map"></div>
+    <div id="status" class="status">正在載入點位...</div>
+    <div class="layer-panel" id="layerPanel">
+      <b>圖層開關</b>
+      <label><input type="checkbox" id="layerCamps" checked>露營區風險點位</label>
+      <label><input type="checkbox" id="layerDebris">土石流影響範圍</label>
+      <label><input type="checkbox" id="layerRiverLines">河流線（riverlin.shp）</label>
+      <label><input type="checkbox" id="layerRiverPolys">河流範圍（riverpoly.shp）</label>
+      <label><input type="checkbox" id="layerWarn">崩塌警戒影響範圍</label>
+      <label><input type="checkbox" id="layerPotential">崩塌警戒潛勢範圍</label>
+      <label><input type="checkbox" id="layerEvents">2025 事件型崩塌點</label>
+      <label><input type="checkbox" id="layerRoads">道路線</label>
+      <label><input type="checkbox" id="layerFaults">斷層線／地質敏感區</label>
+    </div>
+    <div class="map-legend"><span class="dot" style="background:#ef4444"></span>立即撤離　<span class="dot" style="background:#fb923c"></span>預警撤離<br><span class="dot" style="background:#facc15"></span>加強監測　<span class="dot" style="background:#22c55e"></span>正常監測<br><span class="linekey" style="border-color:#38bdf8"></span>道路線　<span class="linekey dashed" style="border-color:#ef4444"></span>斷層線<br><span class="linekey" style="border-color:#0ea5e9"></span>河流線　<span class="linekey" style="border-color:#22d3ee;border-top-width:6px;opacity:.65"></span>河流範圍</div>
+    <div id="details" class="details hidden"></div>
+    <div id="error" class="error"><h2>地圖函式庫沒有載入</h2><p>如果你是離線開啟，Leaflet 無法從 CDN 載入。請改開同資料夾內的 <b>offline_map.html</b>，那一版不需要網路。</p></div>
+  </main>
+</div>
+<script src="real_rainfall.js"></script>
+<script src="road_access.js"></script>
+<script src="hazard_layers.js"></script>
+<script src="road_fault_layers.js"></script>
+<script src="river_layers.js"></script>
+<script>
+(function(){
+  const DATA = window.DEMO_DATA;
+  const camps = DATA.campsites || [];
+  const LIVE_RAINFALL_API = '/api/rainfall';
+  const RAIN_REFRESH_MS = 10 * 60 * 1000;
+  let rainfallMeta = null;
+  const COLORS = {'立即撤離':'#ef4444','預警撤離':'#fb923c','加強監測':'#facc15','正常監測':'#22c55e'};
+  const LVCLASS = {'立即撤離':'lv-critical','預警撤離':'lv-high','加強監測':'lv-med','正常監測':'lv-low'};
+  const ZHTW = {critical:'critical', high:'high', med:'med', low:'low'};
+  function $(id){return document.getElementById(id)}
+  function fmt(v,unit='',digits=0){ if(v===null || v===undefined || Number.isNaN(Number(v))) return '無資料'; return `${Number(v).toFixed(digits)}${unit}`; }
+  function fmtDist(m){ if(m===null || m===undefined || Number.isNaN(Number(m))) return '無資料'; return m>=1000 ? `${(m/1000).toFixed(1)} km` : `${Math.round(m)} m`; }
+  function fmtTime(value){
+    if(!value) return '無資料';
+    const d = new Date(value);
+    if(Number.isNaN(d.getTime())) return String(value);
+    return d.toLocaleString('zh-TW', {hour12:false, year:'numeric', month:'2-digit', day:'2-digit', hour:'2-digit', minute:'2-digit'});
+  }
+  function latestObservedAt(rainfall){
+    const rows = Object.values((rainfall && rainfall.by_priority_rank) || {});
+    const times = rows.map(r=>new Date(r.rain_observed_at).getTime()).filter(Number.isFinite);
+    return times.length ? new Date(Math.max(...times)).toISOString() : null;
+  }
+  function updateRainInfo(rainfall, matched){
+    const el = $('rainUpdateInfo');
+    if(!el) return;
+    if(!rainfall || !matched){
+      el.innerHTML = '尚未載入真實雨量，使用備援雨量值。';
+      return;
+    }
+    const observedAt = latestObservedAt(rainfall);
+    el.innerHTML = `資料更新：<b>${fmtTime(rainfall.generated_at)}</b><br>最新測站觀測：<b>${fmtTime(observedAt)}</b><br>來源：${rainfall.source || 'CWA'}，${matched.toLocaleString()} 個營區，方法：${rainfall.interpolation_method || '未標示'}`;
+  }
+  function rainValue(c){ return Number.isFinite(Number(c.rain_24h_mm_real)) ? Number(c.rain_24h_mm_real) : Number(c.rain_24h_mm_demo)||0; }
+  function rainLabel(c){ return Number.isFinite(Number(c.rain_24h_mm_real)) ? '實測雨量' : '示範雨量'; }
+  function rainStationText(c){ return c.rain_station_name ? `${c.rain_station_name}${c.rain_station_distance_km==null?'':`，距營區 ${fmtDist(Number(c.rain_station_distance_km)*1000)}`}` : '尚未套用真實測站'; }
+  function scoreDist(d){ if(d===null || d===undefined) return 0; if(d<=0) return 100; if(d<=100) return 90; if(d<=250) return 75; if(d<=500) return 55; if(d<=1000) return 30; if(d<=2000) return 12; return 0; }
+  function classify(score){ if(score>=75) return '立即撤離'; if(score>=60) return '預警撤離'; if(score>=40) return '加強監測'; return '正常監測'; }
+  const AHP_WEIGHTS = {
+    legal: 14.3,
+    slope: 5.6,
+    rain: 28.8,
+    fault: 2.0,
+    debris: 14.7,
+    event: 14.7,
+    river: 5.6,
+    road: 14.3
+  };
+  const AHP_WEIGHT_TOTAL = 100;
+  function weighted(part, score){ return AHP_WEIGHTS[part] / AHP_WEIGHT_TOTAL * score; }
+  function rainCategoryScore(rain){ if(rain>=500) return 100; if(rain>=350) return 75; if(rain>=200) return 50; if(rain>=80) return 25; return 0; }
+  function slopePercentScore(deg){ const pct = Math.tan((Number(deg)||0) * Math.PI / 180) * 100; if(pct>=30) return 100; if(pct>=10) return 50; return 0; }
+  function binaryInsideScore(d){ d=Number(d); return Number.isFinite(d) && d<=0 ? 100 : 0; }
+  function eventDistanceScore(d){ d=Number(d); if(!Number.isFinite(d)) return 0; if(d<=100) return 100; if(d<=250) return 75; if(d<500) return 25; return 0; }
+  function faultDistanceScore(d){ d=Number(d); if(!Number.isFinite(d)) return 0; if(d<=250) return 100; if(d<=500) return 75; if(d<1000) return 25; return 0; }
+  function riverDistanceScore(d){ d=Number(d); if(!Number.isFinite(d)) return 0; if(d<50) return 100; if(d<100) return 50; return 0; }
+  function roadAccessScore(c){ if(Number.isFinite(Number(c.road_score))) return Number(c.road_score); const count = Number(c.road_count_1km); if(!Number.isFinite(count)) return 0; if(count<=1) return 100; if(count===2) return 50; return 0; }
+  function recalc(c){
+    const rain = rainValue(c);
+    const rainScore = rainCategoryScore(rain);
+    const slopeScore = slopePercentScore(c.slope_deg);
+    const debrisScore = binaryInsideScore(c.debris_dist_m);
+    const faultScore = Number.isFinite(Number(c.fault_score)) ? Number(c.fault_score) : faultDistanceScore(c.fault_dist_m);
+    const eventScore = eventDistanceScore(c.event_dist_m);
+    const riverScore = Number.isFinite(Number(c.river_score)) ? Number(c.river_score) : riverDistanceScore(c.river_dist_m);
+    const legalScore = String(c.law_status||'').includes('違反') || String(c.law_issue||'').match(/待|未|尚|不符合|違反/) ? 50 : 0;
+    const roadScore = roadAccessScore(c);
+    let score = weighted('legal', legalScore) + weighted('slope', slopeScore) + weighted('rain', rainScore) + weighted('fault', faultScore) + weighted('debris', debrisScore) + weighted('event', eventScore) + weighted('river', riverScore) + weighted('road', roadScore);
+    score = Math.min(100, score);
+    return {score, level: classify(score), rain};
+  }
+  function isIllegal(c){
+    const text = `${c.law_status||''} ${c.law_issue||''}`;
+    return text.includes('違反') || /待|未|尚|不符合/.test(text);
+  }
+  function computeDynamicSummary(list){
+    const summary = {
+      total: list.length,
+      critical: 0,
+      high: 0,
+      medium: 0,
+      low: 0,
+      evacuation: 0,
+      illegal: 0,
+      near_debris_500m: 0,
+      near_landslide_500m: 0,
+      near_river_50m: 0,
+      near_river_100m: 0
+    };
+    list.forEach(c=>{
+      const calc = recalc(c);
+      if(calc.level === '立即撤離') summary.critical += 1;
+      else if(calc.level === '預警撤離') summary.high += 1;
+      else if(calc.level === '加強監測') summary.medium += 1;
+      else summary.low += 1;
+      if(['立即撤離','預警撤離'].includes(calc.level)) summary.evacuation += 1;
+      if(isIllegal(c)) summary.illegal += 1;
+      if(Number.isFinite(Number(c.debris_dist_m)) && Number(c.debris_dist_m) <= 500) summary.near_debris_500m += 1;
+      const landslideDistances = [c.lswarn_dist_m, c.lspot_dist_m, c.event_dist_m].map(Number).filter(Number.isFinite);
+      if(landslideDistances.length && Math.min(...landslideDistances) <= 500) summary.near_landslide_500m += 1;
+      if(Number.isFinite(Number(c.river_dist_m)) && Number(c.river_dist_m) < 50) summary.near_river_50m += 1;
+      if(Number.isFinite(Number(c.river_dist_m)) && Number(c.river_dist_m) < 100) summary.near_river_100m += 1;
+    });
+    Object.assign(DATA.summary, {
+      valid_points: summary.total,
+      critical: summary.critical,
+      high: summary.high,
+      medium: summary.medium,
+      low: summary.low,
+      illegal: summary.illegal,
+      near_debris_500m: summary.near_debris_500m,
+      near_landslide_500m: summary.near_landslide_500m,
+      near_river_50m: summary.near_river_50m,
+      near_river_100m: summary.near_river_100m
+    });
+    return summary;
+  }
+  function renderDynamicSummary(){
+    const summary = computeDynamicSummary(camps);
+    $('kpiTotal').textContent = summary.total.toLocaleString();
+    $('kpiEvac').textContent = summary.evacuation.toLocaleString();
+    $('kpiDebris').textContent = summary.near_debris_500m.toLocaleString();
+    $('kpiIllegal').textContent = summary.illegal.toLocaleString();
+    return summary;
+  }
+  function actionText(level){ return {'立即撤離':'啟動撤離與人員清點，避免夜間或豪雨中移動，優先確認聯外道路是否受阻。','預警撤離':'通知營主與遊客準備撤離，檢查車輛動線與備用避難點，雨勢增強即提前離場。','加強監測':'維持每 30–60 分鐘巡查邊坡、溪水與道路狀況，準備雨具、照明與通訊設備。','正常監測':'維持一般天候監測，確認聯絡資訊與撤離路線即可。'}[level]; }
+  function makeAlert(c, calc){
+    const place = `${c.county||''}${c.town||''}`;
+    const reasons = [];
+    if(calc.rain>=300) reasons.push(`${rainLabel(c)} ${calc.rain.toFixed(0)} mm/24h`); else if(calc.rain>=200) reasons.push(`雨量偏高 ${calc.rain.toFixed(0)} mm/24h`);
+    if(c.slope_deg!==null && c.slope_deg>=30) reasons.push(`坡度 ${Number(c.slope_deg).toFixed(0)}°`);
+    if(c.debris_dist_m!==null && c.debris_dist_m<=500) reasons.push(`距土石流影響範圍 ${fmtDist(c.debris_dist_m)}`);
+    const lsVals = [c.lswarn_dist_m,c.lspot_dist_m,c.event_dist_m].filter(x=>x!==null && x!==undefined && !Number.isNaN(Number(x)));
+    const minLs = lsVals.length ? Math.min(...lsVals) : Infinity;
+    if(Number.isFinite(minLs) && minLs<=500) reasons.push('鄰近崩塌/警戒範圍');
+    if(String(c.law_status||'').includes('違反')) reasons.push('法規狀態需注意');
+    const reason = reasons.slice(0,4).join('、') || '目前未達主要高風險條件';
+    if(['立即撤離','預警撤離'].includes(calc.level)) return `【露營安全預警】${place}「${c.name}」目前評估為「${calc.level}」。主因：${reason}。請營主立即通知遊客，確認人員、車輛與聯外道路狀況，必要時依地方政府指示提前撤離。`;
+    if(calc.level==='加強監測') return `【露營安全提醒】${place}「${c.name}」目前為「加強監測」。主因：${reason}。請持續注意雨勢、溪水與邊坡狀況，先完成撤離路線與聯絡名冊確認。`;
+    return `【露營安全資訊】${place}「${c.name}」目前為「正常監測」。仍請留意氣象更新並確認基本撤離路線。`;
+  }
+  if(typeof L === 'undefined'){ $('error').style.display='block'; return; }
+  $('status').style.display='block';
+  const map = L.map('map', {zoomControl:true, preferCanvas:false}).setView([23.72,121.0], 7);
+  setTimeout(()=>map.invalidateSize(), 100); window.addEventListener('resize',()=>setTimeout(()=>map.invalidateSize(),100));
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom:19, attribution:'&copy; OpenStreetMap contributors'}).addTo(map);
+
+  const campLayer = L.layerGroup().addTo(map);
+  let debrisLayer=null, riverLineLayer=null, riverPolyLayer=null, warnLayer=null, potentialLayer=null, eventLayer=null, roadLineLayer=null, faultLineLayer=null;
+  function hazardStyle(color, fill=.10, weight=1){ return {color, weight, fillOpacity:fill, opacity:.9}; }
+  function ensureDebris(){ if(!debrisLayer) debrisLayer=L.geoJSON(DATA.hazards.debrisImpact, {style:()=>hazardStyle('#fb923c',.12,1), onEachFeature:(f,l)=>l.bindPopup(`<b>土石流影響範圍</b><br>${f.properties.County||''}${f.properties.Town||''}<br>風險：${f.properties.Risk||'無資料'}`)}); return debrisLayer; }
+  function ensureRiverLines(){
+    if(!riverLineLayer){
+      const geo = (window.RIVER_LAYERS && window.RIVER_LAYERS.riverLines) || {type:'FeatureCollection', features:[]};
+      riverLineLayer = L.geoJSON(geo, {
+        style:()=>({color:'#0ea5e9', weight:1.15, opacity:.78, fillOpacity:0}),
+        onEachFeature:(f,l)=>{
+          const p=f.properties||{};
+          l.bindPopup(`<b>河流線（riverlin.shp）</b><br>名稱：${p.NAME||'無資料'}${p.FROM?`<br>水系／來源：${p.FROM}`:''}<br>說明：此圖層由 riverlin.shp 轉換為 WGS84 GeoJSON，用於呈現河川線資料。`);
+        }
+      });
+    }
+    return riverLineLayer;
+  }
+  function ensureRiverPolys(){
+    if(!riverPolyLayer){
+      const geo = (window.RIVER_LAYERS && window.RIVER_LAYERS.riverPolys) || {type:'FeatureCollection', features:[]};
+      riverPolyLayer = L.geoJSON(geo, {
+        style:()=>({color:'#22d3ee', weight:.65, opacity:.55, fillColor:'#0ea5e9', fillOpacity:.18}),
+        onEachFeature:(f,l)=>{
+          const p=f.properties||{};
+          l.bindPopup(`<b>河流範圍（riverpoly.shp）</b><br>名稱：${p.RIVER_NAME||'無資料'}${p.RIVER_FROM?`<br>水系：${p.RIVER_FROM}`:''}${p.RIVER_TYPE?`<br>類型代碼：${p.RIVER_TYPE}`:''}<br>說明：此圖層由 riverpoly.shp 轉換為 WGS84 GeoJSON，用於呈現河川面資料。`);
+        }
+      });
+    }
+    return riverPolyLayer;
+  }
+  function ensureWarn(){ if(!warnLayer) warnLayer=L.geoJSON(DATA.hazards.landslideWarning, {style:()=>hazardStyle('#ef4444',.15,1.4), onEachFeature:(f,l)=>l.bindPopup(`<b>崩塌警戒影響範圍</b><br>${f.properties.County||''}${f.properties.Town||''}<br>風險：${f.properties.Risk||'無資料'}`)}); return warnLayer; }
+  function ensurePotential(){ if(!potentialLayer) potentialLayer=L.geoJSON(DATA.hazards.landslidePotential, {style:()=>hazardStyle('#a855f7',.10,1), onEachFeature:(f,l)=>l.bindPopup(`<b>崩塌警戒潛勢範圍</b><br>${f.properties.County01||''}${f.properties.Town01||''}<br>類型：${f.properties.Type||'無資料'}<br>風險：${f.properties.Risk||'無資料'}`)}); return potentialLayer; }
+  function ensureEvents(){ if(!eventLayer) eventLayer=L.geoJSON(DATA.hazards.eventLandslidePts, {pointToLayer:(f,latlng)=>L.circleMarker(latlng,{radius:3.2,color:'#e11d48',weight:0,fillOpacity:.65}), onEachFeature:(f,l)=>l.bindPopup(`<b>2025 事件型崩塌</b><br>${f.properties.Events||''}<br>面積：${Number(f.properties.Area_ha||0).toFixed(2)} ha`)}); return eventLayer; }
+  function roadStyle(f){
+    const cat = String((f.properties && (f.properties.source_category || f.properties['分類'])) || '');
+    let color = '#94a3b8', weight = 1.15, opacity = .72;
+    if(cat.includes('國道')){ color = '#60a5fa'; weight = 2.4; opacity = .9; }
+    else if(cat.includes('省道')){ color = '#38bdf8'; weight = 1.9; opacity = .88; }
+    else if(cat.includes('縣') || cat.includes('鄉')){ color = '#facc15'; weight = 1.35; opacity = .8; }
+    return {color, weight, opacity, fillOpacity:0};
+  }
+  function ensureRoads(){
+    if(!roadLineLayer){
+      const geo = (window.ROAD_FAULT_LAYERS && window.ROAD_FAULT_LAYERS.roads) || {type:'FeatureCollection', features:[]};
+      roadLineLayer = L.geoJSON(geo, {
+        style: roadStyle,
+        onEachFeature:(f,l)=>{
+          const p=f.properties||{};
+          l.bindPopup(`<b>道路線</b><br>編號：${p['編號']||p['編碼']||'無資料'}<br>類型：${p.source_category||p['分類']||'無資料'}`);
+        }
+      });
+    }
+    return roadLineLayer;
+  }
+  function ensureFaults(){
+    if(!faultLineLayer){
+      const geo = (window.ROAD_FAULT_LAYERS && window.ROAD_FAULT_LAYERS.faults) || {type:'FeatureCollection', features:[]};
+      faultLineLayer = L.geoJSON(geo, {
+        style:()=>({color:'#ef4444', weight:2.1, opacity:.92, fillOpacity:.025, dashArray:'6 5'}),
+        onEachFeature:(f,l)=>{
+          const p=f.properties||{};
+          l.bindPopup(`<b>斷層線／地質敏感區</b><br>${p.name||'無名稱資料'}${p.no?`<br>編號：${p.no}`:''}`);
+        }
+      });
+    }
+    return faultLineLayer;
+  }
+  function toggleLayer(id, layerFn){ $(id).addEventListener('change', e=>{ const layer=layerFn(); if(e.target.checked) layer.addTo(map); else map.removeLayer(layer); }); }
+  $('layerCamps').addEventListener('change',e=>{ if(e.target.checked) campLayer.addTo(map); else map.removeLayer(campLayer); });
+  toggleLayer('layerDebris', ensureDebris); toggleLayer('layerRiverLines', ensureRiverLines); toggleLayer('layerRiverPolys', ensureRiverPolys); toggleLayer('layerWarn', ensureWarn); toggleLayer('layerPotential', ensurePotential); toggleLayer('layerEvents', ensureEvents); toggleLayer('layerRoads', ensureRoads); toggleLayer('layerFaults', ensureFaults);
+
+  const countyFilter = $('countyFilter');
+  countyFilter.innerHTML = '<option value="all">全部縣市</option>' + DATA.summary.counties.map(c=>`<option value="${c}">${c}</option>`).join('');
+  let markerById = new Map(); let lastBounds=[];
+  function passFilters(c){
+    const county = countyFilter.value; const risk = $('riskFilter').value; const q = $('search').value.trim().toLowerCase(); const calc = recalc(c);
+    if(county!=='all' && c.county!==county) return false;
+    if(risk!=='all' && calc.level!==risk) return false;
+    if(q){ const hay = `${c.name} ${c.county} ${c.town} ${c.law_issue}`.toLowerCase(); if(!hay.includes(q)) return false; }
+    return true;
+  }
+  const AHP_ORDER = ['rain','debris','event','legal','road','slope','river','fault'];
+  const AHP_LABELS = {rain:'雨量', debris:'土石流', event:'事件型崩塌', legal:'法規', road:'聯外道路', slope:'坡度', river:'河川距離', fault:'斷層'};
+  function legalRiskScore(c){ return String(c.law_status||'').includes('違反') || String(c.law_issue||'').match(/待|未|尚|不符合|違反/) ? 50 : 0; }
+  function numOrNull(v){ const n = Number(v); return Number.isFinite(n) ? n : null; }
+  function slopePercent(deg){ const n = numOrNull(deg); return n===null ? null : Math.tan(n * Math.PI / 180) * 100; }
+  function riskBreakdown(c, calc){
+    const rain = calc && Number.isFinite(Number(calc.rain)) ? Number(calc.rain) : rainValue(c);
+    const parts = {
+      rain: {raw: rainCategoryScore(rain), value: `${rainLabel(c)} ${Number(rain||0).toFixed(0)} mm/24h`, rule:'≥500=100；350–499=75；200–349=50；80–199=25'},
+      debris: {raw: binaryInsideScore(c.debris_dist_m), value: `距土石流 ${fmtDist(c.debris_dist_m)}`, rule:'位於影響範圍內＝100；範圍外＝0'},
+      event: {raw: eventDistanceScore(c.event_dist_m), value: `距事件型崩塌 ${fmtDist(c.event_dist_m)}`, rule:'≤100m=100；≤250m=75；<500m=25'},
+      legal: {raw: legalRiskScore(c), value: c.law_status || '未標示', rule:'違反／待查／不符合等狀態納入治理風險'},
+      road: {raw: roadAccessScore(c), value: Number.isFinite(Number(c.road_count_1km)) ? `1 km 內道路數 ${Number(c.road_count_1km).toFixed(0)}` : '道路資料未套用，暫以 0 分處理', rule:'道路越少代表撤離替代性越低'},
+      slope: {raw: slopePercentScore(c.slope_deg), value: `${fmt(c.slope_deg,'°',1)}（坡度 ${slopePercent(c.slope_deg)===null?'無資料':slopePercent(c.slope_deg).toFixed(0)+'%'}）`, rule:'坡度百分比 ≥30%=100；10–29%=50'},
+      river: {raw: Number.isFinite(Number(c.river_score)) ? Number(c.river_score) : riverDistanceScore(c.river_dist_m), value: `距河川 ${fmtDist(c.river_dist_m)}${c.nearest_river_name ? '｜最近：'+c.nearest_river_name : ''}${c.river_source ? '｜資料：'+c.river_source : ''}`, rule:'<50m=100；<100m=50；使用 riverlin.shp / riverpoly.shp 最近距離'},
+      fault: {raw: Number.isFinite(Number(c.fault_score)) ? Number(c.fault_score) : faultDistanceScore(c.fault_dist_m), value: `距斷層 ${fmtDist(c.fault_dist_m)}`, rule:'≤250m=100；≤500m=75；<1000m=25'}
+    };
+    return AHP_ORDER.map(key=>{
+      const weight = AHP_WEIGHTS[key] || 0;
+      const raw = Math.max(0, Math.min(100, Number(parts[key].raw)||0));
+      const contribution = weighted(key, raw);
+      return {key, label:AHP_LABELS[key], weight, raw, contribution, value:parts[key].value, rule:parts[key].rule};
+    });
+  }
+  function factorRowsHTML(rows){
+    return rows.map(r=>`<div class="factor-row"><div class="factor-top"><div class="factor-name">${r.label}｜權重 ${r.weight.toFixed(1)}%</div><div class="factor-score">${r.raw.toFixed(0)} / 100 → +${r.contribution.toFixed(1)} 分</div></div><div class="factor-bar"><i style="width:${Math.max(0, Math.min(100, r.contribution))}%"></i></div><div class="factor-meta">${r.value}<br>${r.rule}</div></div>`).join('');
+  }
+  function popupBreakdownHTML(c, calc){
+    const topRows = riskBreakdown(c, calc).filter(r=>r.contribution>0).sort((a,b)=>b.contribution-a.contribution).slice(0,3);
+    if(!topRows.length) return '<div class="popup-breakdown">主要加權因子：目前皆未達加分門檻</div>';
+    return `<div class="popup-breakdown"><b>主要加權因子</b>${topRows.map(r=>`<div><span>${r.label} ${r.weight.toFixed(1)}%</span><b>+${r.contribution.toFixed(1)}</b></div>`).join('')}</div>`;
+  }
+  function markerSize(score){ return score>=75?18:score>=60?16:score>=40?13:11; }
+  function iconFor(calc){ const size=markerSize(calc.score); const cls=calc.level==='立即撤離'?'critical':''; return L.divIcon({className:'camp-marker-wrap', html:`<div class="camp-marker ${cls}" style="--s:${size}px;--c:${COLORS[calc.level]}"></div>`, iconSize:[size,size], iconAnchor:[size/2,size/2]}); }
+  function popupHTML(c, calc){ return `<b>${c.name}</b><br>${c.county||''}${c.town||''}<br><span class="level ${LVCLASS[calc.level]}" style="margin-top:6px">${calc.level}｜${calc.score.toFixed(1)} 分</span>${popupBreakdownHTML(c, calc)}<button onclick="window.showDetailsById('${c.priority_rank}')" style="margin-top:8px;border:0;border-radius:8px;padding:5px 8px;background:#38bdf8;color:#082f49;font-weight:900;cursor:pointer">查看完整權重明細</button>`; }
+  function render(){
+    campLayer.clearLayers(); markerById.clear(); lastBounds=[];
+    const shown = camps.filter(passFilters).map(c=>Object.assign({}, c, {calc:recalc(c)})).sort((a,b)=>b.calc.score-a.calc.score);
+    const fragStatus = `顯示 ${shown.length.toLocaleString()} / ${camps.length.toLocaleString()} 個露營區點位`;
+    $('status').textContent = fragStatus;
+    shown.forEach(c=>{
+      const lat = Number(c.lat), lon = Number(c.lon); if(!Number.isFinite(lat)||!Number.isFinite(lon)) return; const m = L.marker([lat,lon], {icon: iconFor(c.calc), title:c.name, zIndexOffset: Math.round(c.calc.score*10)});
+      m.bindPopup(popupHTML(c,c.calc)); m.on('click',()=>showDetails(c)); m.addTo(campLayer); markerById.set(String(c.priority_rank), m); lastBounds.push([lat,lon]);
+    });
+    renderDynamicSummary();
+    renderPriority(shown.slice(0,12));
+    return shown;
+  }
+  function renderPriority(list){ $('priorityList').innerHTML = list.map(c=>`<div class="item" onclick="window.focusCamp('${c.priority_rank}')"><div class="top"><div class="name">${c.name}</div><div class="score">${c.calc.score.toFixed(1)}</div></div><div class="meta">${c.county||''}${c.town||''}｜${rainLabel(c)} ${c.calc.rain.toFixed(0)} mm｜坡度 ${fmt(c.slope_deg,'°',0)}｜坡向 ${c.aspect_dir||'無資料'}</div><span class="level ${LVCLASS[c.calc.level]}">${c.calc.level}</span></div>`).join('') || '<div class="subtitle">沒有符合條件的露營場。</div>'; }
+  function showDetails(c){
+    const calc = c.calc || recalc(c);
+    const alert = makeAlert(c,calc);
+    const rows = riskBreakdown(c, calc);
+    const totalFromRows = rows.reduce((sum,r)=>sum+r.contribution,0);
+    const d=$('details');
+    d.classList.remove('hidden');
+    d.innerHTML = `<button class="close" onclick="document.getElementById('details').classList.add('hidden')">×</button>
+      <div class="detail-title">${c.name}</div>
+      <div class="detail-sub">${c.county||''}${c.town||''}｜資料信心：${c.data_confidence||'中'}｜法規：${c.law_status||'未標示'}</div>
+      <span class="level ${LVCLASS[calc.level]}">${calc.level}｜${calc.score.toFixed(1)} 分</span>
+      <div class="notice"><b>本次評分依左側 8 項權重計算</b><br>總分 = 各因子原始分數（0–100） × 權重比例。下方「+分」即該因子對總風險分數的實際貢獻；目前加總為 ${totalFromRows.toFixed(1)} 分。</div>
+      <h2 style="margin-top:14px">權重貢獻明細</h2>
+      <div class="score-breakdown">${factorRowsHTML(rows)}</div>
+      <h2 style="margin-top:14px">原始環境資料</h2>
+      <div class="grid2">
+        <div class="metric"><b>${fmt(calc.rain,' mm',0)}</b><span>24h ${rainLabel(c)}</span></div>
+        <div class="metric"><b>${rainStationText(c)}</b><span>雨量測站</span></div>
+        <div class="metric"><b>${fmt(c.slope_deg,'°',1)}</b><span>20m DEM 坡度</span></div>
+        <div class="metric"><b>${fmt(c.elevation_m,' m',0)}</b><span>高程</span></div>
+        <div class="metric"><b>${fmtDist(c.debris_dist_m)}</b><span>最近土石流影響範圍</span></div>
+        <div class="metric"><b>${fmtDist(c.event_dist_m)}</b><span>最近 2025 事件型崩塌</span></div>
+        <div class="metric"><b>${fmtDist(c.river_dist_m)}</b><span>最近河川距離（riverlin/riverpoly）</span></div>
+        <div class="metric"><b>${fmtDist(c.fault_dist_m)}</b><span>最近斷層／地質敏感區</span></div>
+        <div class="metric"><b>${Number.isFinite(Number(c.road_count_1km)) ? Number(c.road_count_1km).toFixed(0) : '無資料'}</b><span>1 km 內聯外道路數</span></div>
+        <div class="metric"><b>${c.aspect_dir||'無資料'} ${c.aspect_deg==null?'':Number(c.aspect_deg).toFixed(0)+'°'}</b><span>坡向，僅作背景資訊</span></div>
+      </div>
+      <div class="notice"><b>建議行動</b><br>${actionText(calc.level)}</div>
+      <h2 style="margin-top:14px">預警訊息草稿</h2>
+      <div class="alertbox" id="alertText">${alert}</div>
+      <button class="btn copybtn" onclick="navigator.clipboard && navigator.clipboard.writeText(document.getElementById('alertText').innerText)">複製預警文字</button>
+      <div class="method"><b>雨量備註：</b>${rainfallMeta ? `中央氣象署 ${rainfallMeta.source}，更新 ${fmtTime(rainfallMeta.generated_at)}` : '目前未載入 real_rainfall.json，使用備援雨量值。'}<br><b>權重備註：</b>左側欄位與此明細皆使用同一套 AHP/MCDA 權重：雨量 28.8%、土石流 14.7%、事件型崩塌 14.7%、法規 14.3%、聯外道路 14.3%、坡度 5.6%、河川距離 5.6%、斷層 2.0%。<br><b>河川距離備註：</b>本版已將營區點位投影至 EPSG:3826，並以 riverlin.shp 與 riverpoly.shp 重新計算最近距離。<br><b>法規/治理備註：</b>${c.law_issue||'無或未標示'}<br><b>原民區：</b>${c.indigenous_area||'未標示'}</div>`;
+  }
+  
+  window.focusCamp = function(id){ const m=markerById.get(String(id)); if(m){ if(!$('layerCamps').checked){ $('layerCamps').checked=true; campLayer.addTo(map); } map.setView(m.getLatLng(), 14); m.openPopup(); } };
+  window.showDetailsById = function(id){ const c=camps.find(x=>String(x.priority_rank)===String(id)); if(c) showDetails(c); };
+  function loadRoadAccess(){
+    const roads = window.ROAD_ACCESS || null;
+    const byRank = (roads && roads.by_priority_rank) || {};
+    let matched = 0;
+    camps.forEach(c=>{
+      const row = byRank[String(c.priority_rank)];
+      if(!row) return;
+      Object.assign(c, row);
+      matched += 1;
+    });
+    return matched;
+  }
+
+  function loadHazardLayers(){
+    const hazards = window.HAZARD_LAYERS || null;
+    const byRank = (hazards && hazards.by_priority_rank) || {};
+    let matched = 0;
+    camps.forEach(c=>{
+      const row = byRank[String(c.priority_rank)];
+      if(!row) return;
+      Object.assign(c, row);
+      matched += 1;
+    });
+    return matched;
+  }
+
+  async function fetchLiveRainfall(){
+    if(location.protocol === 'file:') return null;
+    try{
+      const res = await fetch(`${LIVE_RAINFALL_API}?ts=${Date.now()}`, {cache:'no-store'});
+      if(res.ok) return await res.json();
+      console.info('Live rainfall API returned', res.status);
+    }catch(err){
+      console.info('Live rainfall API unavailable; using rainfall file fallback.', err);
+    }
+    return null;
+  }
+
+  async function loadRealRainfall(){
+    try{
+      let rainfall = await fetchLiveRainfall();
+      try{
+        if(!rainfall){
+          const res = await fetch(`real_rainfall.json?ts=${Date.now()}`, {cache:'no-store'});
+          if(res.ok) rainfall = await res.json();
+        }
+      }catch(fetchErr){
+        console.info('real_rainfall.json fetch failed; falling back to bundled JS.', fetchErr);
+      }
+      rainfall = rainfall || window.REAL_RAINFALL || null;
+      if(!rainfall) return false;
+      const byRank = rainfall.by_priority_rank || {};
+      let matched = 0;
+      camps.forEach(c=>{
+        const row = byRank[String(c.priority_rank)];
+        if(!row) return;
+        Object.assign(c, row);
+        matched += 1;
+      });
+      rainfallMeta = rainfall;
+      updateRainInfo(rainfall, matched);
+      if(matched){
+        $('status').style.display='block';
+        $('status').textContent = `已套用中央氣象署實測雨量：${matched.toLocaleString()} 個露營區，更新 ${fmtTime(rainfall.generated_at)}`;
+      }
+      return matched > 0;
+    }catch(err){
+      console.info('real_rainfall.json not loaded; using demo rainfall.', err);
+      updateRainInfo(null, 0);
+      return false;
+    }
+  }
+  ['countyFilter','riskFilter','search'].forEach(id=>$(id).addEventListener('input',()=>{ render(); }));
+  $('resetBtn').onclick=()=>{ countyFilter.value='all'; $('riskFilter').value='all'; $('search').value=''; render(); };
+  $('fitBtn').onclick=()=>{ if(lastBounds.length) map.fitBounds(lastBounds,{padding:[30,30],maxZoom:13}); };
+  loadRoadAccess();
+  loadHazardLayers();
+  function refreshRainfallAndRender(){
+    return loadRealRainfall().finally(()=>{ render(); });
+  }
+  refreshRainfallAndRender().finally(()=>{
+    if(lastBounds.length) map.fitBounds(lastBounds,{padding:[20,20],maxZoom:8});
+    setTimeout(()=>{ map.invalidateSize(); $('status').style.display='none'; }, 1200);
+  });
+  if(location.protocol !== 'file:'){
+    setInterval(()=>{ refreshRainfallAndRender(); }, RAIN_REFRESH_MS);
+  }
+})();
+</script>
+</body>
+</html>

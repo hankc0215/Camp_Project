@@ -1,0 +1,10434 @@
+window.HAZARD_LAYERS = {
+  "source": {
+    "fault": "Data\\Fault\\TaiwanFault.shp",
+    "river": "Data\\2024_1753條土石流潛勢溪流圖\\debrisstream1753_20260126_twd97.shp"
+  },
+  "method": "TWD97 TM2 nearest segment distance",
+  "fault_line_count": 48,
+  "river_line_count": 4502,
+  "campsite_count": 1737,
+  "by_priority_rank": {
+    "1": {
+      "fault_dist_m": 11288.6,
+      "fault_score": 0,
+      "river_dist_m": 148.6,
+      "river_score": 0
+    },
+    "2": {
+      "fault_dist_m": 11469.3,
+      "fault_score": 0,
+      "river_dist_m": 345.7,
+      "river_score": 0
+    },
+    "3": {
+      "fault_dist_m": 5432.7,
+      "fault_score": 0,
+      "river_dist_m": 87.6,
+      "river_score": 50
+    },
+    "4": {
+      "fault_dist_m": 11934.1,
+      "fault_score": 0,
+      "river_dist_m": 107.0,
+      "river_score": 0
+    },
+    "5": {
+      "fault_dist_m": 10246.7,
+      "fault_score": 0,
+      "river_dist_m": 170.2,
+      "river_score": 0
+    },
+    "6": {
+      "fault_dist_m": 21178.5,
+      "fault_score": 0,
+      "river_dist_m": 224.1,
+      "river_score": 0
+    },
+    "7": {
+      "fault_dist_m": 9598.9,
+      "fault_score": 0,
+      "river_dist_m": 130.9,
+      "river_score": 0
+    },
+    "8": {
+      "fault_dist_m": 6354.7,
+      "fault_score": 0,
+      "river_dist_m": 363.7,
+      "river_score": 0
+    },
+    "9": {
+      "fault_dist_m": 9823.4,
+      "fault_score": 0,
+      "river_dist_m": 297.2,
+      "river_score": 0
+    },
+    "10": {
+      "fault_dist_m": 4815.3,
+      "fault_score": 0,
+      "river_dist_m": 326.8,
+      "river_score": 0
+    },
+    "11": {
+      "fault_dist_m": 12124.9,
+      "fault_score": 0,
+      "river_dist_m": 333.2,
+      "river_score": 0
+    },
+    "12": {
+      "fault_dist_m": 6456.4,
+      "fault_score": 0,
+      "river_dist_m": 514.6,
+      "river_score": 0
+    },
+    "13": {
+      "fault_dist_m": 38496.0,
+      "fault_score": 0,
+      "river_dist_m": 304.6,
+      "river_score": 0
+    },
+    "14": {
+      "fault_dist_m": 12580.7,
+      "fault_score": 0,
+      "river_dist_m": 507.4,
+      "river_score": 0
+    },
+    "15": {
+      "fault_dist_m": 11317.5,
+      "fault_score": 0,
+      "river_dist_m": 249.6,
+      "river_score": 0
+    },
+    "16": {
+      "fault_dist_m": 9378.0,
+      "fault_score": 0,
+      "river_dist_m": 555.8,
+      "river_score": 0
+    },
+    "17": {
+      "fault_dist_m": 10197.4,
+      "fault_score": 0,
+      "river_dist_m": 295.9,
+      "river_score": 0
+    },
+    "18": {
+      "fault_dist_m": 11560.5,
+      "fault_score": 0,
+      "river_dist_m": 178.8,
+      "river_score": 0
+    },
+    "19": {
+      "fault_dist_m": 9989.7,
+      "fault_score": 0,
+      "river_dist_m": 107.1,
+      "river_score": 0
+    },
+    "20": {
+      "fault_dist_m": 6695.4,
+      "fault_score": 0,
+      "river_dist_m": 707.7,
+      "river_score": 0
+    },
+    "21": {
+      "fault_dist_m": 5845.3,
+      "fault_score": 0,
+      "river_dist_m": 412.5,
+      "river_score": 0
+    },
+    "22": {
+      "fault_dist_m": 12098.2,
+      "fault_score": 0,
+      "river_dist_m": 600.9,
+      "river_score": 0
+    },
+    "23": {
+      "fault_dist_m": 11899.8,
+      "fault_score": 0,
+      "river_dist_m": 72.7,
+      "river_score": 50
+    },
+    "24": {
+      "fault_dist_m": 11853.1,
+      "fault_score": 0,
+      "river_dist_m": 138.2,
+      "river_score": 0
+    },
+    "25": {
+      "fault_dist_m": 9453.3,
+      "fault_score": 0,
+      "river_dist_m": 592.8,
+      "river_score": 0
+    },
+    "26": {
+      "fault_dist_m": 16206.7,
+      "fault_score": 0,
+      "river_dist_m": 605.6,
+      "river_score": 0
+    },
+    "27": {
+      "fault_dist_m": 11521.5,
+      "fault_score": 0,
+      "river_dist_m": 377.7,
+      "river_score": 0
+    },
+    "28": {
+      "fault_dist_m": 10111.4,
+      "fault_score": 0,
+      "river_dist_m": 159.2,
+      "river_score": 0
+    },
+    "29": {
+      "fault_dist_m": 12258.2,
+      "fault_score": 0,
+      "river_dist_m": 253.8,
+      "river_score": 0
+    },
+    "30": {
+      "fault_dist_m": 14751.0,
+      "fault_score": 0,
+      "river_dist_m": 200.3,
+      "river_score": 0
+    },
+    "31": {
+      "fault_dist_m": 9553.2,
+      "fault_score": 0,
+      "river_dist_m": 193.1,
+      "river_score": 0
+    },
+    "32": {
+      "fault_dist_m": 30168.6,
+      "fault_score": 0,
+      "river_dist_m": 221.5,
+      "river_score": 0
+    },
+    "33": {
+      "fault_dist_m": 12245.9,
+      "fault_score": 0,
+      "river_dist_m": 232.8,
+      "river_score": 0
+    },
+    "34": {
+      "fault_dist_m": 12242.0,
+      "fault_score": 0,
+      "river_dist_m": 620.2,
+      "river_score": 0
+    },
+    "35": {
+      "fault_dist_m": 9138.1,
+      "fault_score": 0,
+      "river_dist_m": 928.4,
+      "river_score": 0
+    },
+    "36": {
+      "fault_dist_m": 9375.3,
+      "fault_score": 0,
+      "river_dist_m": 1024.8,
+      "river_score": 0
+    },
+    "37": {
+      "fault_dist_m": 11571.3,
+      "fault_score": 0,
+      "river_dist_m": 222.8,
+      "river_score": 0
+    },
+    "38": {
+      "fault_dist_m": 11773.7,
+      "fault_score": 0,
+      "river_dist_m": 608.4,
+      "river_score": 0
+    },
+    "39": {
+      "fault_dist_m": 12039.5,
+      "fault_score": 0,
+      "river_dist_m": 435.4,
+      "river_score": 0
+    },
+    "40": {
+      "fault_dist_m": 5891.9,
+      "fault_score": 0,
+      "river_dist_m": 576.6,
+      "river_score": 0
+    },
+    "41": {
+      "fault_dist_m": 12346.6,
+      "fault_score": 0,
+      "river_dist_m": 459.1,
+      "river_score": 0
+    },
+    "42": {
+      "fault_dist_m": 11942.2,
+      "fault_score": 0,
+      "river_dist_m": 357.5,
+      "river_score": 0
+    },
+    "43": {
+      "fault_dist_m": 20141.4,
+      "fault_score": 0,
+      "river_dist_m": 263.5,
+      "river_score": 0
+    },
+    "44": {
+      "fault_dist_m": 11859.2,
+      "fault_score": 0,
+      "river_dist_m": 510.3,
+      "river_score": 0
+    },
+    "45": {
+      "fault_dist_m": 20127.6,
+      "fault_score": 0,
+      "river_dist_m": 89.4,
+      "river_score": 50
+    },
+    "46": {
+      "fault_dist_m": 11734.2,
+      "fault_score": 0,
+      "river_dist_m": 674.1,
+      "river_score": 0
+    },
+    "47": {
+      "fault_dist_m": 20232.7,
+      "fault_score": 0,
+      "river_dist_m": 182.3,
+      "river_score": 0
+    },
+    "48": {
+      "fault_dist_m": 2662.5,
+      "fault_score": 0,
+      "river_dist_m": 473.1,
+      "river_score": 0
+    },
+    "49": {
+      "fault_dist_m": 9456.4,
+      "fault_score": 0,
+      "river_dist_m": 906.7,
+      "river_score": 0
+    },
+    "50": {
+      "fault_dist_m": 20425.8,
+      "fault_score": 0,
+      "river_dist_m": 645.4,
+      "river_score": 0
+    },
+    "51": {
+      "fault_dist_m": 36724.7,
+      "fault_score": 0,
+      "river_dist_m": 193.6,
+      "river_score": 0
+    },
+    "52": {
+      "fault_dist_m": 5928.6,
+      "fault_score": 0,
+      "river_dist_m": 1393.2,
+      "river_score": 0
+    },
+    "53": {
+      "fault_dist_m": 24728.9,
+      "fault_score": 0,
+      "river_dist_m": 225.7,
+      "river_score": 0
+    },
+    "54": {
+      "fault_dist_m": 6214.0,
+      "fault_score": 0,
+      "river_dist_m": 98.8,
+      "river_score": 50
+    },
+    "55": {
+      "fault_dist_m": 35436.2,
+      "fault_score": 0,
+      "river_dist_m": 133.2,
+      "river_score": 0
+    },
+    "56": {
+      "fault_dist_m": 4454.9,
+      "fault_score": 0,
+      "river_dist_m": 367.2,
+      "river_score": 0
+    },
+    "57": {
+      "fault_dist_m": 12154.8,
+      "fault_score": 0,
+      "river_dist_m": 382.7,
+      "river_score": 0
+    },
+    "58": {
+      "fault_dist_m": 8105.5,
+      "fault_score": 0,
+      "river_dist_m": 173.4,
+      "river_score": 0
+    },
+    "59": {
+      "fault_dist_m": 8680.2,
+      "fault_score": 0,
+      "river_dist_m": 52.5,
+      "river_score": 50
+    },
+    "60": {
+      "fault_dist_m": 18780.1,
+      "fault_score": 0,
+      "river_dist_m": 366.3,
+      "river_score": 0
+    },
+    "61": {
+      "fault_dist_m": 11883.6,
+      "fault_score": 0,
+      "river_dist_m": 600.4,
+      "river_score": 0
+    },
+    "62": {
+      "fault_dist_m": 6809.9,
+      "fault_score": 0,
+      "river_dist_m": 657.4,
+      "river_score": 0
+    },
+    "63": {
+      "fault_dist_m": 11940.4,
+      "fault_score": 0,
+      "river_dist_m": 486.1,
+      "river_score": 0
+    },
+    "64": {
+      "fault_dist_m": 10980.5,
+      "fault_score": 0,
+      "river_dist_m": 468.0,
+      "river_score": 0
+    },
+    "65": {
+      "fault_dist_m": 2777.3,
+      "fault_score": 0,
+      "river_dist_m": 33.3,
+      "river_score": 100
+    },
+    "66": {
+      "fault_dist_m": 11347.0,
+      "fault_score": 0,
+      "river_dist_m": 784.5,
+      "river_score": 0
+    },
+    "67": {
+      "fault_dist_m": 8517.6,
+      "fault_score": 0,
+      "river_dist_m": 43.1,
+      "river_score": 100
+    },
+    "68": {
+      "fault_dist_m": 11281.5,
+      "fault_score": 0,
+      "river_dist_m": 770.9,
+      "river_score": 0
+    },
+    "69": {
+      "fault_dist_m": 875.9,
+      "fault_score": 25,
+      "river_dist_m": 35.5,
+      "river_score": 100
+    },
+    "70": {
+      "fault_dist_m": 12274.2,
+      "fault_score": 0,
+      "river_dist_m": 267.4,
+      "river_score": 0
+    },
+    "71": {
+      "fault_dist_m": 12326.6,
+      "fault_score": 0,
+      "river_dist_m": 510.3,
+      "river_score": 0
+    },
+    "72": {
+      "fault_dist_m": 8116.7,
+      "fault_score": 0,
+      "river_dist_m": 196.9,
+      "river_score": 0
+    },
+    "73": {
+      "fault_dist_m": 29913.0,
+      "fault_score": 0,
+      "river_dist_m": 809.0,
+      "river_score": 0
+    },
+    "74": {
+      "fault_dist_m": 24157.3,
+      "fault_score": 0,
+      "river_dist_m": 314.6,
+      "river_score": 0
+    },
+    "75": {
+      "fault_dist_m": 5771.5,
+      "fault_score": 0,
+      "river_dist_m": 39.6,
+      "river_score": 100
+    },
+    "76": {
+      "fault_dist_m": 11257.7,
+      "fault_score": 0,
+      "river_dist_m": 214.5,
+      "river_score": 0
+    },
+    "77": {
+      "fault_dist_m": 9879.4,
+      "fault_score": 0,
+      "river_dist_m": 261.5,
+      "river_score": 0
+    },
+    "78": {
+      "fault_dist_m": 39080.2,
+      "fault_score": 0,
+      "river_dist_m": 28.8,
+      "river_score": 100
+    },
+    "79": {
+      "fault_dist_m": 11586.3,
+      "fault_score": 0,
+      "river_dist_m": 758.2,
+      "river_score": 0
+    },
+    "80": {
+      "fault_dist_m": 11927.9,
+      "fault_score": 0,
+      "river_dist_m": 242.6,
+      "river_score": 0
+    },
+    "81": {
+      "fault_dist_m": 11764.5,
+      "fault_score": 0,
+      "river_dist_m": 664.4,
+      "river_score": 0
+    },
+    "82": {
+      "fault_dist_m": 12480.6,
+      "fault_score": 0,
+      "river_dist_m": 459.1,
+      "river_score": 0
+    },
+    "83": {
+      "fault_dist_m": 6176.2,
+      "fault_score": 0,
+      "river_dist_m": 159.0,
+      "river_score": 0
+    },
+    "84": {
+      "fault_dist_m": 11510.7,
+      "fault_score": 0,
+      "river_dist_m": 541.3,
+      "river_score": 0
+    },
+    "85": {
+      "fault_dist_m": 8235.9,
+      "fault_score": 0,
+      "river_dist_m": 174.5,
+      "river_score": 0
+    },
+    "86": {
+      "fault_dist_m": 11427.3,
+      "fault_score": 0,
+      "river_dist_m": 674.6,
+      "river_score": 0
+    },
+    "87": {
+      "fault_dist_m": 8766.9,
+      "fault_score": 0,
+      "river_dist_m": 681.7,
+      "river_score": 0
+    },
+    "88": {
+      "fault_dist_m": 22091.2,
+      "fault_score": 0,
+      "river_dist_m": 157.9,
+      "river_score": 0
+    },
+    "89": {
+      "fault_dist_m": 11338.4,
+      "fault_score": 0,
+      "river_dist_m": 695.1,
+      "river_score": 0
+    },
+    "90": {
+      "fault_dist_m": 10163.3,
+      "fault_score": 0,
+      "river_dist_m": 516.0,
+      "river_score": 0
+    },
+    "91": {
+      "fault_dist_m": 11983.9,
+      "fault_score": 0,
+      "river_dist_m": 158.7,
+      "river_score": 0
+    },
+    "92": {
+      "fault_dist_m": 8592.4,
+      "fault_score": 0,
+      "river_dist_m": 497.3,
+      "river_score": 0
+    },
+    "93": {
+      "fault_dist_m": 11403.0,
+      "fault_score": 0,
+      "river_dist_m": 684.3,
+      "river_score": 0
+    },
+    "94": {
+      "fault_dist_m": 11178.2,
+      "fault_score": 0,
+      "river_dist_m": 985.8,
+      "river_score": 0
+    },
+    "95": {
+      "fault_dist_m": 14361.8,
+      "fault_score": 0,
+      "river_dist_m": 347.3,
+      "river_score": 0
+    },
+    "96": {
+      "fault_dist_m": 6580.4,
+      "fault_score": 0,
+      "river_dist_m": 271.7,
+      "river_score": 0
+    },
+    "97": {
+      "fault_dist_m": 5094.9,
+      "fault_score": 0,
+      "river_dist_m": 980.9,
+      "river_score": 0
+    },
+    "98": {
+      "fault_dist_m": 11906.2,
+      "fault_score": 0,
+      "river_dist_m": 393.3,
+      "river_score": 0
+    },
+    "99": {
+      "fault_dist_m": 18393.3,
+      "fault_score": 0,
+      "river_dist_m": 318.6,
+      "river_score": 0
+    },
+    "100": {
+      "fault_dist_m": 33924.6,
+      "fault_score": 0,
+      "river_dist_m": 1626.5,
+      "river_score": 0
+    },
+    "101": {
+      "fault_dist_m": 7475.2,
+      "fault_score": 0,
+      "river_dist_m": 154.4,
+      "river_score": 0
+    },
+    "102": {
+      "fault_dist_m": 12091.8,
+      "fault_score": 0,
+      "river_dist_m": 278.0,
+      "river_score": 0
+    },
+    "103": {
+      "fault_dist_m": 11347.4,
+      "fault_score": 0,
+      "river_dist_m": 464.7,
+      "river_score": 0
+    },
+    "104": {
+      "fault_dist_m": 32103.4,
+      "fault_score": 0,
+      "river_dist_m": 154.1,
+      "river_score": 0
+    },
+    "105": {
+      "fault_dist_m": 7996.3,
+      "fault_score": 0,
+      "river_dist_m": 35.9,
+      "river_score": 100
+    },
+    "106": {
+      "fault_dist_m": 27819.7,
+      "fault_score": 0,
+      "river_dist_m": 767.8,
+      "river_score": 0
+    },
+    "107": {
+      "fault_dist_m": 13244.3,
+      "fault_score": 0,
+      "river_dist_m": 869.8,
+      "river_score": 0
+    },
+    "108": {
+      "fault_dist_m": 29902.2,
+      "fault_score": 0,
+      "river_dist_m": 791.7,
+      "river_score": 0
+    },
+    "109": {
+      "fault_dist_m": 8739.6,
+      "fault_score": 0,
+      "river_dist_m": 178.8,
+      "river_score": 0
+    },
+    "110": {
+      "fault_dist_m": 11339.4,
+      "fault_score": 0,
+      "river_dist_m": 318.4,
+      "river_score": 0
+    },
+    "111": {
+      "fault_dist_m": 10939.3,
+      "fault_score": 0,
+      "river_dist_m": 994.8,
+      "river_score": 0
+    },
+    "112": {
+      "fault_dist_m": 9387.9,
+      "fault_score": 0,
+      "river_dist_m": 74.0,
+      "river_score": 50
+    },
+    "113": {
+      "fault_dist_m": 54.3,
+      "fault_score": 100,
+      "river_dist_m": 361.5,
+      "river_score": 0
+    },
+    "114": {
+      "fault_dist_m": 21099.6,
+      "fault_score": 0,
+      "river_dist_m": 362.2,
+      "river_score": 0
+    },
+    "115": {
+      "fault_dist_m": 36058.7,
+      "fault_score": 0,
+      "river_dist_m": 824.8,
+      "river_score": 0
+    },
+    "116": {
+      "fault_dist_m": 11277.0,
+      "fault_score": 0,
+      "river_dist_m": 829.8,
+      "river_score": 0
+    },
+    "117": {
+      "fault_dist_m": 14914.4,
+      "fault_score": 0,
+      "river_dist_m": 191.2,
+      "river_score": 0
+    },
+    "118": {
+      "fault_dist_m": 48640.3,
+      "fault_score": 0,
+      "river_dist_m": 81.0,
+      "river_score": 50
+    },
+    "119": {
+      "fault_dist_m": 11478.1,
+      "fault_score": 0,
+      "river_dist_m": 550.0,
+      "river_score": 0
+    },
+    "120": {
+      "fault_dist_m": 24083.2,
+      "fault_score": 0,
+      "river_dist_m": 977.4,
+      "river_score": 0
+    },
+    "121": {
+      "fault_dist_m": 34011.5,
+      "fault_score": 0,
+      "river_dist_m": 460.0,
+      "river_score": 0
+    },
+    "122": {
+      "fault_dist_m": 12511.4,
+      "fault_score": 0,
+      "river_dist_m": 522.9,
+      "river_score": 0
+    },
+    "123": {
+      "fault_dist_m": 6765.5,
+      "fault_score": 0,
+      "river_dist_m": 421.1,
+      "river_score": 0
+    },
+    "124": {
+      "fault_dist_m": 19466.2,
+      "fault_score": 0,
+      "river_dist_m": 996.4,
+      "river_score": 0
+    },
+    "125": {
+      "fault_dist_m": 9691.7,
+      "fault_score": 0,
+      "river_dist_m": 498.5,
+      "river_score": 0
+    },
+    "126": {
+      "fault_dist_m": 57319.2,
+      "fault_score": 0,
+      "river_dist_m": 328.7,
+      "river_score": 0
+    },
+    "127": {
+      "fault_dist_m": 15280.6,
+      "fault_score": 0,
+      "river_dist_m": 173.9,
+      "river_score": 0
+    },
+    "128": {
+      "fault_dist_m": 10216.1,
+      "fault_score": 0,
+      "river_dist_m": 473.8,
+      "river_score": 0
+    },
+    "129": {
+      "fault_dist_m": 32395.0,
+      "fault_score": 0,
+      "river_dist_m": 74.5,
+      "river_score": 50
+    },
+    "130": {
+      "fault_dist_m": 28009.8,
+      "fault_score": 0,
+      "river_dist_m": 579.8,
+      "river_score": 0
+    },
+    "131": {
+      "fault_dist_m": 11980.4,
+      "fault_score": 0,
+      "river_dist_m": 111.5,
+      "river_score": 0
+    },
+    "132": {
+      "fault_dist_m": 36136.9,
+      "fault_score": 0,
+      "river_dist_m": 1030.9,
+      "river_score": 0
+    },
+    "133": {
+      "fault_dist_m": 31560.4,
+      "fault_score": 0,
+      "river_dist_m": 51.4,
+      "river_score": 50
+    },
+    "134": {
+      "fault_dist_m": 4423.4,
+      "fault_score": 0,
+      "river_dist_m": 718.8,
+      "river_score": 0
+    },
+    "135": {
+      "fault_dist_m": 2856.8,
+      "fault_score": 0,
+      "river_dist_m": 319.6,
+      "river_score": 0
+    },
+    "136": {
+      "fault_dist_m": 66848.5,
+      "fault_score": 0,
+      "river_dist_m": 217.4,
+      "river_score": 0
+    },
+    "137": {
+      "fault_dist_m": 29770.3,
+      "fault_score": 0,
+      "river_dist_m": 506.2,
+      "river_score": 0
+    },
+    "138": {
+      "fault_dist_m": 831.8,
+      "fault_score": 25,
+      "river_dist_m": 179.8,
+      "river_score": 0
+    },
+    "139": {
+      "fault_dist_m": 36622.9,
+      "fault_score": 0,
+      "river_dist_m": 1007.2,
+      "river_score": 0
+    },
+    "140": {
+      "fault_dist_m": 29921.7,
+      "fault_score": 0,
+      "river_dist_m": 769.6,
+      "river_score": 0
+    },
+    "141": {
+      "fault_dist_m": 11478.7,
+      "fault_score": 0,
+      "river_dist_m": 431.1,
+      "river_score": 0
+    },
+    "142": {
+      "fault_dist_m": 9780.8,
+      "fault_score": 0,
+      "river_dist_m": 200.4,
+      "river_score": 0
+    },
+    "143": {
+      "fault_dist_m": 11352.8,
+      "fault_score": 0,
+      "river_dist_m": 576.3,
+      "river_score": 0
+    },
+    "144": {
+      "fault_dist_m": 35810.1,
+      "fault_score": 0,
+      "river_dist_m": 335.4,
+      "river_score": 0
+    },
+    "145": {
+      "fault_dist_m": 11429.1,
+      "fault_score": 0,
+      "river_dist_m": 480.1,
+      "river_score": 0
+    },
+    "146": {
+      "fault_dist_m": 72668.8,
+      "fault_score": 0,
+      "river_dist_m": 215.7,
+      "river_score": 0
+    },
+    "147": {
+      "fault_dist_m": 73117.5,
+      "fault_score": 0,
+      "river_dist_m": 129.1,
+      "river_score": 0
+    },
+    "148": {
+      "fault_dist_m": 11741.0,
+      "fault_score": 0,
+      "river_dist_m": 863.8,
+      "river_score": 0
+    },
+    "149": {
+      "fault_dist_m": 4487.9,
+      "fault_score": 0,
+      "river_dist_m": 36.8,
+      "river_score": 100
+    },
+    "150": {
+      "fault_dist_m": 4574.7,
+      "fault_score": 0,
+      "river_dist_m": 220.8,
+      "river_score": 0
+    },
+    "151": {
+      "fault_dist_m": 11713.6,
+      "fault_score": 0,
+      "river_dist_m": 393.0,
+      "river_score": 0
+    },
+    "152": {
+      "fault_dist_m": 51165.3,
+      "fault_score": 0,
+      "river_dist_m": 197.7,
+      "river_score": 0
+    },
+    "153": {
+      "fault_dist_m": 25147.0,
+      "fault_score": 0,
+      "river_dist_m": 391.7,
+      "river_score": 0
+    },
+    "154": {
+      "fault_dist_m": 12303.8,
+      "fault_score": 0,
+      "river_dist_m": 732.1,
+      "river_score": 0
+    },
+    "155": {
+      "fault_dist_m": 17344.9,
+      "fault_score": 0,
+      "river_dist_m": 835.6,
+      "river_score": 0
+    },
+    "156": {
+      "fault_dist_m": 24861.3,
+      "fault_score": 0,
+      "river_dist_m": 376.4,
+      "river_score": 0
+    },
+    "157": {
+      "fault_dist_m": 11259.1,
+      "fault_score": 0,
+      "river_dist_m": 425.6,
+      "river_score": 0
+    },
+    "158": {
+      "fault_dist_m": 77059.4,
+      "fault_score": 0,
+      "river_dist_m": 213.1,
+      "river_score": 0
+    },
+    "159": {
+      "fault_dist_m": 14584.9,
+      "fault_score": 0,
+      "river_dist_m": 306.1,
+      "river_score": 0
+    },
+    "160": {
+      "fault_dist_m": 28072.1,
+      "fault_score": 0,
+      "river_dist_m": 190.1,
+      "river_score": 0
+    },
+    "161": {
+      "fault_dist_m": 32808.4,
+      "fault_score": 0,
+      "river_dist_m": 122.7,
+      "river_score": 0
+    },
+    "162": {
+      "fault_dist_m": 69909.6,
+      "fault_score": 0,
+      "river_dist_m": 329.7,
+      "river_score": 0
+    },
+    "163": {
+      "fault_dist_m": 27290.3,
+      "fault_score": 0,
+      "river_dist_m": 448.2,
+      "river_score": 0
+    },
+    "164": {
+      "fault_dist_m": 20337.8,
+      "fault_score": 0,
+      "river_dist_m": 96.4,
+      "river_score": 50
+    },
+    "165": {
+      "fault_dist_m": 12135.0,
+      "fault_score": 0,
+      "river_dist_m": 255.4,
+      "river_score": 0
+    },
+    "166": {
+      "fault_dist_m": 11091.8,
+      "fault_score": 0,
+      "river_dist_m": 494.3,
+      "river_score": 0
+    },
+    "167": {
+      "fault_dist_m": 32512.8,
+      "fault_score": 0,
+      "river_dist_m": 209.1,
+      "river_score": 0
+    },
+    "168": {
+      "fault_dist_m": 13237.2,
+      "fault_score": 0,
+      "river_dist_m": 1038.6,
+      "river_score": 0
+    },
+    "169": {
+      "fault_dist_m": 19266.2,
+      "fault_score": 0,
+      "river_dist_m": 219.4,
+      "river_score": 0
+    },
+    "170": {
+      "fault_dist_m": 21750.6,
+      "fault_score": 0,
+      "river_dist_m": 321.6,
+      "river_score": 0
+    },
+    "171": {
+      "fault_dist_m": 38273.6,
+      "fault_score": 0,
+      "river_dist_m": 1034.6,
+      "river_score": 0
+    },
+    "172": {
+      "fault_dist_m": 36337.5,
+      "fault_score": 0,
+      "river_dist_m": 606.7,
+      "river_score": 0
+    },
+    "173": {
+      "fault_dist_m": 11977.9,
+      "fault_score": 0,
+      "river_dist_m": 315.1,
+      "river_score": 0
+    },
+    "174": {
+      "fault_dist_m": 2217.4,
+      "fault_score": 0,
+      "river_dist_m": 88.8,
+      "river_score": 50
+    },
+    "175": {
+      "fault_dist_m": 3441.2,
+      "fault_score": 0,
+      "river_dist_m": 570.5,
+      "river_score": 0
+    },
+    "176": {
+      "fault_dist_m": 20910.9,
+      "fault_score": 0,
+      "river_dist_m": 1552.3,
+      "river_score": 0
+    },
+    "177": {
+      "fault_dist_m": 56462.0,
+      "fault_score": 0,
+      "river_dist_m": 678.4,
+      "river_score": 0
+    },
+    "178": {
+      "fault_dist_m": 27140.6,
+      "fault_score": 0,
+      "river_dist_m": 117.9,
+      "river_score": 0
+    },
+    "179": {
+      "fault_dist_m": 12164.2,
+      "fault_score": 0,
+      "river_dist_m": 489.0,
+      "river_score": 0
+    },
+    "180": {
+      "fault_dist_m": 21075.4,
+      "fault_score": 0,
+      "river_dist_m": 372.2,
+      "river_score": 0
+    },
+    "181": {
+      "fault_dist_m": 19753.5,
+      "fault_score": 0,
+      "river_dist_m": 650.2,
+      "river_score": 0
+    },
+    "182": {
+      "fault_dist_m": 12713.2,
+      "fault_score": 0,
+      "river_dist_m": 463.2,
+      "river_score": 0
+    },
+    "183": {
+      "fault_dist_m": 11419.3,
+      "fault_score": 0,
+      "river_dist_m": 638.0,
+      "river_score": 0
+    },
+    "184": {
+      "fault_dist_m": 3138.1,
+      "fault_score": 0,
+      "river_dist_m": 323.0,
+      "river_score": 0
+    },
+    "185": {
+      "fault_dist_m": 11074.9,
+      "fault_score": 0,
+      "river_dist_m": 1008.2,
+      "river_score": 0
+    },
+    "186": {
+      "fault_dist_m": 24961.7,
+      "fault_score": 0,
+      "river_dist_m": 561.6,
+      "river_score": 0
+    },
+    "187": {
+      "fault_dist_m": 21320.3,
+      "fault_score": 0,
+      "river_dist_m": 231.8,
+      "river_score": 0
+    },
+    "188": {
+      "fault_dist_m": 22288.2,
+      "fault_score": 0,
+      "river_dist_m": 1028.6,
+      "river_score": 0
+    },
+    "189": {
+      "fault_dist_m": 25053.0,
+      "fault_score": 0,
+      "river_dist_m": 105.7,
+      "river_score": 0
+    },
+    "190": {
+      "fault_dist_m": 11460.4,
+      "fault_score": 0,
+      "river_dist_m": 464.1,
+      "river_score": 0
+    },
+    "191": {
+      "fault_dist_m": 1010.3,
+      "fault_score": 0,
+      "river_dist_m": 577.2,
+      "river_score": 0
+    },
+    "192": {
+      "fault_dist_m": 15819.6,
+      "fault_score": 0,
+      "river_dist_m": 1226.8,
+      "river_score": 0
+    },
+    "193": {
+      "fault_dist_m": 23147.5,
+      "fault_score": 0,
+      "river_dist_m": 464.2,
+      "river_score": 0
+    },
+    "194": {
+      "fault_dist_m": 8414.4,
+      "fault_score": 0,
+      "river_dist_m": 342.6,
+      "river_score": 0
+    },
+    "195": {
+      "fault_dist_m": 26431.2,
+      "fault_score": 0,
+      "river_dist_m": 2781.7,
+      "river_score": 0
+    },
+    "196": {
+      "fault_dist_m": 11229.3,
+      "fault_score": 0,
+      "river_dist_m": 352.4,
+      "river_score": 0
+    },
+    "197": {
+      "fault_dist_m": 10553.3,
+      "fault_score": 0,
+      "river_dist_m": 153.1,
+      "river_score": 0
+    },
+    "198": {
+      "fault_dist_m": 11834.4,
+      "fault_score": 0,
+      "river_dist_m": 595.0,
+      "river_score": 0
+    },
+    "199": {
+      "fault_dist_m": 8957.0,
+      "fault_score": 0,
+      "river_dist_m": 1008.7,
+      "river_score": 0
+    },
+    "200": {
+      "fault_dist_m": 12271.1,
+      "fault_score": 0,
+      "river_dist_m": 313.6,
+      "river_score": 0
+    },
+    "201": {
+      "fault_dist_m": 945.9,
+      "fault_score": 25,
+      "river_dist_m": 639.1,
+      "river_score": 0
+    },
+    "202": {
+      "fault_dist_m": 23920.7,
+      "fault_score": 0,
+      "river_dist_m": 75.3,
+      "river_score": 50
+    },
+    "203": {
+      "fault_dist_m": 17666.0,
+      "fault_score": 0,
+      "river_dist_m": 304.7,
+      "river_score": 0
+    },
+    "204": {
+      "fault_dist_m": 15839.3,
+      "fault_score": 0,
+      "river_dist_m": 437.5,
+      "river_score": 0
+    },
+    "205": {
+      "fault_dist_m": 44238.2,
+      "fault_score": 0,
+      "river_dist_m": 86.4,
+      "river_score": 50
+    },
+    "206": {
+      "fault_dist_m": 12092.2,
+      "fault_score": 0,
+      "river_dist_m": 584.4,
+      "river_score": 0
+    },
+    "207": {
+      "fault_dist_m": 25010.3,
+      "fault_score": 0,
+      "river_dist_m": 322.9,
+      "river_score": 0
+    },
+    "208": {
+      "fault_dist_m": 790.3,
+      "fault_score": 25,
+      "river_dist_m": 991.0,
+      "river_score": 0
+    },
+    "209": {
+      "fault_dist_m": 3677.4,
+      "fault_score": 0,
+      "river_dist_m": 287.0,
+      "river_score": 0
+    },
+    "210": {
+      "fault_dist_m": 29467.4,
+      "fault_score": 0,
+      "river_dist_m": 2039.3,
+      "river_score": 0
+    },
+    "211": {
+      "fault_dist_m": 12177.9,
+      "fault_score": 0,
+      "river_dist_m": 237.7,
+      "river_score": 0
+    },
+    "212": {
+      "fault_dist_m": 20116.5,
+      "fault_score": 0,
+      "river_dist_m": 158.7,
+      "river_score": 0
+    },
+    "213": {
+      "fault_dist_m": 20623.6,
+      "fault_score": 0,
+      "river_dist_m": 14.0,
+      "river_score": 100
+    },
+    "214": {
+      "fault_dist_m": 3820.5,
+      "fault_score": 0,
+      "river_dist_m": 745.3,
+      "river_score": 0
+    },
+    "215": {
+      "fault_dist_m": 14724.5,
+      "fault_score": 0,
+      "river_dist_m": 710.7,
+      "river_score": 0
+    },
+    "216": {
+      "fault_dist_m": 11047.2,
+      "fault_score": 0,
+      "river_dist_m": 957.5,
+      "river_score": 0
+    },
+    "217": {
+      "fault_dist_m": 11173.1,
+      "fault_score": 0,
+      "river_dist_m": 409.3,
+      "river_score": 0
+    },
+    "218": {
+      "fault_dist_m": 11941.6,
+      "fault_score": 0,
+      "river_dist_m": 530.1,
+      "river_score": 0
+    },
+    "219": {
+      "fault_dist_m": 25182.5,
+      "fault_score": 0,
+      "river_dist_m": 265.3,
+      "river_score": 0
+    },
+    "220": {
+      "fault_dist_m": 26779.5,
+      "fault_score": 0,
+      "river_dist_m": 360.8,
+      "river_score": 0
+    },
+    "221": {
+      "fault_dist_m": 8273.6,
+      "fault_score": 0,
+      "river_dist_m": 20.1,
+      "river_score": 100
+    },
+    "222": {
+      "fault_dist_m": 3236.8,
+      "fault_score": 0,
+      "river_dist_m": 305.1,
+      "river_score": 0
+    },
+    "223": {
+      "fault_dist_m": 3263.3,
+      "fault_score": 0,
+      "river_dist_m": 421.9,
+      "river_score": 0
+    },
+    "224": {
+      "fault_dist_m": 2800.5,
+      "fault_score": 0,
+      "river_dist_m": 28.7,
+      "river_score": 100
+    },
+    "225": {
+      "fault_dist_m": 9517.6,
+      "fault_score": 0,
+      "river_dist_m": 61.8,
+      "river_score": 50
+    },
+    "226": {
+      "fault_dist_m": 20515.2,
+      "fault_score": 0,
+      "river_dist_m": 432.5,
+      "river_score": 0
+    },
+    "227": {
+      "fault_dist_m": 38464.7,
+      "fault_score": 0,
+      "river_dist_m": 926.3,
+      "river_score": 0
+    },
+    "228": {
+      "fault_dist_m": 12072.6,
+      "fault_score": 0,
+      "river_dist_m": 1000.3,
+      "river_score": 0
+    },
+    "229": {
+      "fault_dist_m": 11088.3,
+      "fault_score": 0,
+      "river_dist_m": 515.1,
+      "river_score": 0
+    },
+    "230": {
+      "fault_dist_m": 11683.1,
+      "fault_score": 0,
+      "river_dist_m": 215.8,
+      "river_score": 0
+    },
+    "231": {
+      "fault_dist_m": 11223.2,
+      "fault_score": 0,
+      "river_dist_m": 548.9,
+      "river_score": 0
+    },
+    "232": {
+      "fault_dist_m": 31802.8,
+      "fault_score": 0,
+      "river_dist_m": 172.5,
+      "river_score": 0
+    },
+    "233": {
+      "fault_dist_m": 28338.2,
+      "fault_score": 0,
+      "river_dist_m": 28.4,
+      "river_score": 100
+    },
+    "234": {
+      "fault_dist_m": 48497.4,
+      "fault_score": 0,
+      "river_dist_m": 388.4,
+      "river_score": 0
+    },
+    "235": {
+      "fault_dist_m": 13856.7,
+      "fault_score": 0,
+      "river_dist_m": 262.3,
+      "river_score": 0
+    },
+    "236": {
+      "fault_dist_m": 11834.3,
+      "fault_score": 0,
+      "river_dist_m": 190.6,
+      "river_score": 0
+    },
+    "237": {
+      "fault_dist_m": 18097.5,
+      "fault_score": 0,
+      "river_dist_m": 766.0,
+      "river_score": 0
+    },
+    "238": {
+      "fault_dist_m": 24718.8,
+      "fault_score": 0,
+      "river_dist_m": 1437.7,
+      "river_score": 0
+    },
+    "239": {
+      "fault_dist_m": 12057.1,
+      "fault_score": 0,
+      "river_dist_m": 308.5,
+      "river_score": 0
+    },
+    "240": {
+      "fault_dist_m": 2697.9,
+      "fault_score": 0,
+      "river_dist_m": 266.7,
+      "river_score": 0
+    },
+    "241": {
+      "fault_dist_m": 3686.8,
+      "fault_score": 0,
+      "river_dist_m": 401.1,
+      "river_score": 0
+    },
+    "242": {
+      "fault_dist_m": 27857.1,
+      "fault_score": 0,
+      "river_dist_m": 643.0,
+      "river_score": 0
+    },
+    "243": {
+      "fault_dist_m": 45088.4,
+      "fault_score": 0,
+      "river_dist_m": 460.8,
+      "river_score": 0
+    },
+    "244": {
+      "fault_dist_m": 13229.5,
+      "fault_score": 0,
+      "river_dist_m": 449.6,
+      "river_score": 0
+    },
+    "245": {
+      "fault_dist_m": 7724.5,
+      "fault_score": 0,
+      "river_dist_m": 780.2,
+      "river_score": 0
+    },
+    "246": {
+      "fault_dist_m": 12378.5,
+      "fault_score": 0,
+      "river_dist_m": 378.2,
+      "river_score": 0
+    },
+    "247": {
+      "fault_dist_m": 24667.7,
+      "fault_score": 0,
+      "river_dist_m": 600.1,
+      "river_score": 0
+    },
+    "248": {
+      "fault_dist_m": 6581.9,
+      "fault_score": 0,
+      "river_dist_m": 754.3,
+      "river_score": 0
+    },
+    "249": {
+      "fault_dist_m": 15659.7,
+      "fault_score": 0,
+      "river_dist_m": 400.4,
+      "river_score": 0
+    },
+    "250": {
+      "fault_dist_m": 12881.7,
+      "fault_score": 0,
+      "river_dist_m": 637.1,
+      "river_score": 0
+    },
+    "251": {
+      "fault_dist_m": 52756.3,
+      "fault_score": 0,
+      "river_dist_m": 21.2,
+      "river_score": 100
+    },
+    "252": {
+      "fault_dist_m": 8851.0,
+      "fault_score": 0,
+      "river_dist_m": 301.8,
+      "river_score": 0
+    },
+    "253": {
+      "fault_dist_m": 14652.0,
+      "fault_score": 0,
+      "river_dist_m": 317.5,
+      "river_score": 0
+    },
+    "254": {
+      "fault_dist_m": 11662.7,
+      "fault_score": 0,
+      "river_dist_m": 138.7,
+      "river_score": 0
+    },
+    "255": {
+      "fault_dist_m": 9384.6,
+      "fault_score": 0,
+      "river_dist_m": 88.4,
+      "river_score": 50
+    },
+    "256": {
+      "fault_dist_m": 11078.9,
+      "fault_score": 0,
+      "river_dist_m": 898.6,
+      "river_score": 0
+    },
+    "257": {
+      "fault_dist_m": 36237.1,
+      "fault_score": 0,
+      "river_dist_m": 755.5,
+      "river_score": 0
+    },
+    "258": {
+      "fault_dist_m": 5823.0,
+      "fault_score": 0,
+      "river_dist_m": 535.2,
+      "river_score": 0
+    },
+    "259": {
+      "fault_dist_m": 12728.1,
+      "fault_score": 0,
+      "river_dist_m": 463.2,
+      "river_score": 0
+    },
+    "260": {
+      "fault_dist_m": 31887.7,
+      "fault_score": 0,
+      "river_dist_m": 62.9,
+      "river_score": 50
+    },
+    "261": {
+      "fault_dist_m": 18598.0,
+      "fault_score": 0,
+      "river_dist_m": 237.9,
+      "river_score": 0
+    },
+    "262": {
+      "fault_dist_m": 14451.4,
+      "fault_score": 0,
+      "river_dist_m": 363.1,
+      "river_score": 0
+    },
+    "263": {
+      "fault_dist_m": 22525.1,
+      "fault_score": 0,
+      "river_dist_m": 1887.6,
+      "river_score": 0
+    },
+    "264": {
+      "fault_dist_m": 35722.8,
+      "fault_score": 0,
+      "river_dist_m": 379.7,
+      "river_score": 0
+    },
+    "265": {
+      "fault_dist_m": 30088.9,
+      "fault_score": 0,
+      "river_dist_m": 212.6,
+      "river_score": 0
+    },
+    "266": {
+      "fault_dist_m": 5815.9,
+      "fault_score": 0,
+      "river_dist_m": 1210.9,
+      "river_score": 0
+    },
+    "267": {
+      "fault_dist_m": 4294.4,
+      "fault_score": 0,
+      "river_dist_m": 659.0,
+      "river_score": 0
+    },
+    "268": {
+      "fault_dist_m": 12079.8,
+      "fault_score": 0,
+      "river_dist_m": 363.0,
+      "river_score": 0
+    },
+    "269": {
+      "fault_dist_m": 24913.8,
+      "fault_score": 0,
+      "river_dist_m": 404.7,
+      "river_score": 0
+    },
+    "270": {
+      "fault_dist_m": 25194.8,
+      "fault_score": 0,
+      "river_dist_m": 203.9,
+      "river_score": 0
+    },
+    "271": {
+      "fault_dist_m": 26742.9,
+      "fault_score": 0,
+      "river_dist_m": 757.5,
+      "river_score": 0
+    },
+    "272": {
+      "fault_dist_m": 16550.8,
+      "fault_score": 0,
+      "river_dist_m": 231.8,
+      "river_score": 0
+    },
+    "273": {
+      "fault_dist_m": 12426.5,
+      "fault_score": 0,
+      "river_dist_m": 408.9,
+      "river_score": 0
+    },
+    "274": {
+      "fault_dist_m": 7494.2,
+      "fault_score": 0,
+      "river_dist_m": 33.5,
+      "river_score": 100
+    },
+    "275": {
+      "fault_dist_m": 11266.8,
+      "fault_score": 0,
+      "river_dist_m": 1079.5,
+      "river_score": 0
+    },
+    "276": {
+      "fault_dist_m": 18061.7,
+      "fault_score": 0,
+      "river_dist_m": 162.7,
+      "river_score": 0
+    },
+    "277": {
+      "fault_dist_m": 11887.6,
+      "fault_score": 0,
+      "river_dist_m": 558.0,
+      "river_score": 0
+    },
+    "278": {
+      "fault_dist_m": 11342.5,
+      "fault_score": 0,
+      "river_dist_m": 218.5,
+      "river_score": 0
+    },
+    "279": {
+      "fault_dist_m": 3999.1,
+      "fault_score": 0,
+      "river_dist_m": 257.2,
+      "river_score": 0
+    },
+    "280": {
+      "fault_dist_m": 25801.3,
+      "fault_score": 0,
+      "river_dist_m": 308.0,
+      "river_score": 0
+    },
+    "281": {
+      "fault_dist_m": 11196.5,
+      "fault_score": 0,
+      "river_dist_m": 437.7,
+      "river_score": 0
+    },
+    "282": {
+      "fault_dist_m": 27701.5,
+      "fault_score": 0,
+      "river_dist_m": 805.1,
+      "river_score": 0
+    },
+    "283": {
+      "fault_dist_m": 18685.6,
+      "fault_score": 0,
+      "river_dist_m": 56.7,
+      "river_score": 50
+    },
+    "284": {
+      "fault_dist_m": 11024.0,
+      "fault_score": 0,
+      "river_dist_m": 576.0,
+      "river_score": 0
+    },
+    "285": {
+      "fault_dist_m": 93.1,
+      "fault_score": 100,
+      "river_dist_m": 244.7,
+      "river_score": 0
+    },
+    "286": {
+      "fault_dist_m": 5331.3,
+      "fault_score": 0,
+      "river_dist_m": 336.0,
+      "river_score": 0
+    },
+    "287": {
+      "fault_dist_m": 6047.1,
+      "fault_score": 0,
+      "river_dist_m": 532.8,
+      "river_score": 0
+    },
+    "288": {
+      "fault_dist_m": 18257.7,
+      "fault_score": 0,
+      "river_dist_m": 489.2,
+      "river_score": 0
+    },
+    "289": {
+      "fault_dist_m": 22568.1,
+      "fault_score": 0,
+      "river_dist_m": 318.2,
+      "river_score": 0
+    },
+    "290": {
+      "fault_dist_m": 8047.1,
+      "fault_score": 0,
+      "river_dist_m": 579.3,
+      "river_score": 0
+    },
+    "291": {
+      "fault_dist_m": 8131.5,
+      "fault_score": 0,
+      "river_dist_m": 273.5,
+      "river_score": 0
+    },
+    "292": {
+      "fault_dist_m": 30890.7,
+      "fault_score": 0,
+      "river_dist_m": 37.9,
+      "river_score": 100
+    },
+    "293": {
+      "fault_dist_m": 24923.9,
+      "fault_score": 0,
+      "river_dist_m": 391.6,
+      "river_score": 0
+    },
+    "294": {
+      "fault_dist_m": 8613.6,
+      "fault_score": 0,
+      "river_dist_m": 67.8,
+      "river_score": 50
+    },
+    "295": {
+      "fault_dist_m": 11039.6,
+      "fault_score": 0,
+      "river_dist_m": 459.8,
+      "river_score": 0
+    },
+    "296": {
+      "fault_dist_m": 62958.7,
+      "fault_score": 0,
+      "river_dist_m": 342.9,
+      "river_score": 0
+    },
+    "297": {
+      "fault_dist_m": 4806.6,
+      "fault_score": 0,
+      "river_dist_m": 790.5,
+      "river_score": 0
+    },
+    "298": {
+      "fault_dist_m": 8407.2,
+      "fault_score": 0,
+      "river_dist_m": 256.9,
+      "river_score": 0
+    },
+    "299": {
+      "fault_dist_m": 3239.8,
+      "fault_score": 0,
+      "river_dist_m": 520.4,
+      "river_score": 0
+    },
+    "300": {
+      "fault_dist_m": 11895.9,
+      "fault_score": 0,
+      "river_dist_m": 288.0,
+      "river_score": 0
+    },
+    "301": {
+      "fault_dist_m": 1137.9,
+      "fault_score": 0,
+      "river_dist_m": 137.7,
+      "river_score": 0
+    },
+    "302": {
+      "fault_dist_m": 24933.1,
+      "fault_score": 0,
+      "river_dist_m": 415.0,
+      "river_score": 0
+    },
+    "303": {
+      "fault_dist_m": 62835.4,
+      "fault_score": 0,
+      "river_dist_m": 273.9,
+      "river_score": 0
+    },
+    "304": {
+      "fault_dist_m": 3208.7,
+      "fault_score": 0,
+      "river_dist_m": 486.0,
+      "river_score": 0
+    },
+    "305": {
+      "fault_dist_m": 26817.5,
+      "fault_score": 0,
+      "river_dist_m": 547.2,
+      "river_score": 0
+    },
+    "306": {
+      "fault_dist_m": 27373.4,
+      "fault_score": 0,
+      "river_dist_m": 93.6,
+      "river_score": 50
+    },
+    "307": {
+      "fault_dist_m": 84687.4,
+      "fault_score": 0,
+      "river_dist_m": 272.7,
+      "river_score": 0
+    },
+    "308": {
+      "fault_dist_m": 26758.7,
+      "fault_score": 0,
+      "river_dist_m": 848.0,
+      "river_score": 0
+    },
+    "309": {
+      "fault_dist_m": 420.2,
+      "fault_score": 75,
+      "river_dist_m": 536.8,
+      "river_score": 0
+    },
+    "310": {
+      "fault_dist_m": 3089.1,
+      "fault_score": 0,
+      "river_dist_m": 618.3,
+      "river_score": 0
+    },
+    "311": {
+      "fault_dist_m": 3055.6,
+      "fault_score": 0,
+      "river_dist_m": 137.4,
+      "river_score": 0
+    },
+    "312": {
+      "fault_dist_m": 57343.3,
+      "fault_score": 0,
+      "river_dist_m": 361.4,
+      "river_score": 0
+    },
+    "313": {
+      "fault_dist_m": 688.4,
+      "fault_score": 25,
+      "river_dist_m": 111.9,
+      "river_score": 0
+    },
+    "314": {
+      "fault_dist_m": 22580.8,
+      "fault_score": 0,
+      "river_dist_m": 297.0,
+      "river_score": 0
+    },
+    "315": {
+      "fault_dist_m": 10779.2,
+      "fault_score": 0,
+      "river_dist_m": 101.9,
+      "river_score": 0
+    },
+    "316": {
+      "fault_dist_m": 9868.4,
+      "fault_score": 0,
+      "river_dist_m": 379.9,
+      "river_score": 0
+    },
+    "317": {
+      "fault_dist_m": 27092.1,
+      "fault_score": 0,
+      "river_dist_m": 225.4,
+      "river_score": 0
+    },
+    "318": {
+      "fault_dist_m": 27762.9,
+      "fault_score": 0,
+      "river_dist_m": 773.1,
+      "river_score": 0
+    },
+    "319": {
+      "fault_dist_m": 17195.9,
+      "fault_score": 0,
+      "river_dist_m": 50.4,
+      "river_score": 50
+    },
+    "320": {
+      "fault_dist_m": 22463.6,
+      "fault_score": 0,
+      "river_dist_m": 61.3,
+      "river_score": 50
+    },
+    "321": {
+      "fault_dist_m": 12093.4,
+      "fault_score": 0,
+      "river_dist_m": 668.6,
+      "river_score": 0
+    },
+    "322": {
+      "fault_dist_m": 3514.2,
+      "fault_score": 0,
+      "river_dist_m": 293.8,
+      "river_score": 0
+    },
+    "323": {
+      "fault_dist_m": 3199.4,
+      "fault_score": 0,
+      "river_dist_m": 342.7,
+      "river_score": 0
+    },
+    "324": {
+      "fault_dist_m": 11172.4,
+      "fault_score": 0,
+      "river_dist_m": 405.7,
+      "river_score": 0
+    },
+    "325": {
+      "fault_dist_m": 13533.7,
+      "fault_score": 0,
+      "river_dist_m": 1323.9,
+      "river_score": 0
+    },
+    "326": {
+      "fault_dist_m": 2493.9,
+      "fault_score": 0,
+      "river_dist_m": 192.4,
+      "river_score": 0
+    },
+    "327": {
+      "fault_dist_m": 3742.3,
+      "fault_score": 0,
+      "river_dist_m": 320.0,
+      "river_score": 0
+    },
+    "328": {
+      "fault_dist_m": 10264.6,
+      "fault_score": 0,
+      "river_dist_m": 740.5,
+      "river_score": 0
+    },
+    "329": {
+      "fault_dist_m": 13543.3,
+      "fault_score": 0,
+      "river_dist_m": 521.8,
+      "river_score": 0
+    },
+    "330": {
+      "fault_dist_m": 9704.7,
+      "fault_score": 0,
+      "river_dist_m": 280.5,
+      "river_score": 0
+    },
+    "331": {
+      "fault_dist_m": 6068.3,
+      "fault_score": 0,
+      "river_dist_m": 650.9,
+      "river_score": 0
+    },
+    "332": {
+      "fault_dist_m": 2913.0,
+      "fault_score": 0,
+      "river_dist_m": 30.7,
+      "river_score": 100
+    },
+    "333": {
+      "fault_dist_m": 67235.4,
+      "fault_score": 0,
+      "river_dist_m": 600.2,
+      "river_score": 0
+    },
+    "334": {
+      "fault_dist_m": 13975.6,
+      "fault_score": 0,
+      "river_dist_m": 320.0,
+      "river_score": 0
+    },
+    "335": {
+      "fault_dist_m": 10921.6,
+      "fault_score": 0,
+      "river_dist_m": 396.8,
+      "river_score": 0
+    },
+    "336": {
+      "fault_dist_m": 24963.6,
+      "fault_score": 0,
+      "river_dist_m": 608.0,
+      "river_score": 0
+    },
+    "337": {
+      "fault_dist_m": 24698.3,
+      "fault_score": 0,
+      "river_dist_m": 639.6,
+      "river_score": 0
+    },
+    "338": {
+      "fault_dist_m": 49143.7,
+      "fault_score": 0,
+      "river_dist_m": 3881.1,
+      "river_score": 0
+    },
+    "339": {
+      "fault_dist_m": 21645.2,
+      "fault_score": 0,
+      "river_dist_m": 75.2,
+      "river_score": 50
+    },
+    "340": {
+      "fault_dist_m": 9372.5,
+      "fault_score": 0,
+      "river_dist_m": 153.5,
+      "river_score": 0
+    },
+    "341": {
+      "fault_dist_m": 1946.3,
+      "fault_score": 0,
+      "river_dist_m": 331.5,
+      "river_score": 0
+    },
+    "342": {
+      "fault_dist_m": 56343.8,
+      "fault_score": 0,
+      "river_dist_m": 483.4,
+      "river_score": 0
+    },
+    "343": {
+      "fault_dist_m": 19334.1,
+      "fault_score": 0,
+      "river_dist_m": 362.2,
+      "river_score": 0
+    },
+    "344": {
+      "fault_dist_m": 1905.5,
+      "fault_score": 0,
+      "river_dist_m": 458.6,
+      "river_score": 0
+    },
+    "345": {
+      "fault_dist_m": 11111.0,
+      "fault_score": 0,
+      "river_dist_m": 519.4,
+      "river_score": 0
+    },
+    "346": {
+      "fault_dist_m": 12239.9,
+      "fault_score": 0,
+      "river_dist_m": 341.6,
+      "river_score": 0
+    },
+    "347": {
+      "fault_dist_m": 16581.3,
+      "fault_score": 0,
+      "river_dist_m": 107.2,
+      "river_score": 0
+    },
+    "348": {
+      "fault_dist_m": 12257.5,
+      "fault_score": 0,
+      "river_dist_m": 200.7,
+      "river_score": 0
+    },
+    "349": {
+      "fault_dist_m": 10010.9,
+      "fault_score": 0,
+      "river_dist_m": 455.8,
+      "river_score": 0
+    },
+    "350": {
+      "fault_dist_m": 36135.2,
+      "fault_score": 0,
+      "river_dist_m": 587.5,
+      "river_score": 0
+    },
+    "351": {
+      "fault_dist_m": 14631.6,
+      "fault_score": 0,
+      "river_dist_m": 361.5,
+      "river_score": 0
+    },
+    "352": {
+      "fault_dist_m": 22043.2,
+      "fault_score": 0,
+      "river_dist_m": 1118.6,
+      "river_score": 0
+    },
+    "353": {
+      "fault_dist_m": 29859.7,
+      "fault_score": 0,
+      "river_dist_m": 935.2,
+      "river_score": 0
+    },
+    "354": {
+      "fault_dist_m": 4087.4,
+      "fault_score": 0,
+      "river_dist_m": 552.3,
+      "river_score": 0
+    },
+    "355": {
+      "fault_dist_m": 10770.3,
+      "fault_score": 0,
+      "river_dist_m": 574.8,
+      "river_score": 0
+    },
+    "356": {
+      "fault_dist_m": 11510.6,
+      "fault_score": 0,
+      "river_dist_m": 301.2,
+      "river_score": 0
+    },
+    "357": {
+      "fault_dist_m": 11121.8,
+      "fault_score": 0,
+      "river_dist_m": 473.3,
+      "river_score": 0
+    },
+    "358": {
+      "fault_dist_m": 24944.4,
+      "fault_score": 0,
+      "river_dist_m": 368.1,
+      "river_score": 0
+    },
+    "359": {
+      "fault_dist_m": 27420.9,
+      "fault_score": 0,
+      "river_dist_m": 357.8,
+      "river_score": 0
+    },
+    "360": {
+      "fault_dist_m": 29597.6,
+      "fault_score": 0,
+      "river_dist_m": 358.3,
+      "river_score": 0
+    },
+    "361": {
+      "fault_dist_m": 33807.7,
+      "fault_score": 0,
+      "river_dist_m": 814.0,
+      "river_score": 0
+    },
+    "362": {
+      "fault_dist_m": 22623.4,
+      "fault_score": 0,
+      "river_dist_m": 196.1,
+      "river_score": 0
+    },
+    "363": {
+      "fault_dist_m": 13427.9,
+      "fault_score": 0,
+      "river_dist_m": 1191.4,
+      "river_score": 0
+    },
+    "364": {
+      "fault_dist_m": 30286.8,
+      "fault_score": 0,
+      "river_dist_m": 213.9,
+      "river_score": 0
+    },
+    "365": {
+      "fault_dist_m": 37539.7,
+      "fault_score": 0,
+      "river_dist_m": 382.1,
+      "river_score": 0
+    },
+    "366": {
+      "fault_dist_m": 47865.4,
+      "fault_score": 0,
+      "river_dist_m": 807.9,
+      "river_score": 0
+    },
+    "367": {
+      "fault_dist_m": 18988.6,
+      "fault_score": 0,
+      "river_dist_m": 472.2,
+      "river_score": 0
+    },
+    "368": {
+      "fault_dist_m": 36021.5,
+      "fault_score": 0,
+      "river_dist_m": 454.0,
+      "river_score": 0
+    },
+    "369": {
+      "fault_dist_m": 35316.7,
+      "fault_score": 0,
+      "river_dist_m": 1944.0,
+      "river_score": 0
+    },
+    "370": {
+      "fault_dist_m": 26594.0,
+      "fault_score": 0,
+      "river_dist_m": 211.9,
+      "river_score": 0
+    },
+    "371": {
+      "fault_dist_m": 24947.2,
+      "fault_score": 0,
+      "river_dist_m": 586.2,
+      "river_score": 0
+    },
+    "372": {
+      "fault_dist_m": 70004.4,
+      "fault_score": 0,
+      "river_dist_m": 191.5,
+      "river_score": 0
+    },
+    "373": {
+      "fault_dist_m": 7886.7,
+      "fault_score": 0,
+      "river_dist_m": 338.4,
+      "river_score": 0
+    },
+    "374": {
+      "fault_dist_m": 14146.1,
+      "fault_score": 0,
+      "river_dist_m": 344.6,
+      "river_score": 0
+    },
+    "375": {
+      "fault_dist_m": 22931.7,
+      "fault_score": 0,
+      "river_dist_m": 145.5,
+      "river_score": 0
+    },
+    "376": {
+      "fault_dist_m": 54734.1,
+      "fault_score": 0,
+      "river_dist_m": 365.0,
+      "river_score": 0
+    },
+    "377": {
+      "fault_dist_m": 18604.6,
+      "fault_score": 0,
+      "river_dist_m": 120.8,
+      "river_score": 0
+    },
+    "378": {
+      "fault_dist_m": 3345.6,
+      "fault_score": 0,
+      "river_dist_m": 764.9,
+      "river_score": 0
+    },
+    "379": {
+      "fault_dist_m": 13683.7,
+      "fault_score": 0,
+      "river_dist_m": 358.3,
+      "river_score": 0
+    },
+    "380": {
+      "fault_dist_m": 11203.2,
+      "fault_score": 0,
+      "river_dist_m": 901.9,
+      "river_score": 0
+    },
+    "381": {
+      "fault_dist_m": 26601.1,
+      "fault_score": 0,
+      "river_dist_m": 1096.3,
+      "river_score": 0
+    },
+    "382": {
+      "fault_dist_m": 2189.1,
+      "fault_score": 0,
+      "river_dist_m": 379.4,
+      "river_score": 0
+    },
+    "383": {
+      "fault_dist_m": 12523.2,
+      "fault_score": 0,
+      "river_dist_m": 345.9,
+      "river_score": 0
+    },
+    "384": {
+      "fault_dist_m": 17704.2,
+      "fault_score": 0,
+      "river_dist_m": 445.2,
+      "river_score": 0
+    },
+    "385": {
+      "fault_dist_m": 64382.4,
+      "fault_score": 0,
+      "river_dist_m": 162.8,
+      "river_score": 0
+    },
+    "386": {
+      "fault_dist_m": 35041.7,
+      "fault_score": 0,
+      "river_dist_m": 641.4,
+      "river_score": 0
+    },
+    "387": {
+      "fault_dist_m": 20537.0,
+      "fault_score": 0,
+      "river_dist_m": 125.8,
+      "river_score": 0
+    },
+    "388": {
+      "fault_dist_m": 21231.5,
+      "fault_score": 0,
+      "river_dist_m": 881.6,
+      "river_score": 0
+    },
+    "389": {
+      "fault_dist_m": 38049.5,
+      "fault_score": 0,
+      "river_dist_m": 1105.8,
+      "river_score": 0
+    },
+    "390": {
+      "fault_dist_m": 30804.3,
+      "fault_score": 0,
+      "river_dist_m": 333.9,
+      "river_score": 0
+    },
+    "391": {
+      "fault_dist_m": 9818.4,
+      "fault_score": 0,
+      "river_dist_m": 744.2,
+      "river_score": 0
+    },
+    "392": {
+      "fault_dist_m": 1367.9,
+      "fault_score": 0,
+      "river_dist_m": 320.4,
+      "river_score": 0
+    },
+    "393": {
+      "fault_dist_m": 34984.4,
+      "fault_score": 0,
+      "river_dist_m": 1175.0,
+      "river_score": 0
+    },
+    "394": {
+      "fault_dist_m": 7827.4,
+      "fault_score": 0,
+      "river_dist_m": 354.1,
+      "river_score": 0
+    },
+    "395": {
+      "fault_dist_m": 24945.4,
+      "fault_score": 0,
+      "river_dist_m": 514.9,
+      "river_score": 0
+    },
+    "396": {
+      "fault_dist_m": 54239.8,
+      "fault_score": 0,
+      "river_dist_m": 328.1,
+      "river_score": 0
+    },
+    "397": {
+      "fault_dist_m": 64162.9,
+      "fault_score": 0,
+      "river_dist_m": 374.0,
+      "river_score": 0
+    },
+    "398": {
+      "fault_dist_m": 21689.6,
+      "fault_score": 0,
+      "river_dist_m": 131.9,
+      "river_score": 0
+    },
+    "399": {
+      "fault_dist_m": 10800.6,
+      "fault_score": 0,
+      "river_dist_m": 548.1,
+      "river_score": 0
+    },
+    "400": {
+      "fault_dist_m": 15566.5,
+      "fault_score": 0,
+      "river_dist_m": 676.6,
+      "river_score": 0
+    },
+    "401": {
+      "fault_dist_m": 55233.8,
+      "fault_score": 0,
+      "river_dist_m": 556.5,
+      "river_score": 0
+    },
+    "402": {
+      "fault_dist_m": 19045.7,
+      "fault_score": 0,
+      "river_dist_m": 477.8,
+      "river_score": 0
+    },
+    "403": {
+      "fault_dist_m": 9568.6,
+      "fault_score": 0,
+      "river_dist_m": 368.6,
+      "river_score": 0
+    },
+    "404": {
+      "fault_dist_m": 10294.5,
+      "fault_score": 0,
+      "river_dist_m": 937.3,
+      "river_score": 0
+    },
+    "405": {
+      "fault_dist_m": 19864.8,
+      "fault_score": 0,
+      "river_dist_m": 494.6,
+      "river_score": 0
+    },
+    "406": {
+      "fault_dist_m": 18706.2,
+      "fault_score": 0,
+      "river_dist_m": 572.1,
+      "river_score": 0
+    },
+    "407": {
+      "fault_dist_m": 40895.0,
+      "fault_score": 0,
+      "river_dist_m": 463.5,
+      "river_score": 0
+    },
+    "408": {
+      "fault_dist_m": 30068.4,
+      "fault_score": 0,
+      "river_dist_m": 1407.6,
+      "river_score": 0
+    },
+    "409": {
+      "fault_dist_m": 17301.6,
+      "fault_score": 0,
+      "river_dist_m": 779.2,
+      "river_score": 0
+    },
+    "410": {
+      "fault_dist_m": 36386.7,
+      "fault_score": 0,
+      "river_dist_m": 727.2,
+      "river_score": 0
+    },
+    "411": {
+      "fault_dist_m": 11585.5,
+      "fault_score": 0,
+      "river_dist_m": 636.7,
+      "river_score": 0
+    },
+    "412": {
+      "fault_dist_m": 12731.2,
+      "fault_score": 0,
+      "river_dist_m": 362.8,
+      "river_score": 0
+    },
+    "413": {
+      "fault_dist_m": 12702.7,
+      "fault_score": 0,
+      "river_dist_m": 425.9,
+      "river_score": 0
+    },
+    "414": {
+      "fault_dist_m": 78974.0,
+      "fault_score": 0,
+      "river_dist_m": 448.1,
+      "river_score": 0
+    },
+    "415": {
+      "fault_dist_m": 2822.5,
+      "fault_score": 0,
+      "river_dist_m": 319.4,
+      "river_score": 0
+    },
+    "416": {
+      "fault_dist_m": 20421.1,
+      "fault_score": 0,
+      "river_dist_m": 301.8,
+      "river_score": 0
+    },
+    "417": {
+      "fault_dist_m": 1131.0,
+      "fault_score": 0,
+      "river_dist_m": 370.5,
+      "river_score": 0
+    },
+    "418": {
+      "fault_dist_m": 17289.1,
+      "fault_score": 0,
+      "river_dist_m": 428.6,
+      "river_score": 0
+    },
+    "419": {
+      "fault_dist_m": 22912.9,
+      "fault_score": 0,
+      "river_dist_m": 165.4,
+      "river_score": 0
+    },
+    "420": {
+      "fault_dist_m": 13180.8,
+      "fault_score": 0,
+      "river_dist_m": 1894.6,
+      "river_score": 0
+    },
+    "421": {
+      "fault_dist_m": 5268.4,
+      "fault_score": 0,
+      "river_dist_m": 535.9,
+      "river_score": 0
+    },
+    "422": {
+      "fault_dist_m": 30483.5,
+      "fault_score": 0,
+      "river_dist_m": 1230.4,
+      "river_score": 0
+    },
+    "423": {
+      "fault_dist_m": 30750.0,
+      "fault_score": 0,
+      "river_dist_m": 370.0,
+      "river_score": 0
+    },
+    "424": {
+      "fault_dist_m": 6745.5,
+      "fault_score": 0,
+      "river_dist_m": 589.1,
+      "river_score": 0
+    },
+    "425": {
+      "fault_dist_m": 12347.5,
+      "fault_score": 0,
+      "river_dist_m": 500.4,
+      "river_score": 0
+    },
+    "426": {
+      "fault_dist_m": 29723.8,
+      "fault_score": 0,
+      "river_dist_m": 581.4,
+      "river_score": 0
+    },
+    "427": {
+      "fault_dist_m": 64215.2,
+      "fault_score": 0,
+      "river_dist_m": 336.7,
+      "river_score": 0
+    },
+    "428": {
+      "fault_dist_m": 11013.1,
+      "fault_score": 0,
+      "river_dist_m": 1111.8,
+      "river_score": 0
+    },
+    "429": {
+      "fault_dist_m": 37296.6,
+      "fault_score": 0,
+      "river_dist_m": 740.6,
+      "river_score": 0
+    },
+    "430": {
+      "fault_dist_m": 78951.2,
+      "fault_score": 0,
+      "river_dist_m": 326.4,
+      "river_score": 0
+    },
+    "431": {
+      "fault_dist_m": 35202.5,
+      "fault_score": 0,
+      "river_dist_m": 985.9,
+      "river_score": 0
+    },
+    "432": {
+      "fault_dist_m": 8469.5,
+      "fault_score": 0,
+      "river_dist_m": 93.2,
+      "river_score": 50
+    },
+    "433": {
+      "fault_dist_m": 17573.4,
+      "fault_score": 0,
+      "river_dist_m": 783.8,
+      "river_score": 0
+    },
+    "434": {
+      "fault_dist_m": 20471.2,
+      "fault_score": 0,
+      "river_dist_m": 491.6,
+      "river_score": 0
+    },
+    "435": {
+      "fault_dist_m": 24839.6,
+      "fault_score": 0,
+      "river_dist_m": 500.1,
+      "river_score": 0
+    },
+    "436": {
+      "fault_dist_m": 33213.6,
+      "fault_score": 0,
+      "river_dist_m": 303.9,
+      "river_score": 0
+    },
+    "437": {
+      "fault_dist_m": 4179.6,
+      "fault_score": 0,
+      "river_dist_m": 952.3,
+      "river_score": 0
+    },
+    "438": {
+      "fault_dist_m": 18165.4,
+      "fault_score": 0,
+      "river_dist_m": 109.4,
+      "river_score": 0
+    },
+    "439": {
+      "fault_dist_m": 20975.5,
+      "fault_score": 0,
+      "river_dist_m": 410.9,
+      "river_score": 0
+    },
+    "440": {
+      "fault_dist_m": 13745.5,
+      "fault_score": 0,
+      "river_dist_m": 141.2,
+      "river_score": 0
+    },
+    "441": {
+      "fault_dist_m": 18275.9,
+      "fault_score": 0,
+      "river_dist_m": 401.9,
+      "river_score": 0
+    },
+    "442": {
+      "fault_dist_m": 24538.1,
+      "fault_score": 0,
+      "river_dist_m": 1249.0,
+      "river_score": 0
+    },
+    "443": {
+      "fault_dist_m": 11800.5,
+      "fault_score": 0,
+      "river_dist_m": 578.2,
+      "river_score": 0
+    },
+    "444": {
+      "fault_dist_m": 4149.1,
+      "fault_score": 0,
+      "river_dist_m": 1118.2,
+      "river_score": 0
+    },
+    "445": {
+      "fault_dist_m": 20776.6,
+      "fault_score": 0,
+      "river_dist_m": 675.0,
+      "river_score": 0
+    },
+    "446": {
+      "fault_dist_m": 20606.5,
+      "fault_score": 0,
+      "river_dist_m": 671.6,
+      "river_score": 0
+    },
+    "447": {
+      "fault_dist_m": 73021.4,
+      "fault_score": 0,
+      "river_dist_m": 327.1,
+      "river_score": 0
+    },
+    "448": {
+      "fault_dist_m": 3046.2,
+      "fault_score": 0,
+      "river_dist_m": 653.5,
+      "river_score": 0
+    },
+    "449": {
+      "fault_dist_m": 6552.5,
+      "fault_score": 0,
+      "river_dist_m": 652.3,
+      "river_score": 0
+    },
+    "450": {
+      "fault_dist_m": 3891.6,
+      "fault_score": 0,
+      "river_dist_m": 535.6,
+      "river_score": 0
+    },
+    "451": {
+      "fault_dist_m": 11908.5,
+      "fault_score": 0,
+      "river_dist_m": 424.7,
+      "river_score": 0
+    },
+    "452": {
+      "fault_dist_m": 10465.8,
+      "fault_score": 0,
+      "river_dist_m": 37.6,
+      "river_score": 100
+    },
+    "453": {
+      "fault_dist_m": 63937.5,
+      "fault_score": 0,
+      "river_dist_m": 687.6,
+      "river_score": 0
+    },
+    "454": {
+      "fault_dist_m": 9370.8,
+      "fault_score": 0,
+      "river_dist_m": 95.4,
+      "river_score": 50
+    },
+    "455": {
+      "fault_dist_m": 12295.7,
+      "fault_score": 0,
+      "river_dist_m": 194.5,
+      "river_score": 0
+    },
+    "456": {
+      "fault_dist_m": 178.7,
+      "fault_score": 100,
+      "river_dist_m": 620.0,
+      "river_score": 0
+    },
+    "457": {
+      "fault_dist_m": 27569.1,
+      "fault_score": 0,
+      "river_dist_m": 105.6,
+      "river_score": 0
+    },
+    "458": {
+      "fault_dist_m": 17973.7,
+      "fault_score": 0,
+      "river_dist_m": 197.5,
+      "river_score": 0
+    },
+    "459": {
+      "fault_dist_m": 28398.4,
+      "fault_score": 0,
+      "river_dist_m": 36.2,
+      "river_score": 100
+    },
+    "460": {
+      "fault_dist_m": 6700.0,
+      "fault_score": 0,
+      "river_dist_m": 411.6,
+      "river_score": 0
+    },
+    "461": {
+      "fault_dist_m": 13864.8,
+      "fault_score": 0,
+      "river_dist_m": 445.0,
+      "river_score": 0
+    },
+    "462": {
+      "fault_dist_m": 22746.6,
+      "fault_score": 0,
+      "river_dist_m": 86.5,
+      "river_score": 50
+    },
+    "463": {
+      "fault_dist_m": 23097.2,
+      "fault_score": 0,
+      "river_dist_m": 470.7,
+      "river_score": 0
+    },
+    "464": {
+      "fault_dist_m": 14164.1,
+      "fault_score": 0,
+      "river_dist_m": 1432.2,
+      "river_score": 0
+    },
+    "465": {
+      "fault_dist_m": 20664.7,
+      "fault_score": 0,
+      "river_dist_m": 1267.9,
+      "river_score": 0
+    },
+    "466": {
+      "fault_dist_m": 7071.1,
+      "fault_score": 0,
+      "river_dist_m": 441.5,
+      "river_score": 0
+    },
+    "467": {
+      "fault_dist_m": 13955.4,
+      "fault_score": 0,
+      "river_dist_m": 1136.1,
+      "river_score": 0
+    },
+    "468": {
+      "fault_dist_m": 18011.7,
+      "fault_score": 0,
+      "river_dist_m": 287.7,
+      "river_score": 0
+    },
+    "469": {
+      "fault_dist_m": 2996.2,
+      "fault_score": 0,
+      "river_dist_m": 613.1,
+      "river_score": 0
+    },
+    "470": {
+      "fault_dist_m": 6882.0,
+      "fault_score": 0,
+      "river_dist_m": 802.4,
+      "river_score": 0
+    },
+    "471": {
+      "fault_dist_m": 35147.3,
+      "fault_score": 0,
+      "river_dist_m": 1086.1,
+      "river_score": 0
+    },
+    "472": {
+      "fault_dist_m": 10860.3,
+      "fault_score": 0,
+      "river_dist_m": 569.9,
+      "river_score": 0
+    },
+    "473": {
+      "fault_dist_m": 11201.1,
+      "fault_score": 0,
+      "river_dist_m": 57.0,
+      "river_score": 50
+    },
+    "474": {
+      "fault_dist_m": 5035.0,
+      "fault_score": 0,
+      "river_dist_m": 597.5,
+      "river_score": 0
+    },
+    "475": {
+      "fault_dist_m": 19747.7,
+      "fault_score": 0,
+      "river_dist_m": 354.5,
+      "river_score": 0
+    },
+    "476": {
+      "fault_dist_m": 7184.2,
+      "fault_score": 0,
+      "river_dist_m": 1294.9,
+      "river_score": 0
+    },
+    "477": {
+      "fault_dist_m": 8313.6,
+      "fault_score": 0,
+      "river_dist_m": 902.8,
+      "river_score": 0
+    },
+    "478": {
+      "fault_dist_m": 8137.0,
+      "fault_score": 0,
+      "river_dist_m": 353.2,
+      "river_score": 0
+    },
+    "479": {
+      "fault_dist_m": 31384.9,
+      "fault_score": 0,
+      "river_dist_m": 227.4,
+      "river_score": 0
+    },
+    "480": {
+      "fault_dist_m": 30444.7,
+      "fault_score": 0,
+      "river_dist_m": 128.7,
+      "river_score": 0
+    },
+    "481": {
+      "fault_dist_m": 14690.9,
+      "fault_score": 0,
+      "river_dist_m": 737.3,
+      "river_score": 0
+    },
+    "482": {
+      "fault_dist_m": 11950.5,
+      "fault_score": 0,
+      "river_dist_m": 406.4,
+      "river_score": 0
+    },
+    "483": {
+      "fault_dist_m": 28111.2,
+      "fault_score": 0,
+      "river_dist_m": 32.6,
+      "river_score": 100
+    },
+    "484": {
+      "fault_dist_m": 131.4,
+      "fault_score": 100,
+      "river_dist_m": 1006.2,
+      "river_score": 0
+    },
+    "485": {
+      "fault_dist_m": 3453.5,
+      "fault_score": 0,
+      "river_dist_m": 515.0,
+      "river_score": 0
+    },
+    "486": {
+      "fault_dist_m": 29868.7,
+      "fault_score": 0,
+      "river_dist_m": 974.3,
+      "river_score": 0
+    },
+    "487": {
+      "fault_dist_m": 2941.5,
+      "fault_score": 0,
+      "river_dist_m": 325.8,
+      "river_score": 0
+    },
+    "488": {
+      "fault_dist_m": 31033.5,
+      "fault_score": 0,
+      "river_dist_m": 302.8,
+      "river_score": 0
+    },
+    "489": {
+      "fault_dist_m": 29617.2,
+      "fault_score": 0,
+      "river_dist_m": 722.7,
+      "river_score": 0
+    },
+    "490": {
+      "fault_dist_m": 55555.0,
+      "fault_score": 0,
+      "river_dist_m": 436.2,
+      "river_score": 0
+    },
+    "491": {
+      "fault_dist_m": 18798.9,
+      "fault_score": 0,
+      "river_dist_m": 749.4,
+      "river_score": 0
+    },
+    "492": {
+      "fault_dist_m": 17229.2,
+      "fault_score": 0,
+      "river_dist_m": 353.3,
+      "river_score": 0
+    },
+    "493": {
+      "fault_dist_m": 11143.2,
+      "fault_score": 0,
+      "river_dist_m": 684.0,
+      "river_score": 0
+    },
+    "494": {
+      "fault_dist_m": 10938.1,
+      "fault_score": 0,
+      "river_dist_m": 373.1,
+      "river_score": 0
+    },
+    "495": {
+      "fault_dist_m": 53699.5,
+      "fault_score": 0,
+      "river_dist_m": 802.2,
+      "river_score": 0
+    },
+    "496": {
+      "fault_dist_m": 17505.5,
+      "fault_score": 0,
+      "river_dist_m": 621.1,
+      "river_score": 0
+    },
+    "497": {
+      "fault_dist_m": 66935.7,
+      "fault_score": 0,
+      "river_dist_m": 627.6,
+      "river_score": 0
+    },
+    "498": {
+      "fault_dist_m": 31997.0,
+      "fault_score": 0,
+      "river_dist_m": 416.6,
+      "river_score": 0
+    },
+    "499": {
+      "fault_dist_m": 25414.0,
+      "fault_score": 0,
+      "river_dist_m": 485.2,
+      "river_score": 0
+    },
+    "500": {
+      "fault_dist_m": 14935.2,
+      "fault_score": 0,
+      "river_dist_m": 242.6,
+      "river_score": 0
+    },
+    "501": {
+      "fault_dist_m": 8414.3,
+      "fault_score": 0,
+      "river_dist_m": 105.9,
+      "river_score": 0
+    },
+    "502": {
+      "fault_dist_m": 8976.7,
+      "fault_score": 0,
+      "river_dist_m": 867.3,
+      "river_score": 0
+    },
+    "503": {
+      "fault_dist_m": 6475.1,
+      "fault_score": 0,
+      "river_dist_m": 666.0,
+      "river_score": 0
+    },
+    "504": {
+      "fault_dist_m": 21654.5,
+      "fault_score": 0,
+      "river_dist_m": 49.1,
+      "river_score": 100
+    },
+    "505": {
+      "fault_dist_m": 16239.5,
+      "fault_score": 0,
+      "river_dist_m": 887.0,
+      "river_score": 0
+    },
+    "506": {
+      "fault_dist_m": 1832.1,
+      "fault_score": 0,
+      "river_dist_m": 583.1,
+      "river_score": 0
+    },
+    "507": {
+      "fault_dist_m": 25712.5,
+      "fault_score": 0,
+      "river_dist_m": 783.9,
+      "river_score": 0
+    },
+    "508": {
+      "fault_dist_m": 28989.6,
+      "fault_score": 0,
+      "river_dist_m": 1086.1,
+      "river_score": 0
+    },
+    "509": {
+      "fault_dist_m": 14817.9,
+      "fault_score": 0,
+      "river_dist_m": 1639.6,
+      "river_score": 0
+    },
+    "510": {
+      "fault_dist_m": 16881.1,
+      "fault_score": 0,
+      "river_dist_m": 650.6,
+      "river_score": 0
+    },
+    "511": {
+      "fault_dist_m": 59247.2,
+      "fault_score": 0,
+      "river_dist_m": 181.3,
+      "river_score": 0
+    },
+    "512": {
+      "fault_dist_m": 11140.6,
+      "fault_score": 0,
+      "river_dist_m": 650.1,
+      "river_score": 0
+    },
+    "513": {
+      "fault_dist_m": 11870.0,
+      "fault_score": 0,
+      "river_dist_m": 231.5,
+      "river_score": 0
+    },
+    "514": {
+      "fault_dist_m": 606.7,
+      "fault_score": 25,
+      "river_dist_m": 534.4,
+      "river_score": 0
+    },
+    "515": {
+      "fault_dist_m": 11738.4,
+      "fault_score": 0,
+      "river_dist_m": 275.3,
+      "river_score": 0
+    },
+    "516": {
+      "fault_dist_m": 12259.0,
+      "fault_score": 0,
+      "river_dist_m": 166.4,
+      "river_score": 0
+    },
+    "517": {
+      "fault_dist_m": 19878.6,
+      "fault_score": 0,
+      "river_dist_m": 499.0,
+      "river_score": 0
+    },
+    "518": {
+      "fault_dist_m": 14172.3,
+      "fault_score": 0,
+      "river_dist_m": 370.3,
+      "river_score": 0
+    },
+    "519": {
+      "fault_dist_m": 66895.2,
+      "fault_score": 0,
+      "river_dist_m": 554.9,
+      "river_score": 0
+    },
+    "520": {
+      "fault_dist_m": 38452.0,
+      "fault_score": 0,
+      "river_dist_m": 963.1,
+      "river_score": 0
+    },
+    "521": {
+      "fault_dist_m": 6459.8,
+      "fault_score": 0,
+      "river_dist_m": 846.1,
+      "river_score": 0
+    },
+    "522": {
+      "fault_dist_m": 1390.1,
+      "fault_score": 0,
+      "river_dist_m": 1291.5,
+      "river_score": 0
+    },
+    "523": {
+      "fault_dist_m": 20095.6,
+      "fault_score": 0,
+      "river_dist_m": 319.8,
+      "river_score": 0
+    },
+    "524": {
+      "fault_dist_m": 3185.6,
+      "fault_score": 0,
+      "river_dist_m": 453.4,
+      "river_score": 0
+    },
+    "525": {
+      "fault_dist_m": 56036.5,
+      "fault_score": 0,
+      "river_dist_m": 334.5,
+      "river_score": 0
+    },
+    "526": {
+      "fault_dist_m": 7123.8,
+      "fault_score": 0,
+      "river_dist_m": 1312.8,
+      "river_score": 0
+    },
+    "527": {
+      "fault_dist_m": 4234.0,
+      "fault_score": 0,
+      "river_dist_m": 184.5,
+      "river_score": 0
+    },
+    "528": {
+      "fault_dist_m": 56142.5,
+      "fault_score": 0,
+      "river_dist_m": 517.9,
+      "river_score": 0
+    },
+    "529": {
+      "fault_dist_m": 2923.3,
+      "fault_score": 0,
+      "river_dist_m": 328.3,
+      "river_score": 0
+    },
+    "530": {
+      "fault_dist_m": 81134.4,
+      "fault_score": 0,
+      "river_dist_m": 436.7,
+      "river_score": 0
+    },
+    "531": {
+      "fault_dist_m": 33350.3,
+      "fault_score": 0,
+      "river_dist_m": 487.9,
+      "river_score": 0
+    },
+    "532": {
+      "fault_dist_m": 35525.4,
+      "fault_score": 0,
+      "river_dist_m": 3058.5,
+      "river_score": 0
+    },
+    "533": {
+      "fault_dist_m": 10834.2,
+      "fault_score": 0,
+      "river_dist_m": 968.1,
+      "river_score": 0
+    },
+    "534": {
+      "fault_dist_m": 30419.0,
+      "fault_score": 0,
+      "river_dist_m": 433.9,
+      "river_score": 0
+    },
+    "535": {
+      "fault_dist_m": 20160.4,
+      "fault_score": 0,
+      "river_dist_m": 206.3,
+      "river_score": 0
+    },
+    "536": {
+      "fault_dist_m": 6560.1,
+      "fault_score": 0,
+      "river_dist_m": 556.4,
+      "river_score": 0
+    },
+    "537": {
+      "fault_dist_m": 24278.5,
+      "fault_score": 0,
+      "river_dist_m": 479.3,
+      "river_score": 0
+    },
+    "538": {
+      "fault_dist_m": 37260.6,
+      "fault_score": 0,
+      "river_dist_m": 793.3,
+      "river_score": 0
+    },
+    "539": {
+      "fault_dist_m": 5405.4,
+      "fault_score": 0,
+      "river_dist_m": 295.3,
+      "river_score": 0
+    },
+    "540": {
+      "fault_dist_m": 6230.1,
+      "fault_score": 0,
+      "river_dist_m": 767.0,
+      "river_score": 0
+    },
+    "541": {
+      "fault_dist_m": 17128.9,
+      "fault_score": 0,
+      "river_dist_m": 259.6,
+      "river_score": 0
+    },
+    "542": {
+      "fault_dist_m": 44767.1,
+      "fault_score": 0,
+      "river_dist_m": 534.4,
+      "river_score": 0
+    },
+    "543": {
+      "fault_dist_m": 38743.2,
+      "fault_score": 0,
+      "river_dist_m": 127.0,
+      "river_score": 0
+    },
+    "544": {
+      "fault_dist_m": 51990.5,
+      "fault_score": 0,
+      "river_dist_m": 912.5,
+      "river_score": 0
+    },
+    "545": {
+      "fault_dist_m": 50666.0,
+      "fault_score": 0,
+      "river_dist_m": 760.1,
+      "river_score": 0
+    },
+    "546": {
+      "fault_dist_m": 19734.6,
+      "fault_score": 0,
+      "river_dist_m": 1584.2,
+      "river_score": 0
+    },
+    "547": {
+      "fault_dist_m": 11027.3,
+      "fault_score": 0,
+      "river_dist_m": 534.2,
+      "river_score": 0
+    },
+    "548": {
+      "fault_dist_m": 4615.5,
+      "fault_score": 0,
+      "river_dist_m": 81.4,
+      "river_score": 50
+    },
+    "549": {
+      "fault_dist_m": 3180.7,
+      "fault_score": 0,
+      "river_dist_m": 669.2,
+      "river_score": 0
+    },
+    "550": {
+      "fault_dist_m": 11516.8,
+      "fault_score": 0,
+      "river_dist_m": 327.7,
+      "river_score": 0
+    },
+    "551": {
+      "fault_dist_m": 18823.0,
+      "fault_score": 0,
+      "river_dist_m": 980.8,
+      "river_score": 0
+    },
+    "552": {
+      "fault_dist_m": 31258.8,
+      "fault_score": 0,
+      "river_dist_m": 684.5,
+      "river_score": 0
+    },
+    "553": {
+      "fault_dist_m": 65297.9,
+      "fault_score": 0,
+      "river_dist_m": 282.3,
+      "river_score": 0
+    },
+    "554": {
+      "fault_dist_m": 56263.8,
+      "fault_score": 0,
+      "river_dist_m": 414.6,
+      "river_score": 0
+    },
+    "555": {
+      "fault_dist_m": 3973.5,
+      "fault_score": 0,
+      "river_dist_m": 575.7,
+      "river_score": 0
+    },
+    "556": {
+      "fault_dist_m": 18352.7,
+      "fault_score": 0,
+      "river_dist_m": 439.5,
+      "river_score": 0
+    },
+    "557": {
+      "fault_dist_m": 5883.2,
+      "fault_score": 0,
+      "river_dist_m": 124.3,
+      "river_score": 0
+    },
+    "558": {
+      "fault_dist_m": 17676.9,
+      "fault_score": 0,
+      "river_dist_m": 1368.7,
+      "river_score": 0
+    },
+    "559": {
+      "fault_dist_m": 45854.4,
+      "fault_score": 0,
+      "river_dist_m": 661.2,
+      "river_score": 0
+    },
+    "560": {
+      "fault_dist_m": 35252.1,
+      "fault_score": 0,
+      "river_dist_m": 2762.1,
+      "river_score": 0
+    },
+    "561": {
+      "fault_dist_m": 34415.4,
+      "fault_score": 0,
+      "river_dist_m": 4435.1,
+      "river_score": 0
+    },
+    "562": {
+      "fault_dist_m": 34391.1,
+      "fault_score": 0,
+      "river_dist_m": 378.7,
+      "river_score": 0
+    },
+    "563": {
+      "fault_dist_m": 32579.1,
+      "fault_score": 0,
+      "river_dist_m": 910.3,
+      "river_score": 0
+    },
+    "564": {
+      "fault_dist_m": 18143.9,
+      "fault_score": 0,
+      "river_dist_m": 51.6,
+      "river_score": 50
+    },
+    "565": {
+      "fault_dist_m": 8366.8,
+      "fault_score": 0,
+      "river_dist_m": 518.2,
+      "river_score": 0
+    },
+    "566": {
+      "fault_dist_m": 26733.3,
+      "fault_score": 0,
+      "river_dist_m": 271.0,
+      "river_score": 0
+    },
+    "567": {
+      "fault_dist_m": 17132.8,
+      "fault_score": 0,
+      "river_dist_m": 734.3,
+      "river_score": 0
+    },
+    "568": {
+      "fault_dist_m": 10962.2,
+      "fault_score": 0,
+      "river_dist_m": 706.2,
+      "river_score": 0
+    },
+    "569": {
+      "fault_dist_m": 16710.9,
+      "fault_score": 0,
+      "river_dist_m": 570.1,
+      "river_score": 0
+    },
+    "570": {
+      "fault_dist_m": 19940.4,
+      "fault_score": 0,
+      "river_dist_m": 1391.9,
+      "river_score": 0
+    },
+    "571": {
+      "fault_dist_m": 33626.3,
+      "fault_score": 0,
+      "river_dist_m": 1538.5,
+      "river_score": 0
+    },
+    "572": {
+      "fault_dist_m": 16250.5,
+      "fault_score": 0,
+      "river_dist_m": 229.6,
+      "river_score": 0
+    },
+    "573": {
+      "fault_dist_m": 29376.0,
+      "fault_score": 0,
+      "river_dist_m": 2052.3,
+      "river_score": 0
+    },
+    "574": {
+      "fault_dist_m": 4869.5,
+      "fault_score": 0,
+      "river_dist_m": 820.4,
+      "river_score": 0
+    },
+    "575": {
+      "fault_dist_m": 17560.5,
+      "fault_score": 0,
+      "river_dist_m": 560.0,
+      "river_score": 0
+    },
+    "576": {
+      "fault_dist_m": 12358.1,
+      "fault_score": 0,
+      "river_dist_m": 152.8,
+      "river_score": 0
+    },
+    "577": {
+      "fault_dist_m": 12836.5,
+      "fault_score": 0,
+      "river_dist_m": 1006.6,
+      "river_score": 0
+    },
+    "578": {
+      "fault_dist_m": 20960.1,
+      "fault_score": 0,
+      "river_dist_m": 52.1,
+      "river_score": 50
+    },
+    "579": {
+      "fault_dist_m": 26306.6,
+      "fault_score": 0,
+      "river_dist_m": 2767.6,
+      "river_score": 0
+    },
+    "580": {
+      "fault_dist_m": 18050.3,
+      "fault_score": 0,
+      "river_dist_m": 115.5,
+      "river_score": 0
+    },
+    "581": {
+      "fault_dist_m": 10703.4,
+      "fault_score": 0,
+      "river_dist_m": 654.5,
+      "river_score": 0
+    },
+    "582": {
+      "fault_dist_m": 347.3,
+      "fault_score": 75,
+      "river_dist_m": 510.1,
+      "river_score": 0
+    },
+    "583": {
+      "fault_dist_m": 7696.5,
+      "fault_score": 0,
+      "river_dist_m": 1255.6,
+      "river_score": 0
+    },
+    "584": {
+      "fault_dist_m": 3397.8,
+      "fault_score": 0,
+      "river_dist_m": 703.1,
+      "river_score": 0
+    },
+    "585": {
+      "fault_dist_m": 13478.9,
+      "fault_score": 0,
+      "river_dist_m": 1371.1,
+      "river_score": 0
+    },
+    "586": {
+      "fault_dist_m": 34924.4,
+      "fault_score": 0,
+      "river_dist_m": 494.7,
+      "river_score": 0
+    },
+    "587": {
+      "fault_dist_m": 7353.6,
+      "fault_score": 0,
+      "river_dist_m": 461.4,
+      "river_score": 0
+    },
+    "588": {
+      "fault_dist_m": 14270.5,
+      "fault_score": 0,
+      "river_dist_m": 1092.7,
+      "river_score": 0
+    },
+    "589": {
+      "fault_dist_m": 13923.0,
+      "fault_score": 0,
+      "river_dist_m": 1149.2,
+      "river_score": 0
+    },
+    "590": {
+      "fault_dist_m": 34614.9,
+      "fault_score": 0,
+      "river_dist_m": 2215.7,
+      "river_score": 0
+    },
+    "591": {
+      "fault_dist_m": 13846.4,
+      "fault_score": 0,
+      "river_dist_m": 1121.6,
+      "river_score": 0
+    },
+    "592": {
+      "fault_dist_m": 3273.8,
+      "fault_score": 0,
+      "river_dist_m": 719.8,
+      "river_score": 0
+    },
+    "593": {
+      "fault_dist_m": 792.5,
+      "fault_score": 25,
+      "river_dist_m": 390.8,
+      "river_score": 0
+    },
+    "594": {
+      "fault_dist_m": 6446.1,
+      "fault_score": 0,
+      "river_dist_m": 632.5,
+      "river_score": 0
+    },
+    "595": {
+      "fault_dist_m": 12242.3,
+      "fault_score": 0,
+      "river_dist_m": 1073.7,
+      "river_score": 0
+    },
+    "596": {
+      "fault_dist_m": 12264.8,
+      "fault_score": 0,
+      "river_dist_m": 1121.0,
+      "river_score": 0
+    },
+    "597": {
+      "fault_dist_m": 37222.9,
+      "fault_score": 0,
+      "river_dist_m": 809.2,
+      "river_score": 0
+    },
+    "598": {
+      "fault_dist_m": 10017.0,
+      "fault_score": 0,
+      "river_dist_m": 349.6,
+      "river_score": 0
+    },
+    "599": {
+      "fault_dist_m": 12374.3,
+      "fault_score": 0,
+      "river_dist_m": 292.7,
+      "river_score": 0
+    },
+    "600": {
+      "fault_dist_m": 11237.4,
+      "fault_score": 0,
+      "river_dist_m": 358.5,
+      "river_score": 0
+    },
+    "601": {
+      "fault_dist_m": 11921.0,
+      "fault_score": 0,
+      "river_dist_m": 222.8,
+      "river_score": 0
+    },
+    "602": {
+      "fault_dist_m": 16176.1,
+      "fault_score": 0,
+      "river_dist_m": 216.9,
+      "river_score": 0
+    },
+    "603": {
+      "fault_dist_m": 1326.0,
+      "fault_score": 0,
+      "river_dist_m": 1133.4,
+      "river_score": 0
+    },
+    "604": {
+      "fault_dist_m": 12017.3,
+      "fault_score": 0,
+      "river_dist_m": 870.3,
+      "river_score": 0
+    },
+    "605": {
+      "fault_dist_m": 12784.8,
+      "fault_score": 0,
+      "river_dist_m": 1622.7,
+      "river_score": 0
+    },
+    "606": {
+      "fault_dist_m": 34663.2,
+      "fault_score": 0,
+      "river_dist_m": 180.2,
+      "river_score": 0
+    },
+    "607": {
+      "fault_dist_m": 35030.4,
+      "fault_score": 0,
+      "river_dist_m": 150.2,
+      "river_score": 0
+    },
+    "608": {
+      "fault_dist_m": 37481.2,
+      "fault_score": 0,
+      "river_dist_m": 1158.2,
+      "river_score": 0
+    },
+    "609": {
+      "fault_dist_m": 61201.8,
+      "fault_score": 0,
+      "river_dist_m": 701.2,
+      "river_score": 0
+    },
+    "610": {
+      "fault_dist_m": 10962.0,
+      "fault_score": 0,
+      "river_dist_m": 687.1,
+      "river_score": 0
+    },
+    "611": {
+      "fault_dist_m": 24572.0,
+      "fault_score": 0,
+      "river_dist_m": 887.3,
+      "river_score": 0
+    },
+    "612": {
+      "fault_dist_m": 11976.1,
+      "fault_score": 0,
+      "river_dist_m": 333.2,
+      "river_score": 0
+    },
+    "613": {
+      "fault_dist_m": 3862.2,
+      "fault_score": 0,
+      "river_dist_m": 772.9,
+      "river_score": 0
+    },
+    "614": {
+      "fault_dist_m": 7973.0,
+      "fault_score": 0,
+      "river_dist_m": 886.2,
+      "river_score": 0
+    },
+    "615": {
+      "fault_dist_m": 13078.1,
+      "fault_score": 0,
+      "river_dist_m": 385.9,
+      "river_score": 0
+    },
+    "616": {
+      "fault_dist_m": 11412.7,
+      "fault_score": 0,
+      "river_dist_m": 467.3,
+      "river_score": 0
+    },
+    "617": {
+      "fault_dist_m": 17431.2,
+      "fault_score": 0,
+      "river_dist_m": 728.3,
+      "river_score": 0
+    },
+    "618": {
+      "fault_dist_m": 17167.7,
+      "fault_score": 0,
+      "river_dist_m": 607.4,
+      "river_score": 0
+    },
+    "619": {
+      "fault_dist_m": 12268.1,
+      "fault_score": 0,
+      "river_dist_m": 1256.0,
+      "river_score": 0
+    },
+    "620": {
+      "fault_dist_m": 6635.6,
+      "fault_score": 0,
+      "river_dist_m": 831.7,
+      "river_score": 0
+    },
+    "621": {
+      "fault_dist_m": 16539.0,
+      "fault_score": 0,
+      "river_dist_m": 376.8,
+      "river_score": 0
+    },
+    "622": {
+      "fault_dist_m": 13579.8,
+      "fault_score": 0,
+      "river_dist_m": 1780.3,
+      "river_score": 0
+    },
+    "623": {
+      "fault_dist_m": 53688.2,
+      "fault_score": 0,
+      "river_dist_m": 1353.7,
+      "river_score": 0
+    },
+    "624": {
+      "fault_dist_m": 30335.0,
+      "fault_score": 0,
+      "river_dist_m": 1125.1,
+      "river_score": 0
+    },
+    "625": {
+      "fault_dist_m": 6535.3,
+      "fault_score": 0,
+      "river_dist_m": 914.8,
+      "river_score": 0
+    },
+    "626": {
+      "fault_dist_m": 4449.6,
+      "fault_score": 0,
+      "river_dist_m": 217.9,
+      "river_score": 0
+    },
+    "627": {
+      "fault_dist_m": 17165.1,
+      "fault_score": 0,
+      "river_dist_m": 848.5,
+      "river_score": 0
+    },
+    "628": {
+      "fault_dist_m": 69442.3,
+      "fault_score": 0,
+      "river_dist_m": 472.5,
+      "river_score": 0
+    },
+    "629": {
+      "fault_dist_m": 19650.3,
+      "fault_score": 0,
+      "river_dist_m": 21.8,
+      "river_score": 100
+    },
+    "630": {
+      "fault_dist_m": 30801.8,
+      "fault_score": 0,
+      "river_dist_m": 1186.3,
+      "river_score": 0
+    },
+    "631": {
+      "fault_dist_m": 20359.5,
+      "fault_score": 0,
+      "river_dist_m": 1267.3,
+      "river_score": 0
+    },
+    "632": {
+      "fault_dist_m": 15750.6,
+      "fault_score": 0,
+      "river_dist_m": 764.8,
+      "river_score": 0
+    },
+    "633": {
+      "fault_dist_m": 16640.7,
+      "fault_score": 0,
+      "river_dist_m": 667.4,
+      "river_score": 0
+    },
+    "634": {
+      "fault_dist_m": 7612.0,
+      "fault_score": 0,
+      "river_dist_m": 243.9,
+      "river_score": 0
+    },
+    "635": {
+      "fault_dist_m": 17384.5,
+      "fault_score": 0,
+      "river_dist_m": 846.7,
+      "river_score": 0
+    },
+    "636": {
+      "fault_dist_m": 11454.6,
+      "fault_score": 0,
+      "river_dist_m": 1033.3,
+      "river_score": 0
+    },
+    "637": {
+      "fault_dist_m": 21354.7,
+      "fault_score": 0,
+      "river_dist_m": 878.6,
+      "river_score": 0
+    },
+    "638": {
+      "fault_dist_m": 17781.9,
+      "fault_score": 0,
+      "river_dist_m": 367.8,
+      "river_score": 0
+    },
+    "639": {
+      "fault_dist_m": 10843.5,
+      "fault_score": 0,
+      "river_dist_m": 497.1,
+      "river_score": 0
+    },
+    "640": {
+      "fault_dist_m": 9494.9,
+      "fault_score": 0,
+      "river_dist_m": 292.0,
+      "river_score": 0
+    },
+    "641": {
+      "fault_dist_m": 14347.4,
+      "fault_score": 0,
+      "river_dist_m": 585.0,
+      "river_score": 0
+    },
+    "642": {
+      "fault_dist_m": 11511.0,
+      "fault_score": 0,
+      "river_dist_m": 1069.2,
+      "river_score": 0
+    },
+    "643": {
+      "fault_dist_m": 38.7,
+      "fault_score": 100,
+      "river_dist_m": 753.1,
+      "river_score": 0
+    },
+    "644": {
+      "fault_dist_m": 16765.1,
+      "fault_score": 0,
+      "river_dist_m": 750.2,
+      "river_score": 0
+    },
+    "645": {
+      "fault_dist_m": 10511.1,
+      "fault_score": 0,
+      "river_dist_m": 242.6,
+      "river_score": 0
+    },
+    "646": {
+      "fault_dist_m": 6069.1,
+      "fault_score": 0,
+      "river_dist_m": 1028.6,
+      "river_score": 0
+    },
+    "647": {
+      "fault_dist_m": 18998.4,
+      "fault_score": 0,
+      "river_dist_m": 549.2,
+      "river_score": 0
+    },
+    "648": {
+      "fault_dist_m": 26288.1,
+      "fault_score": 0,
+      "river_dist_m": 975.9,
+      "river_score": 0
+    },
+    "649": {
+      "fault_dist_m": 37877.3,
+      "fault_score": 0,
+      "river_dist_m": 622.5,
+      "river_score": 0
+    },
+    "650": {
+      "fault_dist_m": 3270.2,
+      "fault_score": 0,
+      "river_dist_m": 285.8,
+      "river_score": 0
+    },
+    "651": {
+      "fault_dist_m": 16724.2,
+      "fault_score": 0,
+      "river_dist_m": 653.4,
+      "river_score": 0
+    },
+    "652": {
+      "fault_dist_m": 37478.6,
+      "fault_score": 0,
+      "river_dist_m": 699.4,
+      "river_score": 0
+    },
+    "653": {
+      "fault_dist_m": 72495.2,
+      "fault_score": 0,
+      "river_dist_m": 349.5,
+      "river_score": 0
+    },
+    "654": {
+      "fault_dist_m": 7587.8,
+      "fault_score": 0,
+      "river_dist_m": 1436.2,
+      "river_score": 0
+    },
+    "655": {
+      "fault_dist_m": 21110.0,
+      "fault_score": 0,
+      "river_dist_m": 143.8,
+      "river_score": 0
+    },
+    "656": {
+      "fault_dist_m": 27505.4,
+      "fault_score": 0,
+      "river_dist_m": 775.8,
+      "river_score": 0
+    },
+    "657": {
+      "fault_dist_m": 12105.4,
+      "fault_score": 0,
+      "river_dist_m": 953.0,
+      "river_score": 0
+    },
+    "658": {
+      "fault_dist_m": 14759.7,
+      "fault_score": 0,
+      "river_dist_m": 2297.6,
+      "river_score": 0
+    },
+    "659": {
+      "fault_dist_m": 3958.3,
+      "fault_score": 0,
+      "river_dist_m": 102.7,
+      "river_score": 0
+    },
+    "660": {
+      "fault_dist_m": 37192.3,
+      "fault_score": 0,
+      "river_dist_m": 799.9,
+      "river_score": 0
+    },
+    "661": {
+      "fault_dist_m": 8660.7,
+      "fault_score": 0,
+      "river_dist_m": 232.5,
+      "river_score": 0
+    },
+    "662": {
+      "fault_dist_m": 5961.7,
+      "fault_score": 0,
+      "river_dist_m": 946.1,
+      "river_score": 0
+    },
+    "663": {
+      "fault_dist_m": 4688.2,
+      "fault_score": 0,
+      "river_dist_m": 2426.1,
+      "river_score": 0
+    },
+    "664": {
+      "fault_dist_m": 35402.5,
+      "fault_score": 0,
+      "river_dist_m": 804.0,
+      "river_score": 0
+    },
+    "665": {
+      "fault_dist_m": 31447.6,
+      "fault_score": 0,
+      "river_dist_m": 1419.7,
+      "river_score": 0
+    },
+    "666": {
+      "fault_dist_m": 10362.9,
+      "fault_score": 0,
+      "river_dist_m": 326.5,
+      "river_score": 0
+    },
+    "667": {
+      "fault_dist_m": 64305.5,
+      "fault_score": 0,
+      "river_dist_m": 629.7,
+      "river_score": 0
+    },
+    "668": {
+      "fault_dist_m": 37878.0,
+      "fault_score": 0,
+      "river_dist_m": 847.4,
+      "river_score": 0
+    },
+    "669": {
+      "fault_dist_m": 64356.4,
+      "fault_score": 0,
+      "river_dist_m": 280.1,
+      "river_score": 0
+    },
+    "670": {
+      "fault_dist_m": 15124.3,
+      "fault_score": 0,
+      "river_dist_m": 1531.1,
+      "river_score": 0
+    },
+    "671": {
+      "fault_dist_m": 7172.2,
+      "fault_score": 0,
+      "river_dist_m": 701.2,
+      "river_score": 0
+    },
+    "672": {
+      "fault_dist_m": 21605.7,
+      "fault_score": 0,
+      "river_dist_m": 1343.8,
+      "river_score": 0
+    },
+    "673": {
+      "fault_dist_m": 3130.6,
+      "fault_score": 0,
+      "river_dist_m": 730.9,
+      "river_score": 0
+    },
+    "674": {
+      "fault_dist_m": 73123.9,
+      "fault_score": 0,
+      "river_dist_m": 432.2,
+      "river_score": 0
+    },
+    "675": {
+      "fault_dist_m": 16250.4,
+      "fault_score": 0,
+      "river_dist_m": 351.6,
+      "river_score": 0
+    },
+    "676": {
+      "fault_dist_m": 9930.3,
+      "fault_score": 0,
+      "river_dist_m": 447.1,
+      "river_score": 0
+    },
+    "677": {
+      "fault_dist_m": 13672.7,
+      "fault_score": 0,
+      "river_dist_m": 588.8,
+      "river_score": 0
+    },
+    "678": {
+      "fault_dist_m": 40372.7,
+      "fault_score": 0,
+      "river_dist_m": 965.0,
+      "river_score": 0
+    },
+    "679": {
+      "fault_dist_m": 3916.4,
+      "fault_score": 0,
+      "river_dist_m": 203.0,
+      "river_score": 0
+    },
+    "680": {
+      "fault_dist_m": 28123.9,
+      "fault_score": 0,
+      "river_dist_m": 44.5,
+      "river_score": 100
+    },
+    "681": {
+      "fault_dist_m": 16993.8,
+      "fault_score": 0,
+      "river_dist_m": 852.5,
+      "river_score": 0
+    },
+    "682": {
+      "fault_dist_m": 15438.1,
+      "fault_score": 0,
+      "river_dist_m": 607.4,
+      "river_score": 0
+    },
+    "683": {
+      "fault_dist_m": 7403.4,
+      "fault_score": 0,
+      "river_dist_m": 1175.7,
+      "river_score": 0
+    },
+    "684": {
+      "fault_dist_m": 3246.4,
+      "fault_score": 0,
+      "river_dist_m": 542.8,
+      "river_score": 0
+    },
+    "685": {
+      "fault_dist_m": 31931.7,
+      "fault_score": 0,
+      "river_dist_m": 1047.6,
+      "river_score": 0
+    },
+    "686": {
+      "fault_dist_m": 58564.8,
+      "fault_score": 0,
+      "river_dist_m": 2932.0,
+      "river_score": 0
+    },
+    "687": {
+      "fault_dist_m": 34357.5,
+      "fault_score": 0,
+      "river_dist_m": 5875.7,
+      "river_score": 0
+    },
+    "688": {
+      "fault_dist_m": 41359.3,
+      "fault_score": 0,
+      "river_dist_m": 1956.7,
+      "river_score": 0
+    },
+    "689": {
+      "fault_dist_m": 10226.8,
+      "fault_score": 0,
+      "river_dist_m": 1152.0,
+      "river_score": 0
+    },
+    "690": {
+      "fault_dist_m": 34267.7,
+      "fault_score": 0,
+      "river_dist_m": 1425.1,
+      "river_score": 0
+    },
+    "691": {
+      "fault_dist_m": 17387.0,
+      "fault_score": 0,
+      "river_dist_m": 815.2,
+      "river_score": 0
+    },
+    "692": {
+      "fault_dist_m": 29084.5,
+      "fault_score": 0,
+      "river_dist_m": 2389.0,
+      "river_score": 0
+    },
+    "693": {
+      "fault_dist_m": 6733.0,
+      "fault_score": 0,
+      "river_dist_m": 1055.5,
+      "river_score": 0
+    },
+    "694": {
+      "fault_dist_m": 11537.8,
+      "fault_score": 0,
+      "river_dist_m": 1104.9,
+      "river_score": 0
+    },
+    "695": {
+      "fault_dist_m": 67283.8,
+      "fault_score": 0,
+      "river_dist_m": 478.8,
+      "river_score": 0
+    },
+    "696": {
+      "fault_dist_m": 44831.3,
+      "fault_score": 0,
+      "river_dist_m": 1059.4,
+      "river_score": 0
+    },
+    "697": {
+      "fault_dist_m": 37906.2,
+      "fault_score": 0,
+      "river_dist_m": 646.4,
+      "river_score": 0
+    },
+    "698": {
+      "fault_dist_m": 16636.4,
+      "fault_score": 0,
+      "river_dist_m": 746.3,
+      "river_score": 0
+    },
+    "699": {
+      "fault_dist_m": 4167.1,
+      "fault_score": 0,
+      "river_dist_m": 125.7,
+      "river_score": 0
+    },
+    "700": {
+      "fault_dist_m": 11273.4,
+      "fault_score": 0,
+      "river_dist_m": 74.7,
+      "river_score": 50
+    },
+    "701": {
+      "fault_dist_m": 17199.3,
+      "fault_score": 0,
+      "river_dist_m": 780.1,
+      "river_score": 0
+    },
+    "702": {
+      "fault_dist_m": 583.1,
+      "fault_score": 25,
+      "river_dist_m": 148.2,
+      "river_score": 0
+    },
+    "703": {
+      "fault_dist_m": 10574.3,
+      "fault_score": 0,
+      "river_dist_m": 589.6,
+      "river_score": 0
+    },
+    "704": {
+      "fault_dist_m": 20316.9,
+      "fault_score": 0,
+      "river_dist_m": 1216.0,
+      "river_score": 0
+    },
+    "705": {
+      "fault_dist_m": 15174.4,
+      "fault_score": 0,
+      "river_dist_m": 575.2,
+      "river_score": 0
+    },
+    "706": {
+      "fault_dist_m": 37436.4,
+      "fault_score": 0,
+      "river_dist_m": 780.0,
+      "river_score": 0
+    },
+    "707": {
+      "fault_dist_m": 13875.0,
+      "fault_score": 0,
+      "river_dist_m": 930.6,
+      "river_score": 0
+    },
+    "708": {
+      "fault_dist_m": 9136.4,
+      "fault_score": 0,
+      "river_dist_m": 100.4,
+      "river_score": 0
+    },
+    "709": {
+      "fault_dist_m": 28910.9,
+      "fault_score": 0,
+      "river_dist_m": 1063.7,
+      "river_score": 0
+    },
+    "710": {
+      "fault_dist_m": 13098.8,
+      "fault_score": 0,
+      "river_dist_m": 379.9,
+      "river_score": 0
+    },
+    "711": {
+      "fault_dist_m": 32958.8,
+      "fault_score": 0,
+      "river_dist_m": 3290.0,
+      "river_score": 0
+    },
+    "712": {
+      "fault_dist_m": 17347.0,
+      "fault_score": 0,
+      "river_dist_m": 761.9,
+      "river_score": 0
+    },
+    "713": {
+      "fault_dist_m": 20911.2,
+      "fault_score": 0,
+      "river_dist_m": 1142.5,
+      "river_score": 0
+    },
+    "714": {
+      "fault_dist_m": 11452.9,
+      "fault_score": 0,
+      "river_dist_m": 124.8,
+      "river_score": 0
+    },
+    "715": {
+      "fault_dist_m": 10845.2,
+      "fault_score": 0,
+      "river_dist_m": 494.6,
+      "river_score": 0
+    },
+    "716": {
+      "fault_dist_m": 7494.1,
+      "fault_score": 0,
+      "river_dist_m": 1342.0,
+      "river_score": 0
+    },
+    "717": {
+      "fault_dist_m": 14825.6,
+      "fault_score": 0,
+      "river_dist_m": 1243.6,
+      "river_score": 0
+    },
+    "718": {
+      "fault_dist_m": 33610.5,
+      "fault_score": 0,
+      "river_dist_m": 800.9,
+      "river_score": 0
+    },
+    "719": {
+      "fault_dist_m": 4173.5,
+      "fault_score": 0,
+      "river_dist_m": 885.3,
+      "river_score": 0
+    },
+    "720": {
+      "fault_dist_m": 35046.5,
+      "fault_score": 0,
+      "river_dist_m": 951.3,
+      "river_score": 0
+    },
+    "721": {
+      "fault_dist_m": 2822.8,
+      "fault_score": 0,
+      "river_dist_m": 1370.1,
+      "river_score": 0
+    },
+    "722": {
+      "fault_dist_m": 70283.9,
+      "fault_score": 0,
+      "river_dist_m": 187.0,
+      "river_score": 0
+    },
+    "723": {
+      "fault_dist_m": 17041.8,
+      "fault_score": 0,
+      "river_dist_m": 313.2,
+      "river_score": 0
+    },
+    "724": {
+      "fault_dist_m": 13360.9,
+      "fault_score": 0,
+      "river_dist_m": 706.1,
+      "river_score": 0
+    },
+    "725": {
+      "fault_dist_m": 18422.2,
+      "fault_score": 0,
+      "river_dist_m": 597.8,
+      "river_score": 0
+    },
+    "726": {
+      "fault_dist_m": 29999.2,
+      "fault_score": 0,
+      "river_dist_m": 1421.0,
+      "river_score": 0
+    },
+    "727": {
+      "fault_dist_m": 12267.2,
+      "fault_score": 0,
+      "river_dist_m": 418.6,
+      "river_score": 0
+    },
+    "728": {
+      "fault_dist_m": 11476.4,
+      "fault_score": 0,
+      "river_dist_m": 585.1,
+      "river_score": 0
+    },
+    "729": {
+      "fault_dist_m": 26736.3,
+      "fault_score": 0,
+      "river_dist_m": 1216.7,
+      "river_score": 0
+    },
+    "730": {
+      "fault_dist_m": 12471.3,
+      "fault_score": 0,
+      "river_dist_m": 523.1,
+      "river_score": 0
+    },
+    "731": {
+      "fault_dist_m": 2228.4,
+      "fault_score": 0,
+      "river_dist_m": 622.6,
+      "river_score": 0
+    },
+    "732": {
+      "fault_dist_m": 7239.7,
+      "fault_score": 0,
+      "river_dist_m": 317.8,
+      "river_score": 0
+    },
+    "733": {
+      "fault_dist_m": 26461.4,
+      "fault_score": 0,
+      "river_dist_m": 921.6,
+      "river_score": 0
+    },
+    "734": {
+      "fault_dist_m": 37941.3,
+      "fault_score": 0,
+      "river_dist_m": 742.9,
+      "river_score": 0
+    },
+    "735": {
+      "fault_dist_m": 15743.2,
+      "fault_score": 0,
+      "river_dist_m": 664.5,
+      "river_score": 0
+    },
+    "736": {
+      "fault_dist_m": 1043.2,
+      "fault_score": 0,
+      "river_dist_m": 1472.7,
+      "river_score": 0
+    },
+    "737": {
+      "fault_dist_m": 23698.9,
+      "fault_score": 0,
+      "river_dist_m": 611.5,
+      "river_score": 0
+    },
+    "738": {
+      "fault_dist_m": 10823.9,
+      "fault_score": 0,
+      "river_dist_m": 604.7,
+      "river_score": 0
+    },
+    "739": {
+      "fault_dist_m": 23966.1,
+      "fault_score": 0,
+      "river_dist_m": 437.7,
+      "river_score": 0
+    },
+    "740": {
+      "fault_dist_m": 21987.2,
+      "fault_score": 0,
+      "river_dist_m": 239.4,
+      "river_score": 0
+    },
+    "741": {
+      "fault_dist_m": 11679.6,
+      "fault_score": 0,
+      "river_dist_m": 513.7,
+      "river_score": 0
+    },
+    "742": {
+      "fault_dist_m": 21591.4,
+      "fault_score": 0,
+      "river_dist_m": 292.9,
+      "river_score": 0
+    },
+    "743": {
+      "fault_dist_m": 16453.0,
+      "fault_score": 0,
+      "river_dist_m": 738.0,
+      "river_score": 0
+    },
+    "744": {
+      "fault_dist_m": 732.1,
+      "fault_score": 25,
+      "river_dist_m": 902.5,
+      "river_score": 0
+    },
+    "745": {
+      "fault_dist_m": 6456.8,
+      "fault_score": 0,
+      "river_dist_m": 283.6,
+      "river_score": 0
+    },
+    "746": {
+      "fault_dist_m": 33568.9,
+      "fault_score": 0,
+      "river_dist_m": 491.5,
+      "river_score": 0
+    },
+    "747": {
+      "fault_dist_m": 5931.5,
+      "fault_score": 0,
+      "river_dist_m": 2270.4,
+      "river_score": 0
+    },
+    "748": {
+      "fault_dist_m": 6530.3,
+      "fault_score": 0,
+      "river_dist_m": 944.1,
+      "river_score": 0
+    },
+    "749": {
+      "fault_dist_m": 21777.4,
+      "fault_score": 0,
+      "river_dist_m": 2030.5,
+      "river_score": 0
+    },
+    "750": {
+      "fault_dist_m": 16738.3,
+      "fault_score": 0,
+      "river_dist_m": 712.5,
+      "river_score": 0
+    },
+    "751": {
+      "fault_dist_m": 6719.3,
+      "fault_score": 0,
+      "river_dist_m": 910.4,
+      "river_score": 0
+    },
+    "752": {
+      "fault_dist_m": 3688.5,
+      "fault_score": 0,
+      "river_dist_m": 416.6,
+      "river_score": 0
+    },
+    "753": {
+      "fault_dist_m": 35233.2,
+      "fault_score": 0,
+      "river_dist_m": 1405.7,
+      "river_score": 0
+    },
+    "754": {
+      "fault_dist_m": 33114.3,
+      "fault_score": 0,
+      "river_dist_m": 1512.4,
+      "river_score": 0
+    },
+    "755": {
+      "fault_dist_m": 13315.0,
+      "fault_score": 0,
+      "river_dist_m": 1754.2,
+      "river_score": 0
+    },
+    "756": {
+      "fault_dist_m": 20848.3,
+      "fault_score": 0,
+      "river_dist_m": 448.8,
+      "river_score": 0
+    },
+    "757": {
+      "fault_dist_m": 23024.1,
+      "fault_score": 0,
+      "river_dist_m": 1548.9,
+      "river_score": 0
+    },
+    "758": {
+      "fault_dist_m": 8458.0,
+      "fault_score": 0,
+      "river_dist_m": 535.9,
+      "river_score": 0
+    },
+    "759": {
+      "fault_dist_m": 15866.4,
+      "fault_score": 0,
+      "river_dist_m": 447.1,
+      "river_score": 0
+    },
+    "760": {
+      "fault_dist_m": 27019.9,
+      "fault_score": 0,
+      "river_dist_m": 1480.2,
+      "river_score": 0
+    },
+    "761": {
+      "fault_dist_m": 15669.4,
+      "fault_score": 0,
+      "river_dist_m": 623.5,
+      "river_score": 0
+    },
+    "762": {
+      "fault_dist_m": 16750.2,
+      "fault_score": 0,
+      "river_dist_m": 1086.9,
+      "river_score": 0
+    },
+    "763": {
+      "fault_dist_m": 1236.4,
+      "fault_score": 0,
+      "river_dist_m": 2630.0,
+      "river_score": 0
+    },
+    "764": {
+      "fault_dist_m": 64476.7,
+      "fault_score": 0,
+      "river_dist_m": 496.2,
+      "river_score": 0
+    },
+    "765": {
+      "fault_dist_m": 34711.0,
+      "fault_score": 0,
+      "river_dist_m": 922.8,
+      "river_score": 0
+    },
+    "766": {
+      "fault_dist_m": 7758.4,
+      "fault_score": 0,
+      "river_dist_m": 709.9,
+      "river_score": 0
+    },
+    "767": {
+      "fault_dist_m": 38115.8,
+      "fault_score": 0,
+      "river_dist_m": 448.5,
+      "river_score": 0
+    },
+    "768": {
+      "fault_dist_m": 25932.6,
+      "fault_score": 0,
+      "river_dist_m": 978.2,
+      "river_score": 0
+    },
+    "769": {
+      "fault_dist_m": 21736.2,
+      "fault_score": 0,
+      "river_dist_m": 599.8,
+      "river_score": 0
+    },
+    "770": {
+      "fault_dist_m": 5473.4,
+      "fault_score": 0,
+      "river_dist_m": 891.6,
+      "river_score": 0
+    },
+    "771": {
+      "fault_dist_m": 78555.7,
+      "fault_score": 0,
+      "river_dist_m": 993.1,
+      "river_score": 0
+    },
+    "772": {
+      "fault_dist_m": 28891.5,
+      "fault_score": 0,
+      "river_dist_m": 543.3,
+      "river_score": 0
+    },
+    "773": {
+      "fault_dist_m": 30056.8,
+      "fault_score": 0,
+      "river_dist_m": 4568.8,
+      "river_score": 0
+    },
+    "774": {
+      "fault_dist_m": 938.4,
+      "fault_score": 25,
+      "river_dist_m": 1386.9,
+      "river_score": 0
+    },
+    "775": {
+      "fault_dist_m": 1845.7,
+      "fault_score": 0,
+      "river_dist_m": 571.1,
+      "river_score": 0
+    },
+    "776": {
+      "fault_dist_m": 7160.4,
+      "fault_score": 0,
+      "river_dist_m": 49.7,
+      "river_score": 100
+    },
+    "777": {
+      "fault_dist_m": 35104.2,
+      "fault_score": 0,
+      "river_dist_m": 1924.6,
+      "river_score": 0
+    },
+    "778": {
+      "fault_dist_m": 1659.5,
+      "fault_score": 0,
+      "river_dist_m": 1777.9,
+      "river_score": 0
+    },
+    "779": {
+      "fault_dist_m": 20414.2,
+      "fault_score": 0,
+      "river_dist_m": 1502.3,
+      "river_score": 0
+    },
+    "780": {
+      "fault_dist_m": 11739.3,
+      "fault_score": 0,
+      "river_dist_m": 614.2,
+      "river_score": 0
+    },
+    "781": {
+      "fault_dist_m": 9430.9,
+      "fault_score": 0,
+      "river_dist_m": 1378.4,
+      "river_score": 0
+    },
+    "782": {
+      "fault_dist_m": 2302.0,
+      "fault_score": 0,
+      "river_dist_m": 634.5,
+      "river_score": 0
+    },
+    "783": {
+      "fault_dist_m": 32601.1,
+      "fault_score": 0,
+      "river_dist_m": 746.8,
+      "river_score": 0
+    },
+    "784": {
+      "fault_dist_m": 38197.4,
+      "fault_score": 0,
+      "river_dist_m": 640.7,
+      "river_score": 0
+    },
+    "785": {
+      "fault_dist_m": 13059.9,
+      "fault_score": 0,
+      "river_dist_m": 416.0,
+      "river_score": 0
+    },
+    "786": {
+      "fault_dist_m": 18145.1,
+      "fault_score": 0,
+      "river_dist_m": 1095.0,
+      "river_score": 0
+    },
+    "787": {
+      "fault_dist_m": 17956.0,
+      "fault_score": 0,
+      "river_dist_m": 591.6,
+      "river_score": 0
+    },
+    "788": {
+      "fault_dist_m": 15709.3,
+      "fault_score": 0,
+      "river_dist_m": 494.9,
+      "river_score": 0
+    },
+    "789": {
+      "fault_dist_m": 28889.5,
+      "fault_score": 0,
+      "river_dist_m": 907.7,
+      "river_score": 0
+    },
+    "790": {
+      "fault_dist_m": 16630.4,
+      "fault_score": 0,
+      "river_dist_m": 815.3,
+      "river_score": 0
+    },
+    "791": {
+      "fault_dist_m": 21251.4,
+      "fault_score": 0,
+      "river_dist_m": 933.3,
+      "river_score": 0
+    },
+    "792": {
+      "fault_dist_m": 2969.0,
+      "fault_score": 0,
+      "river_dist_m": 415.3,
+      "river_score": 0
+    },
+    "793": {
+      "fault_dist_m": 31546.1,
+      "fault_score": 0,
+      "river_dist_m": 338.2,
+      "river_score": 0
+    },
+    "794": {
+      "fault_dist_m": 16902.3,
+      "fault_score": 0,
+      "river_dist_m": 2054.9,
+      "river_score": 0
+    },
+    "795": {
+      "fault_dist_m": 774.5,
+      "fault_score": 25,
+      "river_dist_m": 1940.2,
+      "river_score": 0
+    },
+    "796": {
+      "fault_dist_m": 19167.5,
+      "fault_score": 0,
+      "river_dist_m": 1098.1,
+      "river_score": 0
+    },
+    "797": {
+      "fault_dist_m": 21059.3,
+      "fault_score": 0,
+      "river_dist_m": 542.1,
+      "river_score": 0
+    },
+    "798": {
+      "fault_dist_m": 4430.5,
+      "fault_score": 0,
+      "river_dist_m": 92.0,
+      "river_score": 50
+    },
+    "799": {
+      "fault_dist_m": 20760.3,
+      "fault_score": 0,
+      "river_dist_m": 1126.2,
+      "river_score": 0
+    },
+    "800": {
+      "fault_dist_m": 28567.6,
+      "fault_score": 0,
+      "river_dist_m": 3626.1,
+      "river_score": 0
+    },
+    "801": {
+      "fault_dist_m": 7225.4,
+      "fault_score": 0,
+      "river_dist_m": 409.1,
+      "river_score": 0
+    },
+    "802": {
+      "fault_dist_m": 29652.1,
+      "fault_score": 0,
+      "river_dist_m": 1511.2,
+      "river_score": 0
+    },
+    "803": {
+      "fault_dist_m": 36423.8,
+      "fault_score": 0,
+      "river_dist_m": 691.3,
+      "river_score": 0
+    },
+    "804": {
+      "fault_dist_m": 16236.4,
+      "fault_score": 0,
+      "river_dist_m": 906.1,
+      "river_score": 0
+    },
+    "805": {
+      "fault_dist_m": 24569.4,
+      "fault_score": 0,
+      "river_dist_m": 973.9,
+      "river_score": 0
+    },
+    "806": {
+      "fault_dist_m": 20672.0,
+      "fault_score": 0,
+      "river_dist_m": 360.1,
+      "river_score": 0
+    },
+    "807": {
+      "fault_dist_m": 1348.8,
+      "fault_score": 0,
+      "river_dist_m": 15.3,
+      "river_score": 100
+    },
+    "808": {
+      "fault_dist_m": 9055.1,
+      "fault_score": 0,
+      "river_dist_m": 125.9,
+      "river_score": 0
+    },
+    "809": {
+      "fault_dist_m": 30594.2,
+      "fault_score": 0,
+      "river_dist_m": 987.4,
+      "river_score": 0
+    },
+    "810": {
+      "fault_dist_m": 23074.0,
+      "fault_score": 0,
+      "river_dist_m": 93.7,
+      "river_score": 50
+    },
+    "811": {
+      "fault_dist_m": 1837.9,
+      "fault_score": 0,
+      "river_dist_m": 1235.7,
+      "river_score": 0
+    },
+    "812": {
+      "fault_dist_m": 39173.9,
+      "fault_score": 0,
+      "river_dist_m": 536.8,
+      "river_score": 0
+    },
+    "813": {
+      "fault_dist_m": 11728.6,
+      "fault_score": 0,
+      "river_dist_m": 582.3,
+      "river_score": 0
+    },
+    "814": {
+      "fault_dist_m": 11461.8,
+      "fault_score": 0,
+      "river_dist_m": 637.8,
+      "river_score": 0
+    },
+    "815": {
+      "fault_dist_m": 21493.8,
+      "fault_score": 0,
+      "river_dist_m": 298.5,
+      "river_score": 0
+    },
+    "816": {
+      "fault_dist_m": 16421.7,
+      "fault_score": 0,
+      "river_dist_m": 326.3,
+      "river_score": 0
+    },
+    "817": {
+      "fault_dist_m": 11073.9,
+      "fault_score": 0,
+      "river_dist_m": 90.4,
+      "river_score": 50
+    },
+    "818": {
+      "fault_dist_m": 2299.5,
+      "fault_score": 0,
+      "river_dist_m": 914.1,
+      "river_score": 0
+    },
+    "819": {
+      "fault_dist_m": 23226.8,
+      "fault_score": 0,
+      "river_dist_m": 444.5,
+      "river_score": 0
+    },
+    "820": {
+      "fault_dist_m": 34565.8,
+      "fault_score": 0,
+      "river_dist_m": 3533.1,
+      "river_score": 0
+    },
+    "821": {
+      "fault_dist_m": 37902.0,
+      "fault_score": 0,
+      "river_dist_m": 635.7,
+      "river_score": 0
+    },
+    "822": {
+      "fault_dist_m": 18078.9,
+      "fault_score": 0,
+      "river_dist_m": 1295.6,
+      "river_score": 0
+    },
+    "823": {
+      "fault_dist_m": 22301.1,
+      "fault_score": 0,
+      "river_dist_m": 879.7,
+      "river_score": 0
+    },
+    "824": {
+      "fault_dist_m": 13431.2,
+      "fault_score": 0,
+      "river_dist_m": 1708.2,
+      "river_score": 0
+    },
+    "825": {
+      "fault_dist_m": 8022.5,
+      "fault_score": 0,
+      "river_dist_m": 796.2,
+      "river_score": 0
+    },
+    "826": {
+      "fault_dist_m": 38200.4,
+      "fault_score": 0,
+      "river_dist_m": 556.1,
+      "river_score": 0
+    },
+    "827": {
+      "fault_dist_m": 19130.4,
+      "fault_score": 0,
+      "river_dist_m": 1289.1,
+      "river_score": 0
+    },
+    "828": {
+      "fault_dist_m": 17361.9,
+      "fault_score": 0,
+      "river_dist_m": 798.0,
+      "river_score": 0
+    },
+    "829": {
+      "fault_dist_m": 32749.5,
+      "fault_score": 0,
+      "river_dist_m": 3556.6,
+      "river_score": 0
+    },
+    "830": {
+      "fault_dist_m": 16977.7,
+      "fault_score": 0,
+      "river_dist_m": 1173.1,
+      "river_score": 0
+    },
+    "831": {
+      "fault_dist_m": 18341.3,
+      "fault_score": 0,
+      "river_dist_m": 485.2,
+      "river_score": 0
+    },
+    "832": {
+      "fault_dist_m": 26027.2,
+      "fault_score": 0,
+      "river_dist_m": 490.9,
+      "river_score": 0
+    },
+    "833": {
+      "fault_dist_m": 34721.4,
+      "fault_score": 0,
+      "river_dist_m": 1060.5,
+      "river_score": 0
+    },
+    "834": {
+      "fault_dist_m": 12950.2,
+      "fault_score": 0,
+      "river_dist_m": 46.2,
+      "river_score": 100
+    },
+    "835": {
+      "fault_dist_m": 3552.0,
+      "fault_score": 0,
+      "river_dist_m": 815.2,
+      "river_score": 0
+    },
+    "836": {
+      "fault_dist_m": 21449.5,
+      "fault_score": 0,
+      "river_dist_m": 38.7,
+      "river_score": 100
+    },
+    "837": {
+      "fault_dist_m": 27977.8,
+      "fault_score": 0,
+      "river_dist_m": 1352.8,
+      "river_score": 0
+    },
+    "838": {
+      "fault_dist_m": 15259.8,
+      "fault_score": 0,
+      "river_dist_m": 2290.7,
+      "river_score": 0
+    },
+    "839": {
+      "fault_dist_m": 10949.2,
+      "fault_score": 0,
+      "river_dist_m": 1271.1,
+      "river_score": 0
+    },
+    "840": {
+      "fault_dist_m": 17506.9,
+      "fault_score": 0,
+      "river_dist_m": 537.6,
+      "river_score": 0
+    },
+    "841": {
+      "fault_dist_m": 9868.6,
+      "fault_score": 0,
+      "river_dist_m": 3.0,
+      "river_score": 100
+    },
+    "842": {
+      "fault_dist_m": 11471.2,
+      "fault_score": 0,
+      "river_dist_m": 671.3,
+      "river_score": 0
+    },
+    "843": {
+      "fault_dist_m": 12680.4,
+      "fault_score": 0,
+      "river_dist_m": 703.1,
+      "river_score": 0
+    },
+    "844": {
+      "fault_dist_m": 1595.3,
+      "fault_score": 0,
+      "river_dist_m": 2870.3,
+      "river_score": 0
+    },
+    "845": {
+      "fault_dist_m": 17255.1,
+      "fault_score": 0,
+      "river_dist_m": 556.7,
+      "river_score": 0
+    },
+    "846": {
+      "fault_dist_m": 15654.1,
+      "fault_score": 0,
+      "river_dist_m": 3102.6,
+      "river_score": 0
+    },
+    "847": {
+      "fault_dist_m": 9784.0,
+      "fault_score": 0,
+      "river_dist_m": 285.7,
+      "river_score": 0
+    },
+    "848": {
+      "fault_dist_m": 5109.6,
+      "fault_score": 0,
+      "river_dist_m": 4393.4,
+      "river_score": 0
+    },
+    "849": {
+      "fault_dist_m": 2137.5,
+      "fault_score": 0,
+      "river_dist_m": 842.1,
+      "river_score": 0
+    },
+    "850": {
+      "fault_dist_m": 18960.0,
+      "fault_score": 0,
+      "river_dist_m": 829.4,
+      "river_score": 0
+    },
+    "851": {
+      "fault_dist_m": 15634.8,
+      "fault_score": 0,
+      "river_dist_m": 903.3,
+      "river_score": 0
+    },
+    "852": {
+      "fault_dist_m": 64441.6,
+      "fault_score": 0,
+      "river_dist_m": 71.1,
+      "river_score": 50
+    },
+    "853": {
+      "fault_dist_m": 17031.4,
+      "fault_score": 0,
+      "river_dist_m": 1117.2,
+      "river_score": 0
+    },
+    "854": {
+      "fault_dist_m": 16166.3,
+      "fault_score": 0,
+      "river_dist_m": 682.7,
+      "river_score": 0
+    },
+    "855": {
+      "fault_dist_m": 30558.3,
+      "fault_score": 0,
+      "river_dist_m": 1269.1,
+      "river_score": 0
+    },
+    "856": {
+      "fault_dist_m": 24087.7,
+      "fault_score": 0,
+      "river_dist_m": 820.9,
+      "river_score": 0
+    },
+    "857": {
+      "fault_dist_m": 32817.8,
+      "fault_score": 0,
+      "river_dist_m": 3812.1,
+      "river_score": 0
+    },
+    "858": {
+      "fault_dist_m": 4245.7,
+      "fault_score": 0,
+      "river_dist_m": 398.0,
+      "river_score": 0
+    },
+    "859": {
+      "fault_dist_m": 13737.8,
+      "fault_score": 0,
+      "river_dist_m": 512.3,
+      "river_score": 0
+    },
+    "860": {
+      "fault_dist_m": 8827.0,
+      "fault_score": 0,
+      "river_dist_m": 1707.7,
+      "river_score": 0
+    },
+    "861": {
+      "fault_dist_m": 6787.8,
+      "fault_score": 0,
+      "river_dist_m": 739.4,
+      "river_score": 0
+    },
+    "862": {
+      "fault_dist_m": 11905.1,
+      "fault_score": 0,
+      "river_dist_m": 463.5,
+      "river_score": 0
+    },
+    "863": {
+      "fault_dist_m": 15846.2,
+      "fault_score": 0,
+      "river_dist_m": 428.3,
+      "river_score": 0
+    },
+    "864": {
+      "fault_dist_m": 55404.5,
+      "fault_score": 0,
+      "river_dist_m": 585.7,
+      "river_score": 0
+    },
+    "865": {
+      "fault_dist_m": 9222.5,
+      "fault_score": 0,
+      "river_dist_m": 2806.0,
+      "river_score": 0
+    },
+    "866": {
+      "fault_dist_m": 16868.1,
+      "fault_score": 0,
+      "river_dist_m": 352.7,
+      "river_score": 0
+    },
+    "867": {
+      "fault_dist_m": 1672.7,
+      "fault_score": 0,
+      "river_dist_m": 704.1,
+      "river_score": 0
+    },
+    "868": {
+      "fault_dist_m": 23119.6,
+      "fault_score": 0,
+      "river_dist_m": 182.1,
+      "river_score": 0
+    },
+    "869": {
+      "fault_dist_m": 4602.4,
+      "fault_score": 0,
+      "river_dist_m": 576.3,
+      "river_score": 0
+    },
+    "870": {
+      "fault_dist_m": 4355.9,
+      "fault_score": 0,
+      "river_dist_m": 936.0,
+      "river_score": 0
+    },
+    "871": {
+      "fault_dist_m": 19130.4,
+      "fault_score": 0,
+      "river_dist_m": 1289.1,
+      "river_score": 0
+    },
+    "872": {
+      "fault_dist_m": 8938.3,
+      "fault_score": 0,
+      "river_dist_m": 787.2,
+      "river_score": 0
+    },
+    "873": {
+      "fault_dist_m": 10855.2,
+      "fault_score": 0,
+      "river_dist_m": 1488.1,
+      "river_score": 0
+    },
+    "874": {
+      "fault_dist_m": 2062.2,
+      "fault_score": 0,
+      "river_dist_m": 725.2,
+      "river_score": 0
+    },
+    "875": {
+      "fault_dist_m": 13547.4,
+      "fault_score": 0,
+      "river_dist_m": 1216.1,
+      "river_score": 0
+    },
+    "876": {
+      "fault_dist_m": 23209.2,
+      "fault_score": 0,
+      "river_dist_m": 351.4,
+      "river_score": 0
+    },
+    "877": {
+      "fault_dist_m": 1436.9,
+      "fault_score": 0,
+      "river_dist_m": 2789.5,
+      "river_score": 0
+    },
+    "878": {
+      "fault_dist_m": 13678.1,
+      "fault_score": 0,
+      "river_dist_m": 253.9,
+      "river_score": 0
+    },
+    "879": {
+      "fault_dist_m": 13678.8,
+      "fault_score": 0,
+      "river_dist_m": 509.5,
+      "river_score": 0
+    },
+    "880": {
+      "fault_dist_m": 12069.0,
+      "fault_score": 0,
+      "river_dist_m": 797.7,
+      "river_score": 0
+    },
+    "881": {
+      "fault_dist_m": 774.0,
+      "fault_score": 25,
+      "river_dist_m": 631.3,
+      "river_score": 0
+    },
+    "882": {
+      "fault_dist_m": 24057.1,
+      "fault_score": 0,
+      "river_dist_m": 853.0,
+      "river_score": 0
+    },
+    "883": {
+      "fault_dist_m": 12912.1,
+      "fault_score": 0,
+      "river_dist_m": 1826.7,
+      "river_score": 0
+    },
+    "884": {
+      "fault_dist_m": 12309.1,
+      "fault_score": 0,
+      "river_dist_m": 787.7,
+      "river_score": 0
+    },
+    "885": {
+      "fault_dist_m": 4778.4,
+      "fault_score": 0,
+      "river_dist_m": 1118.8,
+      "river_score": 0
+    },
+    "886": {
+      "fault_dist_m": 7799.0,
+      "fault_score": 0,
+      "river_dist_m": 1665.4,
+      "river_score": 0
+    },
+    "887": {
+      "fault_dist_m": 21055.9,
+      "fault_score": 0,
+      "river_dist_m": 587.5,
+      "river_score": 0
+    },
+    "888": {
+      "fault_dist_m": 6729.2,
+      "fault_score": 0,
+      "river_dist_m": 298.2,
+      "river_score": 0
+    },
+    "889": {
+      "fault_dist_m": 4123.6,
+      "fault_score": 0,
+      "river_dist_m": 96.4,
+      "river_score": 50
+    },
+    "890": {
+      "fault_dist_m": 13844.9,
+      "fault_score": 0,
+      "river_dist_m": 1800.2,
+      "river_score": 0
+    },
+    "891": {
+      "fault_dist_m": 2343.5,
+      "fault_score": 0,
+      "river_dist_m": 3589.8,
+      "river_score": 0
+    },
+    "892": {
+      "fault_dist_m": 4072.9,
+      "fault_score": 0,
+      "river_dist_m": 5128.0,
+      "river_score": 0
+    },
+    "893": {
+      "fault_dist_m": 28154.8,
+      "fault_score": 0,
+      "river_dist_m": 627.1,
+      "river_score": 0
+    },
+    "894": {
+      "fault_dist_m": 11699.1,
+      "fault_score": 0,
+      "river_dist_m": 395.9,
+      "river_score": 0
+    },
+    "895": {
+      "fault_dist_m": 7172.1,
+      "fault_score": 0,
+      "river_dist_m": 1493.0,
+      "river_score": 0
+    },
+    "896": {
+      "fault_dist_m": 17445.2,
+      "fault_score": 0,
+      "river_dist_m": 1390.1,
+      "river_score": 0
+    },
+    "897": {
+      "fault_dist_m": 5230.0,
+      "fault_score": 0,
+      "river_dist_m": 602.6,
+      "river_score": 0
+    },
+    "898": {
+      "fault_dist_m": 4257.5,
+      "fault_score": 0,
+      "river_dist_m": 1126.3,
+      "river_score": 0
+    },
+    "899": {
+      "fault_dist_m": 4107.3,
+      "fault_score": 0,
+      "river_dist_m": 1057.0,
+      "river_score": 0
+    },
+    "900": {
+      "fault_dist_m": 24027.0,
+      "fault_score": 0,
+      "river_dist_m": 256.7,
+      "river_score": 0
+    },
+    "901": {
+      "fault_dist_m": 21410.8,
+      "fault_score": 0,
+      "river_dist_m": 65.8,
+      "river_score": 50
+    },
+    "902": {
+      "fault_dist_m": 4421.2,
+      "fault_score": 0,
+      "river_dist_m": 835.1,
+      "river_score": 0
+    },
+    "903": {
+      "fault_dist_m": 4851.8,
+      "fault_score": 0,
+      "river_dist_m": 1653.1,
+      "river_score": 0
+    },
+    "904": {
+      "fault_dist_m": 12321.6,
+      "fault_score": 0,
+      "river_dist_m": 573.7,
+      "river_score": 0
+    },
+    "905": {
+      "fault_dist_m": 3033.9,
+      "fault_score": 0,
+      "river_dist_m": 838.6,
+      "river_score": 0
+    },
+    "906": {
+      "fault_dist_m": 1721.8,
+      "fault_score": 0,
+      "river_dist_m": 1164.9,
+      "river_score": 0
+    },
+    "907": {
+      "fault_dist_m": 33813.1,
+      "fault_score": 0,
+      "river_dist_m": 3143.4,
+      "river_score": 0
+    },
+    "908": {
+      "fault_dist_m": 3202.8,
+      "fault_score": 0,
+      "river_dist_m": 72.2,
+      "river_score": 50
+    },
+    "909": {
+      "fault_dist_m": 11491.3,
+      "fault_score": 0,
+      "river_dist_m": 5.5,
+      "river_score": 100
+    },
+    "910": {
+      "fault_dist_m": 33303.1,
+      "fault_score": 0,
+      "river_dist_m": 869.4,
+      "river_score": 0
+    },
+    "911": {
+      "fault_dist_m": 21068.1,
+      "fault_score": 0,
+      "river_dist_m": 529.2,
+      "river_score": 0
+    },
+    "912": {
+      "fault_dist_m": 6867.8,
+      "fault_score": 0,
+      "river_dist_m": 1140.4,
+      "river_score": 0
+    },
+    "913": {
+      "fault_dist_m": 24344.9,
+      "fault_score": 0,
+      "river_dist_m": 983.6,
+      "river_score": 0
+    },
+    "914": {
+      "fault_dist_m": 28637.0,
+      "fault_score": 0,
+      "river_dist_m": 842.1,
+      "river_score": 0
+    },
+    "915": {
+      "fault_dist_m": 37003.6,
+      "fault_score": 0,
+      "river_dist_m": 1313.5,
+      "river_score": 0
+    },
+    "916": {
+      "fault_dist_m": 11671.1,
+      "fault_score": 0,
+      "river_dist_m": 755.3,
+      "river_score": 0
+    },
+    "917": {
+      "fault_dist_m": 4261.1,
+      "fault_score": 0,
+      "river_dist_m": 225.2,
+      "river_score": 0
+    },
+    "918": {
+      "fault_dist_m": 26472.0,
+      "fault_score": 0,
+      "river_dist_m": 1363.0,
+      "river_score": 0
+    },
+    "919": {
+      "fault_dist_m": 13438.1,
+      "fault_score": 0,
+      "river_dist_m": 444.4,
+      "river_score": 0
+    },
+    "920": {
+      "fault_dist_m": 18157.2,
+      "fault_score": 0,
+      "river_dist_m": 1110.6,
+      "river_score": 0
+    },
+    "921": {
+      "fault_dist_m": 17635.9,
+      "fault_score": 0,
+      "river_dist_m": 533.1,
+      "river_score": 0
+    },
+    "922": {
+      "fault_dist_m": 4655.9,
+      "fault_score": 0,
+      "river_dist_m": 571.9,
+      "river_score": 0
+    },
+    "923": {
+      "fault_dist_m": 3532.2,
+      "fault_score": 0,
+      "river_dist_m": 1008.8,
+      "river_score": 0
+    },
+    "924": {
+      "fault_dist_m": 820.6,
+      "fault_score": 25,
+      "river_dist_m": 805.8,
+      "river_score": 0
+    },
+    "925": {
+      "fault_dist_m": 19944.9,
+      "fault_score": 0,
+      "river_dist_m": 545.9,
+      "river_score": 0
+    },
+    "926": {
+      "fault_dist_m": 7313.3,
+      "fault_score": 0,
+      "river_dist_m": 320.7,
+      "river_score": 0
+    },
+    "927": {
+      "fault_dist_m": 33175.7,
+      "fault_score": 0,
+      "river_dist_m": 3646.9,
+      "river_score": 0
+    },
+    "928": {
+      "fault_dist_m": 52954.8,
+      "fault_score": 0,
+      "river_dist_m": 1400.2,
+      "river_score": 0
+    },
+    "929": {
+      "fault_dist_m": 10732.4,
+      "fault_score": 0,
+      "river_dist_m": 1184.3,
+      "river_score": 0
+    },
+    "930": {
+      "fault_dist_m": 14798.1,
+      "fault_score": 0,
+      "river_dist_m": 137.6,
+      "river_score": 0
+    },
+    "931": {
+      "fault_dist_m": 11563.5,
+      "fault_score": 0,
+      "river_dist_m": 1061.0,
+      "river_score": 0
+    },
+    "932": {
+      "fault_dist_m": 110.9,
+      "fault_score": 100,
+      "river_dist_m": 652.4,
+      "river_score": 0
+    },
+    "933": {
+      "fault_dist_m": 30110.1,
+      "fault_score": 0,
+      "river_dist_m": 1111.9,
+      "river_score": 0
+    },
+    "934": {
+      "fault_dist_m": 16060.3,
+      "fault_score": 0,
+      "river_dist_m": 425.9,
+      "river_score": 0
+    },
+    "935": {
+      "fault_dist_m": 23238.9,
+      "fault_score": 0,
+      "river_dist_m": 467.2,
+      "river_score": 0
+    },
+    "936": {
+      "fault_dist_m": 18547.5,
+      "fault_score": 0,
+      "river_dist_m": 409.1,
+      "river_score": 0
+    },
+    "937": {
+      "fault_dist_m": 13096.0,
+      "fault_score": 0,
+      "river_dist_m": 14.6,
+      "river_score": 100
+    },
+    "938": {
+      "fault_dist_m": 18503.3,
+      "fault_score": 0,
+      "river_dist_m": 436.0,
+      "river_score": 0
+    },
+    "939": {
+      "fault_dist_m": 38915.6,
+      "fault_score": 0,
+      "river_dist_m": 2278.5,
+      "river_score": 0
+    },
+    "940": {
+      "fault_dist_m": 355.3,
+      "fault_score": 75,
+      "river_dist_m": 830.4,
+      "river_score": 0
+    },
+    "941": {
+      "fault_dist_m": 1055.4,
+      "fault_score": 0,
+      "river_dist_m": 2165.5,
+      "river_score": 0
+    },
+    "942": {
+      "fault_dist_m": 16303.2,
+      "fault_score": 0,
+      "river_dist_m": 213.0,
+      "river_score": 0
+    },
+    "943": {
+      "fault_dist_m": 40443.7,
+      "fault_score": 0,
+      "river_dist_m": 937.8,
+      "river_score": 0
+    },
+    "944": {
+      "fault_dist_m": 124.0,
+      "fault_score": 100,
+      "river_dist_m": 875.1,
+      "river_score": 0
+    },
+    "945": {
+      "fault_dist_m": 66396.6,
+      "fault_score": 0,
+      "river_dist_m": 555.2,
+      "river_score": 0
+    },
+    "946": {
+      "fault_dist_m": 72374.4,
+      "fault_score": 0,
+      "river_dist_m": 854.8,
+      "river_score": 0
+    },
+    "947": {
+      "fault_dist_m": 12805.9,
+      "fault_score": 0,
+      "river_dist_m": 495.3,
+      "river_score": 0
+    },
+    "948": {
+      "fault_dist_m": 13231.9,
+      "fault_score": 0,
+      "river_dist_m": 264.4,
+      "river_score": 0
+    },
+    "949": {
+      "fault_dist_m": 13449.4,
+      "fault_score": 0,
+      "river_dist_m": 359.3,
+      "river_score": 0
+    },
+    "950": {
+      "fault_dist_m": 22259.0,
+      "fault_score": 0,
+      "river_dist_m": 566.3,
+      "river_score": 0
+    },
+    "951": {
+      "fault_dist_m": 34367.6,
+      "fault_score": 0,
+      "river_dist_m": 2451.8,
+      "river_score": 0
+    },
+    "952": {
+      "fault_dist_m": 5898.1,
+      "fault_score": 0,
+      "river_dist_m": 4551.2,
+      "river_score": 0
+    },
+    "953": {
+      "fault_dist_m": 8498.5,
+      "fault_score": 0,
+      "river_dist_m": 2028.2,
+      "river_score": 0
+    },
+    "954": {
+      "fault_dist_m": 34760.5,
+      "fault_score": 0,
+      "river_dist_m": 838.4,
+      "river_score": 0
+    },
+    "955": {
+      "fault_dist_m": 27781.7,
+      "fault_score": 0,
+      "river_dist_m": 577.0,
+      "river_score": 0
+    },
+    "956": {
+      "fault_dist_m": 3490.3,
+      "fault_score": 0,
+      "river_dist_m": 872.0,
+      "river_score": 0
+    },
+    "957": {
+      "fault_dist_m": 15951.2,
+      "fault_score": 0,
+      "river_dist_m": 532.9,
+      "river_score": 0
+    },
+    "958": {
+      "fault_dist_m": 1104.9,
+      "fault_score": 0,
+      "river_dist_m": 1154.5,
+      "river_score": 0
+    },
+    "959": {
+      "fault_dist_m": 7841.9,
+      "fault_score": 0,
+      "river_dist_m": 1228.4,
+      "river_score": 0
+    },
+    "960": {
+      "fault_dist_m": 16644.3,
+      "fault_score": 0,
+      "river_dist_m": 895.6,
+      "river_score": 0
+    },
+    "961": {
+      "fault_dist_m": 1141.7,
+      "fault_score": 0,
+      "river_dist_m": 991.9,
+      "river_score": 0
+    },
+    "962": {
+      "fault_dist_m": 681.1,
+      "fault_score": 25,
+      "river_dist_m": 816.4,
+      "river_score": 0
+    },
+    "963": {
+      "fault_dist_m": 4516.6,
+      "fault_score": 0,
+      "river_dist_m": 301.2,
+      "river_score": 0
+    },
+    "964": {
+      "fault_dist_m": 17339.4,
+      "fault_score": 0,
+      "river_dist_m": 608.1,
+      "river_score": 0
+    },
+    "965": {
+      "fault_dist_m": 32312.3,
+      "fault_score": 0,
+      "river_dist_m": 870.5,
+      "river_score": 0
+    },
+    "966": {
+      "fault_dist_m": 18194.4,
+      "fault_score": 0,
+      "river_dist_m": 230.9,
+      "river_score": 0
+    },
+    "967": {
+      "fault_dist_m": 11662.7,
+      "fault_score": 0,
+      "river_dist_m": 687.9,
+      "river_score": 0
+    },
+    "968": {
+      "fault_dist_m": 21848.4,
+      "fault_score": 0,
+      "river_dist_m": 584.7,
+      "river_score": 0
+    },
+    "969": {
+      "fault_dist_m": 17416.4,
+      "fault_score": 0,
+      "river_dist_m": 735.8,
+      "river_score": 0
+    },
+    "970": {
+      "fault_dist_m": 12292.6,
+      "fault_score": 0,
+      "river_dist_m": 1886.4,
+      "river_score": 0
+    },
+    "971": {
+      "fault_dist_m": 11160.0,
+      "fault_score": 0,
+      "river_dist_m": 65.7,
+      "river_score": 50
+    },
+    "972": {
+      "fault_dist_m": 20320.2,
+      "fault_score": 0,
+      "river_dist_m": 691.2,
+      "river_score": 0
+    },
+    "973": {
+      "fault_dist_m": 17329.2,
+      "fault_score": 0,
+      "river_dist_m": 860.5,
+      "river_score": 0
+    },
+    "974": {
+      "fault_dist_m": 18021.2,
+      "fault_score": 0,
+      "river_dist_m": 673.7,
+      "river_score": 0
+    },
+    "975": {
+      "fault_dist_m": 5715.5,
+      "fault_score": 0,
+      "river_dist_m": 46.4,
+      "river_score": 100
+    },
+    "976": {
+      "fault_dist_m": 13865.5,
+      "fault_score": 0,
+      "river_dist_m": 1308.5,
+      "river_score": 0
+    },
+    "977": {
+      "fault_dist_m": 8150.5,
+      "fault_score": 0,
+      "river_dist_m": 465.5,
+      "river_score": 0
+    },
+    "978": {
+      "fault_dist_m": 10467.8,
+      "fault_score": 0,
+      "river_dist_m": 495.6,
+      "river_score": 0
+    },
+    "979": {
+      "fault_dist_m": 9856.2,
+      "fault_score": 0,
+      "river_dist_m": 81.2,
+      "river_score": 50
+    },
+    "980": {
+      "fault_dist_m": 9193.8,
+      "fault_score": 0,
+      "river_dist_m": 1334.5,
+      "river_score": 0
+    },
+    "981": {
+      "fault_dist_m": 55601.8,
+      "fault_score": 0,
+      "river_dist_m": 643.7,
+      "river_score": 0
+    },
+    "982": {
+      "fault_dist_m": 13773.8,
+      "fault_score": 0,
+      "river_dist_m": 1288.2,
+      "river_score": 0
+    },
+    "983": {
+      "fault_dist_m": 13682.4,
+      "fault_score": 0,
+      "river_dist_m": 414.1,
+      "river_score": 0
+    },
+    "984": {
+      "fault_dist_m": 13428.2,
+      "fault_score": 0,
+      "river_dist_m": 1020.2,
+      "river_score": 0
+    },
+    "985": {
+      "fault_dist_m": 44638.4,
+      "fault_score": 0,
+      "river_dist_m": 972.7,
+      "river_score": 0
+    },
+    "986": {
+      "fault_dist_m": 6887.7,
+      "fault_score": 0,
+      "river_dist_m": 1441.7,
+      "river_score": 0
+    },
+    "987": {
+      "fault_dist_m": 18503.3,
+      "fault_score": 0,
+      "river_dist_m": 436.0,
+      "river_score": 0
+    },
+    "988": {
+      "fault_dist_m": 18964.3,
+      "fault_score": 0,
+      "river_dist_m": 382.9,
+      "river_score": 0
+    },
+    "989": {
+      "fault_dist_m": 11312.6,
+      "fault_score": 0,
+      "river_dist_m": 68.9,
+      "river_score": 50
+    },
+    "990": {
+      "fault_dist_m": 47032.0,
+      "fault_score": 0,
+      "river_dist_m": 3801.3,
+      "river_score": 0
+    },
+    "991": {
+      "fault_dist_m": 4577.4,
+      "fault_score": 0,
+      "river_dist_m": 1427.7,
+      "river_score": 0
+    },
+    "992": {
+      "fault_dist_m": 6360.9,
+      "fault_score": 0,
+      "river_dist_m": 28.6,
+      "river_score": 100
+    },
+    "993": {
+      "fault_dist_m": 30187.7,
+      "fault_score": 0,
+      "river_dist_m": 566.6,
+      "river_score": 0
+    },
+    "994": {
+      "fault_dist_m": 6681.6,
+      "fault_score": 0,
+      "river_dist_m": 4247.3,
+      "river_score": 0
+    },
+    "995": {
+      "fault_dist_m": 23506.4,
+      "fault_score": 0,
+      "river_dist_m": 860.6,
+      "river_score": 0
+    },
+    "996": {
+      "fault_dist_m": 20336.9,
+      "fault_score": 0,
+      "river_dist_m": 1346.8,
+      "river_score": 0
+    },
+    "997": {
+      "fault_dist_m": 32308.0,
+      "fault_score": 0,
+      "river_dist_m": 845.5,
+      "river_score": 0
+    },
+    "998": {
+      "fault_dist_m": 13640.0,
+      "fault_score": 0,
+      "river_dist_m": 2800.4,
+      "river_score": 0
+    },
+    "999": {
+      "fault_dist_m": 54077.2,
+      "fault_score": 0,
+      "river_dist_m": 216.4,
+      "river_score": 0
+    },
+    "1000": {
+      "fault_dist_m": 1441.5,
+      "fault_score": 0,
+      "river_dist_m": 286.3,
+      "river_score": 0
+    },
+    "1001": {
+      "fault_dist_m": 32289.2,
+      "fault_score": 0,
+      "river_dist_m": 787.6,
+      "river_score": 0
+    },
+    "1002": {
+      "fault_dist_m": 3473.7,
+      "fault_score": 0,
+      "river_dist_m": 863.2,
+      "river_score": 0
+    },
+    "1003": {
+      "fault_dist_m": 13437.9,
+      "fault_score": 0,
+      "river_dist_m": 262.7,
+      "river_score": 0
+    },
+    "1004": {
+      "fault_dist_m": 5216.0,
+      "fault_score": 0,
+      "river_dist_m": 904.6,
+      "river_score": 0
+    },
+    "1005": {
+      "fault_dist_m": 18039.6,
+      "fault_score": 0,
+      "river_dist_m": 1333.3,
+      "river_score": 0
+    },
+    "1006": {
+      "fault_dist_m": 10580.6,
+      "fault_score": 0,
+      "river_dist_m": 1037.7,
+      "river_score": 0
+    },
+    "1007": {
+      "fault_dist_m": 11234.6,
+      "fault_score": 0,
+      "river_dist_m": 1071.5,
+      "river_score": 0
+    },
+    "1008": {
+      "fault_dist_m": 21988.4,
+      "fault_score": 0,
+      "river_dist_m": 838.7,
+      "river_score": 0
+    },
+    "1009": {
+      "fault_dist_m": 21297.5,
+      "fault_score": 0,
+      "river_dist_m": 1084.4,
+      "river_score": 0
+    },
+    "1010": {
+      "fault_dist_m": 11579.2,
+      "fault_score": 0,
+      "river_dist_m": 64.7,
+      "river_score": 50
+    },
+    "1011": {
+      "fault_dist_m": 7064.3,
+      "fault_score": 0,
+      "river_dist_m": 694.8,
+      "river_score": 0
+    },
+    "1012": {
+      "fault_dist_m": 56889.7,
+      "fault_score": 0,
+      "river_dist_m": 567.0,
+      "river_score": 0
+    },
+    "1013": {
+      "fault_dist_m": 3892.9,
+      "fault_score": 0,
+      "river_dist_m": 2164.2,
+      "river_score": 0
+    },
+    "1014": {
+      "fault_dist_m": 3169.6,
+      "fault_score": 0,
+      "river_dist_m": 2453.3,
+      "river_score": 0
+    },
+    "1015": {
+      "fault_dist_m": 29080.8,
+      "fault_score": 0,
+      "river_dist_m": 875.4,
+      "river_score": 0
+    },
+    "1016": {
+      "fault_dist_m": 33817.3,
+      "fault_score": 0,
+      "river_dist_m": 1836.5,
+      "river_score": 0
+    },
+    "1017": {
+      "fault_dist_m": 74382.3,
+      "fault_score": 0,
+      "river_dist_m": 531.8,
+      "river_score": 0
+    },
+    "1018": {
+      "fault_dist_m": 7331.8,
+      "fault_score": 0,
+      "river_dist_m": 1135.4,
+      "river_score": 0
+    },
+    "1019": {
+      "fault_dist_m": 4105.6,
+      "fault_score": 0,
+      "river_dist_m": 1795.9,
+      "river_score": 0
+    },
+    "1020": {
+      "fault_dist_m": 11450.3,
+      "fault_score": 0,
+      "river_dist_m": 77.9,
+      "river_score": 50
+    },
+    "1021": {
+      "fault_dist_m": 88.2,
+      "fault_score": 100,
+      "river_dist_m": 357.0,
+      "river_score": 0
+    },
+    "1022": {
+      "fault_dist_m": 11154.0,
+      "fault_score": 0,
+      "river_dist_m": 1317.8,
+      "river_score": 0
+    },
+    "1023": {
+      "fault_dist_m": 70726.2,
+      "fault_score": 0,
+      "river_dist_m": 1890.6,
+      "river_score": 0
+    },
+    "1024": {
+      "fault_dist_m": 712.2,
+      "fault_score": 25,
+      "river_dist_m": 1310.7,
+      "river_score": 0
+    },
+    "1025": {
+      "fault_dist_m": 7320.1,
+      "fault_score": 0,
+      "river_dist_m": 841.1,
+      "river_score": 0
+    },
+    "1026": {
+      "fault_dist_m": 15299.0,
+      "fault_score": 0,
+      "river_dist_m": 347.8,
+      "river_score": 0
+    },
+    "1027": {
+      "fault_dist_m": 17051.6,
+      "fault_score": 0,
+      "river_dist_m": 426.5,
+      "river_score": 0
+    },
+    "1028": {
+      "fault_dist_m": 17709.2,
+      "fault_score": 0,
+      "river_dist_m": 557.8,
+      "river_score": 0
+    },
+    "1029": {
+      "fault_dist_m": 12561.3,
+      "fault_score": 0,
+      "river_dist_m": 353.4,
+      "river_score": 0
+    },
+    "1030": {
+      "fault_dist_m": 2535.6,
+      "fault_score": 0,
+      "river_dist_m": 1356.2,
+      "river_score": 0
+    },
+    "1031": {
+      "fault_dist_m": 3735.2,
+      "fault_score": 0,
+      "river_dist_m": 1970.2,
+      "river_score": 0
+    },
+    "1032": {
+      "fault_dist_m": 12149.2,
+      "fault_score": 0,
+      "river_dist_m": 601.8,
+      "river_score": 0
+    },
+    "1033": {
+      "fault_dist_m": 10947.5,
+      "fault_score": 0,
+      "river_dist_m": 616.7,
+      "river_score": 0
+    },
+    "1034": {
+      "fault_dist_m": 44778.5,
+      "fault_score": 0,
+      "river_dist_m": 782.7,
+      "river_score": 0
+    },
+    "1035": {
+      "fault_dist_m": 1100.7,
+      "fault_score": 0,
+      "river_dist_m": 2534.5,
+      "river_score": 0
+    },
+    "1036": {
+      "fault_dist_m": 4810.9,
+      "fault_score": 0,
+      "river_dist_m": 685.2,
+      "river_score": 0
+    },
+    "1037": {
+      "fault_dist_m": 12064.8,
+      "fault_score": 0,
+      "river_dist_m": 588.7,
+      "river_score": 0
+    },
+    "1038": {
+      "fault_dist_m": 10371.3,
+      "fault_score": 0,
+      "river_dist_m": 2090.6,
+      "river_score": 0
+    },
+    "1039": {
+      "fault_dist_m": 65794.8,
+      "fault_score": 0,
+      "river_dist_m": 1332.1,
+      "river_score": 0
+    },
+    "1040": {
+      "fault_dist_m": 11125.6,
+      "fault_score": 0,
+      "river_dist_m": 635.0,
+      "river_score": 0
+    },
+    "1041": {
+      "fault_dist_m": 12932.1,
+      "fault_score": 0,
+      "river_dist_m": 1051.7,
+      "river_score": 0
+    },
+    "1042": {
+      "fault_dist_m": 23808.2,
+      "fault_score": 0,
+      "river_dist_m": 1186.2,
+      "river_score": 0
+    },
+    "1043": {
+      "fault_dist_m": 50183.9,
+      "fault_score": 0,
+      "river_dist_m": 946.1,
+      "river_score": 0
+    },
+    "1044": {
+      "fault_dist_m": 24495.5,
+      "fault_score": 0,
+      "river_dist_m": 903.7,
+      "river_score": 0
+    },
+    "1045": {
+      "fault_dist_m": 12065.6,
+      "fault_score": 0,
+      "river_dist_m": 836.6,
+      "river_score": 0
+    },
+    "1046": {
+      "fault_dist_m": 65119.9,
+      "fault_score": 0,
+      "river_dist_m": 1321.4,
+      "river_score": 0
+    },
+    "1047": {
+      "fault_dist_m": 23938.9,
+      "fault_score": 0,
+      "river_dist_m": 922.7,
+      "river_score": 0
+    },
+    "1048": {
+      "fault_dist_m": 7451.5,
+      "fault_score": 0,
+      "river_dist_m": 1618.1,
+      "river_score": 0
+    },
+    "1049": {
+      "fault_dist_m": 4379.5,
+      "fault_score": 0,
+      "river_dist_m": 3353.5,
+      "river_score": 0
+    },
+    "1050": {
+      "fault_dist_m": 16639.4,
+      "fault_score": 0,
+      "river_dist_m": 334.0,
+      "river_score": 0
+    },
+    "1051": {
+      "fault_dist_m": 7614.6,
+      "fault_score": 0,
+      "river_dist_m": 912.0,
+      "river_score": 0
+    },
+    "1052": {
+      "fault_dist_m": 5988.1,
+      "fault_score": 0,
+      "river_dist_m": 811.6,
+      "river_score": 0
+    },
+    "1053": {
+      "fault_dist_m": 65893.8,
+      "fault_score": 0,
+      "river_dist_m": 1453.1,
+      "river_score": 0
+    },
+    "1054": {
+      "fault_dist_m": 21.8,
+      "fault_score": 100,
+      "river_dist_m": 841.1,
+      "river_score": 0
+    },
+    "1055": {
+      "fault_dist_m": 14264.7,
+      "fault_score": 0,
+      "river_dist_m": 2872.3,
+      "river_score": 0
+    },
+    "1056": {
+      "fault_dist_m": 4118.5,
+      "fault_score": 0,
+      "river_dist_m": 580.9,
+      "river_score": 0
+    },
+    "1057": {
+      "fault_dist_m": 14641.5,
+      "fault_score": 0,
+      "river_dist_m": 9361.3,
+      "river_score": 0
+    },
+    "1058": {
+      "fault_dist_m": 780.2,
+      "fault_score": 25,
+      "river_dist_m": 1304.1,
+      "river_score": 0
+    },
+    "1059": {
+      "fault_dist_m": 16744.1,
+      "fault_score": 0,
+      "river_dist_m": 1258.9,
+      "river_score": 0
+    },
+    "1060": {
+      "fault_dist_m": 15772.8,
+      "fault_score": 0,
+      "river_dist_m": 3088.9,
+      "river_score": 0
+    },
+    "1061": {
+      "fault_dist_m": 17382.8,
+      "fault_score": 0,
+      "river_dist_m": 317.3,
+      "river_score": 0
+    },
+    "1062": {
+      "fault_dist_m": 4184.6,
+      "fault_score": 0,
+      "river_dist_m": 4666.6,
+      "river_score": 0
+    },
+    "1063": {
+      "fault_dist_m": 9669.4,
+      "fault_score": 0,
+      "river_dist_m": 204.4,
+      "river_score": 0
+    },
+    "1064": {
+      "fault_dist_m": 29936.8,
+      "fault_score": 0,
+      "river_dist_m": 897.7,
+      "river_score": 0
+    },
+    "1065": {
+      "fault_dist_m": 20473.6,
+      "fault_score": 0,
+      "river_dist_m": 1567.0,
+      "river_score": 0
+    },
+    "1066": {
+      "fault_dist_m": 19157.0,
+      "fault_score": 0,
+      "river_dist_m": 1088.3,
+      "river_score": 0
+    },
+    "1067": {
+      "fault_dist_m": 1784.5,
+      "fault_score": 0,
+      "river_dist_m": 1351.6,
+      "river_score": 0
+    },
+    "1068": {
+      "fault_dist_m": 32735.6,
+      "fault_score": 0,
+      "river_dist_m": 588.3,
+      "river_score": 0
+    },
+    "1069": {
+      "fault_dist_m": 13546.2,
+      "fault_score": 0,
+      "river_dist_m": 502.0,
+      "river_score": 0
+    },
+    "1070": {
+      "fault_dist_m": 9126.0,
+      "fault_score": 0,
+      "river_dist_m": 242.1,
+      "river_score": 0
+    },
+    "1071": {
+      "fault_dist_m": 857.2,
+      "fault_score": 25,
+      "river_dist_m": 359.5,
+      "river_score": 0
+    },
+    "1072": {
+      "fault_dist_m": 38019.8,
+      "fault_score": 0,
+      "river_dist_m": 725.3,
+      "river_score": 0
+    },
+    "1073": {
+      "fault_dist_m": 11545.7,
+      "fault_score": 0,
+      "river_dist_m": 192.5,
+      "river_score": 0
+    },
+    "1074": {
+      "fault_dist_m": 11685.6,
+      "fault_score": 0,
+      "river_dist_m": 349.8,
+      "river_score": 0
+    },
+    "1075": {
+      "fault_dist_m": 9779.7,
+      "fault_score": 0,
+      "river_dist_m": 401.4,
+      "river_score": 0
+    },
+    "1076": {
+      "fault_dist_m": 11663.4,
+      "fault_score": 0,
+      "river_dist_m": 124.8,
+      "river_score": 0
+    },
+    "1077": {
+      "fault_dist_m": 12140.5,
+      "fault_score": 0,
+      "river_dist_m": 856.1,
+      "river_score": 0
+    },
+    "1078": {
+      "fault_dist_m": 6139.3,
+      "fault_score": 0,
+      "river_dist_m": 1010.7,
+      "river_score": 0
+    },
+    "1079": {
+      "fault_dist_m": 21294.5,
+      "fault_score": 0,
+      "river_dist_m": 138.9,
+      "river_score": 0
+    },
+    "1080": {
+      "fault_dist_m": 8480.9,
+      "fault_score": 0,
+      "river_dist_m": 1739.4,
+      "river_score": 0
+    },
+    "1081": {
+      "fault_dist_m": 11511.9,
+      "fault_score": 0,
+      "river_dist_m": 302.7,
+      "river_score": 0
+    },
+    "1082": {
+      "fault_dist_m": 15596.3,
+      "fault_score": 0,
+      "river_dist_m": 544.5,
+      "river_score": 0
+    },
+    "1083": {
+      "fault_dist_m": 19.7,
+      "fault_score": 100,
+      "river_dist_m": 994.7,
+      "river_score": 0
+    },
+    "1084": {
+      "fault_dist_m": 8276.7,
+      "fault_score": 0,
+      "river_dist_m": 817.6,
+      "river_score": 0
+    },
+    "1085": {
+      "fault_dist_m": 11769.4,
+      "fault_score": 0,
+      "river_dist_m": 837.6,
+      "river_score": 0
+    },
+    "1086": {
+      "fault_dist_m": 70110.1,
+      "fault_score": 0,
+      "river_dist_m": 861.5,
+      "river_score": 0
+    },
+    "1087": {
+      "fault_dist_m": 18709.6,
+      "fault_score": 0,
+      "river_dist_m": 360.1,
+      "river_score": 0
+    },
+    "1088": {
+      "fault_dist_m": 18881.3,
+      "fault_score": 0,
+      "river_dist_m": 2029.9,
+      "river_score": 0
+    },
+    "1089": {
+      "fault_dist_m": 4365.1,
+      "fault_score": 0,
+      "river_dist_m": 760.2,
+      "river_score": 0
+    },
+    "1090": {
+      "fault_dist_m": 3822.3,
+      "fault_score": 0,
+      "river_dist_m": 715.2,
+      "river_score": 0
+    },
+    "1091": {
+      "fault_dist_m": 3905.2,
+      "fault_score": 0,
+      "river_dist_m": 592.8,
+      "river_score": 0
+    },
+    "1092": {
+      "fault_dist_m": 7408.1,
+      "fault_score": 0,
+      "river_dist_m": 332.7,
+      "river_score": 0
+    },
+    "1093": {
+      "fault_dist_m": 4366.0,
+      "fault_score": 0,
+      "river_dist_m": 1224.9,
+      "river_score": 0
+    },
+    "1094": {
+      "fault_dist_m": 4476.4,
+      "fault_score": 0,
+      "river_dist_m": 1134.7,
+      "river_score": 0
+    },
+    "1095": {
+      "fault_dist_m": 11465.5,
+      "fault_score": 0,
+      "river_dist_m": 213.6,
+      "river_score": 0
+    },
+    "1096": {
+      "fault_dist_m": 12542.0,
+      "fault_score": 0,
+      "river_dist_m": 2817.6,
+      "river_score": 0
+    },
+    "1097": {
+      "fault_dist_m": 28974.7,
+      "fault_score": 0,
+      "river_dist_m": 1200.2,
+      "river_score": 0
+    },
+    "1098": {
+      "fault_dist_m": 67562.1,
+      "fault_score": 0,
+      "river_dist_m": 231.9,
+      "river_score": 0
+    },
+    "1099": {
+      "fault_dist_m": 3904.6,
+      "fault_score": 0,
+      "river_dist_m": 765.6,
+      "river_score": 0
+    },
+    "1100": {
+      "fault_dist_m": 2544.8,
+      "fault_score": 0,
+      "river_dist_m": 504.9,
+      "river_score": 0
+    },
+    "1101": {
+      "fault_dist_m": 48842.5,
+      "fault_score": 0,
+      "river_dist_m": 1200.1,
+      "river_score": 0
+    },
+    "1102": {
+      "fault_dist_m": 20028.4,
+      "fault_score": 0,
+      "river_dist_m": 874.2,
+      "river_score": 0
+    },
+    "1103": {
+      "fault_dist_m": 7862.6,
+      "fault_score": 0,
+      "river_dist_m": 854.7,
+      "river_score": 0
+    },
+    "1104": {
+      "fault_dist_m": 98442.0,
+      "fault_score": 0,
+      "river_dist_m": 74452.4,
+      "river_score": 0
+    },
+    "1105": {
+      "fault_dist_m": 5770.4,
+      "fault_score": 0,
+      "river_dist_m": 487.2,
+      "river_score": 0
+    },
+    "1106": {
+      "fault_dist_m": 28109.1,
+      "fault_score": 0,
+      "river_dist_m": 56.7,
+      "river_score": 50
+    },
+    "1107": {
+      "fault_dist_m": 22151.1,
+      "fault_score": 0,
+      "river_dist_m": 674.2,
+      "river_score": 0
+    },
+    "1108": {
+      "fault_dist_m": 18021.9,
+      "fault_score": 0,
+      "river_dist_m": 225.8,
+      "river_score": 0
+    },
+    "1109": {
+      "fault_dist_m": 11549.5,
+      "fault_score": 0,
+      "river_dist_m": 130.0,
+      "river_score": 0
+    },
+    "1110": {
+      "fault_dist_m": 12714.2,
+      "fault_score": 0,
+      "river_dist_m": 1061.1,
+      "river_score": 0
+    },
+    "1111": {
+      "fault_dist_m": 20012.6,
+      "fault_score": 0,
+      "river_dist_m": 555.8,
+      "river_score": 0
+    },
+    "1112": {
+      "fault_dist_m": 50594.5,
+      "fault_score": 0,
+      "river_dist_m": 907.7,
+      "river_score": 0
+    },
+    "1113": {
+      "fault_dist_m": 568.6,
+      "fault_score": 25,
+      "river_dist_m": 619.8,
+      "river_score": 0
+    },
+    "1114": {
+      "fault_dist_m": 24032.2,
+      "fault_score": 0,
+      "river_dist_m": 1264.8,
+      "river_score": 0
+    },
+    "1115": {
+      "fault_dist_m": 4736.2,
+      "fault_score": 0,
+      "river_dist_m": 6337.0,
+      "river_score": 0
+    },
+    "1116": {
+      "fault_dist_m": 26746.6,
+      "fault_score": 0,
+      "river_dist_m": 470.0,
+      "river_score": 0
+    },
+    "1117": {
+      "fault_dist_m": 4399.0,
+      "fault_score": 0,
+      "river_dist_m": 781.6,
+      "river_score": 0
+    },
+    "1118": {
+      "fault_dist_m": 3709.0,
+      "fault_score": 0,
+      "river_dist_m": 1454.7,
+      "river_score": 0
+    },
+    "1119": {
+      "fault_dist_m": 4626.1,
+      "fault_score": 0,
+      "river_dist_m": 2485.3,
+      "river_score": 0
+    },
+    "1120": {
+      "fault_dist_m": 11835.4,
+      "fault_score": 0,
+      "river_dist_m": 5597.1,
+      "river_score": 0
+    },
+    "1121": {
+      "fault_dist_m": 49059.7,
+      "fault_score": 0,
+      "river_dist_m": 1751.9,
+      "river_score": 0
+    },
+    "1122": {
+      "fault_dist_m": 63980.0,
+      "fault_score": 0,
+      "river_dist_m": 965.9,
+      "river_score": 0
+    },
+    "1123": {
+      "fault_dist_m": 7807.7,
+      "fault_score": 0,
+      "river_dist_m": 699.6,
+      "river_score": 0
+    },
+    "1124": {
+      "fault_dist_m": 2538.6,
+      "fault_score": 0,
+      "river_dist_m": 3098.6,
+      "river_score": 0
+    },
+    "1125": {
+      "fault_dist_m": 21876.2,
+      "fault_score": 0,
+      "river_dist_m": 454.6,
+      "river_score": 0
+    },
+    "1126": {
+      "fault_dist_m": 17274.6,
+      "fault_score": 0,
+      "river_dist_m": 833.3,
+      "river_score": 0
+    },
+    "1127": {
+      "fault_dist_m": 2435.0,
+      "fault_score": 0,
+      "river_dist_m": 2748.7,
+      "river_score": 0
+    },
+    "1128": {
+      "fault_dist_m": 8916.2,
+      "fault_score": 0,
+      "river_dist_m": 554.9,
+      "river_score": 0
+    },
+    "1129": {
+      "fault_dist_m": 2213.1,
+      "fault_score": 0,
+      "river_dist_m": 960.5,
+      "river_score": 0
+    },
+    "1130": {
+      "fault_dist_m": 10646.5,
+      "fault_score": 0,
+      "river_dist_m": 881.1,
+      "river_score": 0
+    },
+    "1131": {
+      "fault_dist_m": 7874.1,
+      "fault_score": 0,
+      "river_dist_m": 344.0,
+      "river_score": 0
+    },
+    "1132": {
+      "fault_dist_m": 24561.7,
+      "fault_score": 0,
+      "river_dist_m": 1516.2,
+      "river_score": 0
+    },
+    "1133": {
+      "fault_dist_m": 38319.2,
+      "fault_score": 0,
+      "river_dist_m": 1587.1,
+      "river_score": 0
+    },
+    "1134": {
+      "fault_dist_m": 8968.2,
+      "fault_score": 0,
+      "river_dist_m": 983.6,
+      "river_score": 0
+    },
+    "1135": {
+      "fault_dist_m": 15984.0,
+      "fault_score": 0,
+      "river_dist_m": 7911.7,
+      "river_score": 0
+    },
+    "1136": {
+      "fault_dist_m": 5082.7,
+      "fault_score": 0,
+      "river_dist_m": 1304.7,
+      "river_score": 0
+    },
+    "1137": {
+      "fault_dist_m": 21407.5,
+      "fault_score": 0,
+      "river_dist_m": 262.9,
+      "river_score": 0
+    },
+    "1138": {
+      "fault_dist_m": 16828.6,
+      "fault_score": 0,
+      "river_dist_m": 303.2,
+      "river_score": 0
+    },
+    "1139": {
+      "fault_dist_m": 1296.9,
+      "fault_score": 0,
+      "river_dist_m": 1413.6,
+      "river_score": 0
+    },
+    "1140": {
+      "fault_dist_m": 3857.7,
+      "fault_score": 0,
+      "river_dist_m": 15.5,
+      "river_score": 100
+    },
+    "1141": {
+      "fault_dist_m": 13385.8,
+      "fault_score": 0,
+      "river_dist_m": 1159.4,
+      "river_score": 0
+    },
+    "1142": {
+      "fault_dist_m": 6190.0,
+      "fault_score": 0,
+      "river_dist_m": 5785.7,
+      "river_score": 0
+    },
+    "1143": {
+      "fault_dist_m": 1042.0,
+      "fault_score": 0,
+      "river_dist_m": 1479.0,
+      "river_score": 0
+    },
+    "1144": {
+      "fault_dist_m": 7097.8,
+      "fault_score": 0,
+      "river_dist_m": 767.2,
+      "river_score": 0
+    },
+    "1145": {
+      "fault_dist_m": 809.1,
+      "fault_score": 25,
+      "river_dist_m": 1314.2,
+      "river_score": 0
+    },
+    "1146": {
+      "fault_dist_m": 54174.1,
+      "fault_score": 0,
+      "river_dist_m": 771.6,
+      "river_score": 0
+    },
+    "1147": {
+      "fault_dist_m": 8376.1,
+      "fault_score": 0,
+      "river_dist_m": 965.2,
+      "river_score": 0
+    },
+    "1148": {
+      "fault_dist_m": 611.5,
+      "fault_score": 25,
+      "river_dist_m": 2380.5,
+      "river_score": 0
+    },
+    "1149": {
+      "fault_dist_m": 737.6,
+      "fault_score": 25,
+      "river_dist_m": 1205.8,
+      "river_score": 0
+    },
+    "1150": {
+      "fault_dist_m": 3638.9,
+      "fault_score": 0,
+      "river_dist_m": 995.4,
+      "river_score": 0
+    },
+    "1151": {
+      "fault_dist_m": 11885.8,
+      "fault_score": 0,
+      "river_dist_m": 776.1,
+      "river_score": 0
+    },
+    "1152": {
+      "fault_dist_m": 23750.6,
+      "fault_score": 0,
+      "river_dist_m": 1250.5,
+      "river_score": 0
+    },
+    "1153": {
+      "fault_dist_m": 13705.1,
+      "fault_score": 0,
+      "river_dist_m": 1543.7,
+      "river_score": 0
+    },
+    "1154": {
+      "fault_dist_m": 16856.8,
+      "fault_score": 0,
+      "river_dist_m": 956.1,
+      "river_score": 0
+    },
+    "1155": {
+      "fault_dist_m": 33341.9,
+      "fault_score": 0,
+      "river_dist_m": 1658.6,
+      "river_score": 0
+    },
+    "1156": {
+      "fault_dist_m": 8386.9,
+      "fault_score": 0,
+      "river_dist_m": 1018.5,
+      "river_score": 0
+    },
+    "1157": {
+      "fault_dist_m": 11802.6,
+      "fault_score": 0,
+      "river_dist_m": 1460.0,
+      "river_score": 0
+    },
+    "1158": {
+      "fault_dist_m": 98.4,
+      "fault_score": 100,
+      "river_dist_m": 3291.7,
+      "river_score": 0
+    },
+    "1159": {
+      "fault_dist_m": 7060.6,
+      "fault_score": 0,
+      "river_dist_m": 872.4,
+      "river_score": 0
+    },
+    "1160": {
+      "fault_dist_m": 13411.0,
+      "fault_score": 0,
+      "river_dist_m": 3213.5,
+      "river_score": 0
+    },
+    "1161": {
+      "fault_dist_m": 4039.3,
+      "fault_score": 0,
+      "river_dist_m": 62.2,
+      "river_score": 50
+    },
+    "1162": {
+      "fault_dist_m": 4068.9,
+      "fault_score": 0,
+      "river_dist_m": 1351.6,
+      "river_score": 0
+    },
+    "1163": {
+      "fault_dist_m": 15741.0,
+      "fault_score": 0,
+      "river_dist_m": 897.9,
+      "river_score": 0
+    },
+    "1164": {
+      "fault_dist_m": 12439.7,
+      "fault_score": 0,
+      "river_dist_m": 2967.6,
+      "river_score": 0
+    },
+    "1165": {
+      "fault_dist_m": 13446.3,
+      "fault_score": 0,
+      "river_dist_m": 701.7,
+      "river_score": 0
+    },
+    "1166": {
+      "fault_dist_m": 1318.0,
+      "fault_score": 0,
+      "river_dist_m": 10.0,
+      "river_score": 100
+    },
+    "1167": {
+      "fault_dist_m": 30212.9,
+      "fault_score": 0,
+      "river_dist_m": 1259.4,
+      "river_score": 0
+    },
+    "1168": {
+      "fault_dist_m": 520.8,
+      "fault_score": 25,
+      "river_dist_m": 904.4,
+      "river_score": 0
+    },
+    "1169": {
+      "fault_dist_m": 10423.0,
+      "fault_score": 0,
+      "river_dist_m": 1338.4,
+      "river_score": 0
+    },
+    "1170": {
+      "fault_dist_m": 13648.7,
+      "fault_score": 0,
+      "river_dist_m": 1973.4,
+      "river_score": 0
+    },
+    "1171": {
+      "fault_dist_m": 39164.6,
+      "fault_score": 0,
+      "river_dist_m": 4078.4,
+      "river_score": 0
+    },
+    "1172": {
+      "fault_dist_m": 13132.5,
+      "fault_score": 0,
+      "river_dist_m": 721.7,
+      "river_score": 0
+    },
+    "1173": {
+      "fault_dist_m": 9022.5,
+      "fault_score": 0,
+      "river_dist_m": 2091.0,
+      "river_score": 0
+    },
+    "1174": {
+      "fault_dist_m": 33461.4,
+      "fault_score": 0,
+      "river_dist_m": 1406.2,
+      "river_score": 0
+    },
+    "1175": {
+      "fault_dist_m": 75410.5,
+      "fault_score": 0,
+      "river_dist_m": 1500.6,
+      "river_score": 0
+    },
+    "1176": {
+      "fault_dist_m": 70525.0,
+      "fault_score": 0,
+      "river_dist_m": 701.9,
+      "river_score": 0
+    },
+    "1177": {
+      "fault_dist_m": 321.2,
+      "fault_score": 75,
+      "river_dist_m": 649.3,
+      "river_score": 0
+    },
+    "1178": {
+      "fault_dist_m": 7484.6,
+      "fault_score": 0,
+      "river_dist_m": 269.0,
+      "river_score": 0
+    },
+    "1179": {
+      "fault_dist_m": 8553.9,
+      "fault_score": 0,
+      "river_dist_m": 453.2,
+      "river_score": 0
+    },
+    "1180": {
+      "fault_dist_m": 11625.4,
+      "fault_score": 0,
+      "river_dist_m": 335.8,
+      "river_score": 0
+    },
+    "1181": {
+      "fault_dist_m": 2370.2,
+      "fault_score": 0,
+      "river_dist_m": 1380.1,
+      "river_score": 0
+    },
+    "1182": {
+      "fault_dist_m": 2852.5,
+      "fault_score": 0,
+      "river_dist_m": 1871.7,
+      "river_score": 0
+    },
+    "1183": {
+      "fault_dist_m": 5971.9,
+      "fault_score": 0,
+      "river_dist_m": 822.8,
+      "river_score": 0
+    },
+    "1184": {
+      "fault_dist_m": 29761.4,
+      "fault_score": 0,
+      "river_dist_m": 1050.3,
+      "river_score": 0
+    },
+    "1185": {
+      "fault_dist_m": 16643.1,
+      "fault_score": 0,
+      "river_dist_m": 1664.0,
+      "river_score": 0
+    },
+    "1186": {
+      "fault_dist_m": 32420.8,
+      "fault_score": 0,
+      "river_dist_m": 2235.2,
+      "river_score": 0
+    },
+    "1187": {
+      "fault_dist_m": 32945.8,
+      "fault_score": 0,
+      "river_dist_m": 3426.9,
+      "river_score": 0
+    },
+    "1188": {
+      "fault_dist_m": 11538.5,
+      "fault_score": 0,
+      "river_dist_m": 1351.8,
+      "river_score": 0
+    },
+    "1189": {
+      "fault_dist_m": 12462.8,
+      "fault_score": 0,
+      "river_dist_m": 1891.4,
+      "river_score": 0
+    },
+    "1190": {
+      "fault_dist_m": 9350.3,
+      "fault_score": 0,
+      "river_dist_m": 1267.9,
+      "river_score": 0
+    },
+    "1191": {
+      "fault_dist_m": 9.5,
+      "fault_score": 100,
+      "river_dist_m": 579.7,
+      "river_score": 0
+    },
+    "1192": {
+      "fault_dist_m": 9.1,
+      "fault_score": 100,
+      "river_dist_m": 71.5,
+      "river_score": 50
+    },
+    "1193": {
+      "fault_dist_m": 57731.2,
+      "fault_score": 0,
+      "river_dist_m": 995.9,
+      "river_score": 0
+    },
+    "1194": {
+      "fault_dist_m": 67742.1,
+      "fault_score": 0,
+      "river_dist_m": 1017.1,
+      "river_score": 0
+    },
+    "1195": {
+      "fault_dist_m": 15037.9,
+      "fault_score": 0,
+      "river_dist_m": 1746.1,
+      "river_score": 0
+    },
+    "1196": {
+      "fault_dist_m": 27076.4,
+      "fault_score": 0,
+      "river_dist_m": 1449.3,
+      "river_score": 0
+    },
+    "1197": {
+      "fault_dist_m": 22808.3,
+      "fault_score": 0,
+      "river_dist_m": 978.3,
+      "river_score": 0
+    },
+    "1198": {
+      "fault_dist_m": 8089.1,
+      "fault_score": 0,
+      "river_dist_m": 1453.1,
+      "river_score": 0
+    },
+    "1199": {
+      "fault_dist_m": 33312.4,
+      "fault_score": 0,
+      "river_dist_m": 3623.2,
+      "river_score": 0
+    },
+    "1200": {
+      "fault_dist_m": 22358.9,
+      "fault_score": 0,
+      "river_dist_m": 1.0,
+      "river_score": 100
+    },
+    "1201": {
+      "fault_dist_m": 54367.1,
+      "fault_score": 0,
+      "river_dist_m": 2449.0,
+      "river_score": 0
+    },
+    "1202": {
+      "fault_dist_m": 9283.8,
+      "fault_score": 0,
+      "river_dist_m": 1190.9,
+      "river_score": 0
+    },
+    "1203": {
+      "fault_dist_m": 75716.0,
+      "fault_score": 0,
+      "river_dist_m": 1242.6,
+      "river_score": 0
+    },
+    "1204": {
+      "fault_dist_m": 34087.9,
+      "fault_score": 0,
+      "river_dist_m": 1964.9,
+      "river_score": 0
+    },
+    "1205": {
+      "fault_dist_m": 6001.6,
+      "fault_score": 0,
+      "river_dist_m": 130.7,
+      "river_score": 0
+    },
+    "1206": {
+      "fault_dist_m": 12835.2,
+      "fault_score": 0,
+      "river_dist_m": 489.3,
+      "river_score": 0
+    },
+    "1207": {
+      "fault_dist_m": 33470.8,
+      "fault_score": 0,
+      "river_dist_m": 2672.9,
+      "river_score": 0
+    },
+    "1208": {
+      "fault_dist_m": 11563.8,
+      "fault_score": 0,
+      "river_dist_m": 102.3,
+      "river_score": 0
+    },
+    "1209": {
+      "fault_dist_m": 66136.0,
+      "fault_score": 0,
+      "river_dist_m": 770.0,
+      "river_score": 0
+    },
+    "1210": {
+      "fault_dist_m": 3158.5,
+      "fault_score": 0,
+      "river_dist_m": 533.4,
+      "river_score": 0
+    },
+    "1211": {
+      "fault_dist_m": 8082.8,
+      "fault_score": 0,
+      "river_dist_m": 849.7,
+      "river_score": 0
+    },
+    "1212": {
+      "fault_dist_m": 36902.1,
+      "fault_score": 0,
+      "river_dist_m": 1485.4,
+      "river_score": 0
+    },
+    "1213": {
+      "fault_dist_m": 12833.7,
+      "fault_score": 0,
+      "river_dist_m": 1909.3,
+      "river_score": 0
+    },
+    "1214": {
+      "fault_dist_m": 72513.8,
+      "fault_score": 0,
+      "river_dist_m": 18.1,
+      "river_score": 100
+    },
+    "1215": {
+      "fault_dist_m": 9350.3,
+      "fault_score": 0,
+      "river_dist_m": 1287.3,
+      "river_score": 0
+    },
+    "1216": {
+      "fault_dist_m": 9150.3,
+      "fault_score": 0,
+      "river_dist_m": 1952.2,
+      "river_score": 0
+    },
+    "1217": {
+      "fault_dist_m": 12501.6,
+      "fault_score": 0,
+      "river_dist_m": 1326.4,
+      "river_score": 0
+    },
+    "1218": {
+      "fault_dist_m": 67682.3,
+      "fault_score": 0,
+      "river_dist_m": 676.8,
+      "river_score": 0
+    },
+    "1219": {
+      "fault_dist_m": 18671.1,
+      "fault_score": 0,
+      "river_dist_m": 974.7,
+      "river_score": 0
+    },
+    "1220": {
+      "fault_dist_m": 7022.7,
+      "fault_score": 0,
+      "river_dist_m": 1200.4,
+      "river_score": 0
+    },
+    "1221": {
+      "fault_dist_m": 7059.0,
+      "fault_score": 0,
+      "river_dist_m": 1076.8,
+      "river_score": 0
+    },
+    "1222": {
+      "fault_dist_m": 7332.0,
+      "fault_score": 0,
+      "river_dist_m": 381.6,
+      "river_score": 0
+    },
+    "1223": {
+      "fault_dist_m": 8757.6,
+      "fault_score": 0,
+      "river_dist_m": 1349.6,
+      "river_score": 0
+    },
+    "1224": {
+      "fault_dist_m": 6050.2,
+      "fault_score": 0,
+      "river_dist_m": 37.3,
+      "river_score": 100
+    },
+    "1225": {
+      "fault_dist_m": 14630.1,
+      "fault_score": 0,
+      "river_dist_m": 1106.8,
+      "river_score": 0
+    },
+    "1226": {
+      "fault_dist_m": 70935.4,
+      "fault_score": 0,
+      "river_dist_m": 1309.3,
+      "river_score": 0
+    },
+    "1227": {
+      "fault_dist_m": 68704.8,
+      "fault_score": 0,
+      "river_dist_m": 1182.3,
+      "river_score": 0
+    },
+    "1228": {
+      "fault_dist_m": 1805.4,
+      "fault_score": 0,
+      "river_dist_m": 2709.1,
+      "river_score": 0
+    },
+    "1229": {
+      "fault_dist_m": 2811.1,
+      "fault_score": 0,
+      "river_dist_m": 166.4,
+      "river_score": 0
+    },
+    "1230": {
+      "fault_dist_m": 3385.2,
+      "fault_score": 0,
+      "river_dist_m": 1889.1,
+      "river_score": 0
+    },
+    "1231": {
+      "fault_dist_m": 9240.9,
+      "fault_score": 0,
+      "river_dist_m": 1103.3,
+      "river_score": 0
+    },
+    "1232": {
+      "fault_dist_m": 9142.4,
+      "fault_score": 0,
+      "river_dist_m": 1930.8,
+      "river_score": 0
+    },
+    "1233": {
+      "fault_dist_m": 157.8,
+      "fault_score": 100,
+      "river_dist_m": 2379.0,
+      "river_score": 0
+    },
+    "1234": {
+      "fault_dist_m": 3901.6,
+      "fault_score": 0,
+      "river_dist_m": 1329.9,
+      "river_score": 0
+    },
+    "1235": {
+      "fault_dist_m": 3104.0,
+      "fault_score": 0,
+      "river_dist_m": 2704.7,
+      "river_score": 0
+    },
+    "1236": {
+      "fault_dist_m": 9289.3,
+      "fault_score": 0,
+      "river_dist_m": 1626.0,
+      "river_score": 0
+    },
+    "1237": {
+      "fault_dist_m": 19589.0,
+      "fault_score": 0,
+      "river_dist_m": 1278.5,
+      "river_score": 0
+    },
+    "1238": {
+      "fault_dist_m": 10564.4,
+      "fault_score": 0,
+      "river_dist_m": 3347.3,
+      "river_score": 0
+    },
+    "1239": {
+      "fault_dist_m": 4532.8,
+      "fault_score": 0,
+      "river_dist_m": 713.5,
+      "river_score": 0
+    },
+    "1240": {
+      "fault_dist_m": 592.7,
+      "fault_score": 25,
+      "river_dist_m": 2019.6,
+      "river_score": 0
+    },
+    "1241": {
+      "fault_dist_m": 18523.5,
+      "fault_score": 0,
+      "river_dist_m": 884.1,
+      "river_score": 0
+    },
+    "1242": {
+      "fault_dist_m": 13441.6,
+      "fault_score": 0,
+      "river_dist_m": 3062.2,
+      "river_score": 0
+    },
+    "1243": {
+      "fault_dist_m": 6821.1,
+      "fault_score": 0,
+      "river_dist_m": 811.4,
+      "river_score": 0
+    },
+    "1244": {
+      "fault_dist_m": 10640.1,
+      "fault_score": 0,
+      "river_dist_m": 676.8,
+      "river_score": 0
+    },
+    "1245": {
+      "fault_dist_m": 172.1,
+      "fault_score": 100,
+      "river_dist_m": 1334.3,
+      "river_score": 0
+    },
+    "1246": {
+      "fault_dist_m": 10358.8,
+      "fault_score": 0,
+      "river_dist_m": 1314.1,
+      "river_score": 0
+    },
+    "1247": {
+      "fault_dist_m": 3929.4,
+      "fault_score": 0,
+      "river_dist_m": 1761.7,
+      "river_score": 0
+    },
+    "1248": {
+      "fault_dist_m": 17407.4,
+      "fault_score": 0,
+      "river_dist_m": 4391.5,
+      "river_score": 0
+    },
+    "1249": {
+      "fault_dist_m": 1055.5,
+      "fault_score": 0,
+      "river_dist_m": 811.0,
+      "river_score": 0
+    },
+    "1250": {
+      "fault_dist_m": 11927.9,
+      "fault_score": 0,
+      "river_dist_m": 194.5,
+      "river_score": 0
+    },
+    "1251": {
+      "fault_dist_m": 33903.2,
+      "fault_score": 0,
+      "river_dist_m": 731.2,
+      "river_score": 0
+    },
+    "1252": {
+      "fault_dist_m": 66101.3,
+      "fault_score": 0,
+      "river_dist_m": 804.2,
+      "river_score": 0
+    },
+    "1253": {
+      "fault_dist_m": 16679.8,
+      "fault_score": 0,
+      "river_dist_m": 791.2,
+      "river_score": 0
+    },
+    "1254": {
+      "fault_dist_m": 15427.3,
+      "fault_score": 0,
+      "river_dist_m": 2252.8,
+      "river_score": 0
+    },
+    "1255": {
+      "fault_dist_m": 31809.8,
+      "fault_score": 0,
+      "river_dist_m": 1102.1,
+      "river_score": 0
+    },
+    "1256": {
+      "fault_dist_m": 3859.1,
+      "fault_score": 0,
+      "river_dist_m": 2809.8,
+      "river_score": 0
+    },
+    "1257": {
+      "fault_dist_m": 34933.3,
+      "fault_score": 0,
+      "river_dist_m": 2607.6,
+      "river_score": 0
+    },
+    "1258": {
+      "fault_dist_m": 4029.0,
+      "fault_score": 0,
+      "river_dist_m": 59.7,
+      "river_score": 50
+    },
+    "1259": {
+      "fault_dist_m": 28568.7,
+      "fault_score": 0,
+      "river_dist_m": 1091.1,
+      "river_score": 0
+    },
+    "1260": {
+      "fault_dist_m": 34.5,
+      "fault_score": 100,
+      "river_dist_m": 558.8,
+      "river_score": 0
+    },
+    "1261": {
+      "fault_dist_m": 14159.4,
+      "fault_score": 0,
+      "river_dist_m": 1901.2,
+      "river_score": 0
+    },
+    "1262": {
+      "fault_dist_m": 32502.1,
+      "fault_score": 0,
+      "river_dist_m": 1577.0,
+      "river_score": 0
+    },
+    "1263": {
+      "fault_dist_m": 3629.8,
+      "fault_score": 0,
+      "river_dist_m": 1710.7,
+      "river_score": 0
+    },
+    "1264": {
+      "fault_dist_m": 23597.5,
+      "fault_score": 0,
+      "river_dist_m": 973.2,
+      "river_score": 0
+    },
+    "1265": {
+      "fault_dist_m": 41812.3,
+      "fault_score": 0,
+      "river_dist_m": 1388.3,
+      "river_score": 0
+    },
+    "1266": {
+      "fault_dist_m": 4652.4,
+      "fault_score": 0,
+      "river_dist_m": 2285.1,
+      "river_score": 0
+    },
+    "1267": {
+      "fault_dist_m": 33885.3,
+      "fault_score": 0,
+      "river_dist_m": 1556.0,
+      "river_score": 0
+    },
+    "1268": {
+      "fault_dist_m": 2684.4,
+      "fault_score": 0,
+      "river_dist_m": 1137.9,
+      "river_score": 0
+    },
+    "1269": {
+      "fault_dist_m": 8497.7,
+      "fault_score": 0,
+      "river_dist_m": 2024.7,
+      "river_score": 0
+    },
+    "1270": {
+      "fault_dist_m": 12200.2,
+      "fault_score": 0,
+      "river_dist_m": 4145.0,
+      "river_score": 0
+    },
+    "1271": {
+      "fault_dist_m": 13660.7,
+      "fault_score": 0,
+      "river_dist_m": 3792.8,
+      "river_score": 0
+    },
+    "1272": {
+      "fault_dist_m": 4497.1,
+      "fault_score": 0,
+      "river_dist_m": 3593.4,
+      "river_score": 0
+    },
+    "1273": {
+      "fault_dist_m": 9650.2,
+      "fault_score": 0,
+      "river_dist_m": 1522.7,
+      "river_score": 0
+    },
+    "1274": {
+      "fault_dist_m": 412.5,
+      "fault_score": 75,
+      "river_dist_m": 612.5,
+      "river_score": 0
+    },
+    "1275": {
+      "fault_dist_m": 4804.0,
+      "fault_score": 0,
+      "river_dist_m": 4593.1,
+      "river_score": 0
+    },
+    "1276": {
+      "fault_dist_m": 7259.5,
+      "fault_score": 0,
+      "river_dist_m": 1189.8,
+      "river_score": 0
+    },
+    "1277": {
+      "fault_dist_m": 10125.5,
+      "fault_score": 0,
+      "river_dist_m": 1301.5,
+      "river_score": 0
+    },
+    "1278": {
+      "fault_dist_m": 3232.6,
+      "fault_score": 0,
+      "river_dist_m": 2389.5,
+      "river_score": 0
+    },
+    "1279": {
+      "fault_dist_m": 9803.3,
+      "fault_score": 0,
+      "river_dist_m": 5387.7,
+      "river_score": 0
+    },
+    "1280": {
+      "fault_dist_m": 4514.2,
+      "fault_score": 0,
+      "river_dist_m": 1235.1,
+      "river_score": 0
+    },
+    "1281": {
+      "fault_dist_m": 69128.1,
+      "fault_score": 0,
+      "river_dist_m": 599.5,
+      "river_score": 0
+    },
+    "1282": {
+      "fault_dist_m": 14189.4,
+      "fault_score": 0,
+      "river_dist_m": 9756.2,
+      "river_score": 0
+    },
+    "1283": {
+      "fault_dist_m": 30212.9,
+      "fault_score": 0,
+      "river_dist_m": 1259.4,
+      "river_score": 0
+    },
+    "1284": {
+      "fault_dist_m": 31799.6,
+      "fault_score": 0,
+      "river_dist_m": 1115.5,
+      "river_score": 0
+    },
+    "1285": {
+      "fault_dist_m": 5458.7,
+      "fault_score": 0,
+      "river_dist_m": 915.0,
+      "river_score": 0
+    },
+    "1286": {
+      "fault_dist_m": 1840.4,
+      "fault_score": 0,
+      "river_dist_m": 1212.6,
+      "river_score": 0
+    },
+    "1287": {
+      "fault_dist_m": 2046.2,
+      "fault_score": 0,
+      "river_dist_m": 1491.1,
+      "river_score": 0
+    },
+    "1288": {
+      "fault_dist_m": 9810.3,
+      "fault_score": 0,
+      "river_dist_m": 331.8,
+      "river_score": 0
+    },
+    "1289": {
+      "fault_dist_m": 24089.8,
+      "fault_score": 0,
+      "river_dist_m": 943.6,
+      "river_score": 0
+    },
+    "1290": {
+      "fault_dist_m": 17825.6,
+      "fault_score": 0,
+      "river_dist_m": 1369.8,
+      "river_score": 0
+    },
+    "1291": {
+      "fault_dist_m": 9107.9,
+      "fault_score": 0,
+      "river_dist_m": 2117.0,
+      "river_score": 0
+    },
+    "1292": {
+      "fault_dist_m": 34067.4,
+      "fault_score": 0,
+      "river_dist_m": 729.1,
+      "river_score": 0
+    },
+    "1293": {
+      "fault_dist_m": 6645.0,
+      "fault_score": 0,
+      "river_dist_m": 595.7,
+      "river_score": 0
+    },
+    "1294": {
+      "fault_dist_m": 9188.2,
+      "fault_score": 0,
+      "river_dist_m": 1148.1,
+      "river_score": 0
+    },
+    "1295": {
+      "fault_dist_m": 2578.7,
+      "fault_score": 0,
+      "river_dist_m": 895.7,
+      "river_score": 0
+    },
+    "1296": {
+      "fault_dist_m": 13438.6,
+      "fault_score": 0,
+      "river_dist_m": 1059.9,
+      "river_score": 0
+    },
+    "1297": {
+      "fault_dist_m": 42840.8,
+      "fault_score": 0,
+      "river_dist_m": 1352.4,
+      "river_score": 0
+    },
+    "1298": {
+      "fault_dist_m": 7454.2,
+      "fault_score": 0,
+      "river_dist_m": 298.9,
+      "river_score": 0
+    },
+    "1299": {
+      "fault_dist_m": 45426.8,
+      "fault_score": 0,
+      "river_dist_m": 581.3,
+      "river_score": 0
+    },
+    "1300": {
+      "fault_dist_m": 11630.3,
+      "fault_score": 0,
+      "river_dist_m": 728.4,
+      "river_score": 0
+    },
+    "1301": {
+      "fault_dist_m": 34220.2,
+      "fault_score": 0,
+      "river_dist_m": 803.7,
+      "river_score": 0
+    },
+    "1302": {
+      "fault_dist_m": 4888.6,
+      "fault_score": 0,
+      "river_dist_m": 1250.4,
+      "river_score": 0
+    },
+    "1303": {
+      "fault_dist_m": 6071.6,
+      "fault_score": 0,
+      "river_dist_m": 2636.5,
+      "river_score": 0
+    },
+    "1304": {
+      "fault_dist_m": 7031.4,
+      "fault_score": 0,
+      "river_dist_m": 846.3,
+      "river_score": 0
+    },
+    "1305": {
+      "fault_dist_m": 21992.0,
+      "fault_score": 0,
+      "river_dist_m": 236.3,
+      "river_score": 0
+    },
+    "1306": {
+      "fault_dist_m": 3438.1,
+      "fault_score": 0,
+      "river_dist_m": 2460.9,
+      "river_score": 0
+    },
+    "1307": {
+      "fault_dist_m": 3774.7,
+      "fault_score": 0,
+      "river_dist_m": 51.8,
+      "river_score": 50
+    },
+    "1308": {
+      "fault_dist_m": 9219.2,
+      "fault_score": 0,
+      "river_dist_m": 2025.3,
+      "river_score": 0
+    },
+    "1309": {
+      "fault_dist_m": 10772.1,
+      "fault_score": 0,
+      "river_dist_m": 2086.3,
+      "river_score": 0
+    },
+    "1310": {
+      "fault_dist_m": 7583.2,
+      "fault_score": 0,
+      "river_dist_m": 986.9,
+      "river_score": 0
+    },
+    "1311": {
+      "fault_dist_m": 18328.0,
+      "fault_score": 0,
+      "river_dist_m": 617.0,
+      "river_score": 0
+    },
+    "1312": {
+      "fault_dist_m": 13693.1,
+      "fault_score": 0,
+      "river_dist_m": 3211.7,
+      "river_score": 0
+    },
+    "1313": {
+      "fault_dist_m": 2756.0,
+      "fault_score": 0,
+      "river_dist_m": 2391.1,
+      "river_score": 0
+    },
+    "1314": {
+      "fault_dist_m": 77711.4,
+      "fault_score": 0,
+      "river_dist_m": 950.7,
+      "river_score": 0
+    },
+    "1315": {
+      "fault_dist_m": 3571.6,
+      "fault_score": 0,
+      "river_dist_m": 1513.2,
+      "river_score": 0
+    },
+    "1316": {
+      "fault_dist_m": 68330.1,
+      "fault_score": 0,
+      "river_dist_m": 1215.4,
+      "river_score": 0
+    },
+    "1317": {
+      "fault_dist_m": 1496.7,
+      "fault_score": 0,
+      "river_dist_m": 2541.1,
+      "river_score": 0
+    },
+    "1318": {
+      "fault_dist_m": 28648.2,
+      "fault_score": 0,
+      "river_dist_m": 1173.3,
+      "river_score": 0
+    },
+    "1319": {
+      "fault_dist_m": 9006.5,
+      "fault_score": 0,
+      "river_dist_m": 1828.1,
+      "river_score": 0
+    },
+    "1320": {
+      "fault_dist_m": 4055.2,
+      "fault_score": 0,
+      "river_dist_m": 4399.6,
+      "river_score": 0
+    },
+    "1321": {
+      "fault_dist_m": 14803.7,
+      "fault_score": 0,
+      "river_dist_m": 1132.0,
+      "river_score": 0
+    },
+    "1322": {
+      "fault_dist_m": 64455.6,
+      "fault_score": 0,
+      "river_dist_m": 1989.7,
+      "river_score": 0
+    },
+    "1323": {
+      "fault_dist_m": 16912.5,
+      "fault_score": 0,
+      "river_dist_m": 800.0,
+      "river_score": 0
+    },
+    "1324": {
+      "fault_dist_m": 12674.0,
+      "fault_score": 0,
+      "river_dist_m": 1421.0,
+      "river_score": 0
+    },
+    "1325": {
+      "fault_dist_m": 34322.7,
+      "fault_score": 0,
+      "river_dist_m": 751.9,
+      "river_score": 0
+    },
+    "1326": {
+      "fault_dist_m": 1819.1,
+      "fault_score": 0,
+      "river_dist_m": 2288.7,
+      "river_score": 0
+    },
+    "1327": {
+      "fault_dist_m": 8970.0,
+      "fault_score": 0,
+      "river_dist_m": 1171.8,
+      "river_score": 0
+    },
+    "1328": {
+      "fault_dist_m": 51570.6,
+      "fault_score": 0,
+      "river_dist_m": 2533.5,
+      "river_score": 0
+    },
+    "1329": {
+      "fault_dist_m": 1320.4,
+      "fault_score": 0,
+      "river_dist_m": 1066.8,
+      "river_score": 0
+    },
+    "1330": {
+      "fault_dist_m": 6469.9,
+      "fault_score": 0,
+      "river_dist_m": 3254.8,
+      "river_score": 0
+    },
+    "1331": {
+      "fault_dist_m": 317.8,
+      "fault_score": 75,
+      "river_dist_m": 3201.2,
+      "river_score": 0
+    },
+    "1332": {
+      "fault_dist_m": 64.4,
+      "fault_score": 100,
+      "river_dist_m": 928.8,
+      "river_score": 0
+    },
+    "1333": {
+      "fault_dist_m": 4466.0,
+      "fault_score": 0,
+      "river_dist_m": 1176.0,
+      "river_score": 0
+    },
+    "1334": {
+      "fault_dist_m": 27003.4,
+      "fault_score": 0,
+      "river_dist_m": 1675.1,
+      "river_score": 0
+    },
+    "1335": {
+      "fault_dist_m": 90.9,
+      "fault_score": 100,
+      "river_dist_m": 1654.6,
+      "river_score": 0
+    },
+    "1336": {
+      "fault_dist_m": 2015.2,
+      "fault_score": 0,
+      "river_dist_m": 1292.4,
+      "river_score": 0
+    },
+    "1337": {
+      "fault_dist_m": 4997.7,
+      "fault_score": 0,
+      "river_dist_m": 1024.6,
+      "river_score": 0
+    },
+    "1338": {
+      "fault_dist_m": 4420.2,
+      "fault_score": 0,
+      "river_dist_m": 657.3,
+      "river_score": 0
+    },
+    "1339": {
+      "fault_dist_m": 9992.0,
+      "fault_score": 0,
+      "river_dist_m": 1293.9,
+      "river_score": 0
+    },
+    "1340": {
+      "fault_dist_m": 4244.0,
+      "fault_score": 0,
+      "river_dist_m": 1488.0,
+      "river_score": 0
+    },
+    "1341": {
+      "fault_dist_m": 14321.2,
+      "fault_score": 0,
+      "river_dist_m": 2558.3,
+      "river_score": 0
+    },
+    "1342": {
+      "fault_dist_m": 1928.7,
+      "fault_score": 0,
+      "river_dist_m": 2130.4,
+      "river_score": 0
+    },
+    "1343": {
+      "fault_dist_m": 50713.4,
+      "fault_score": 0,
+      "river_dist_m": 1206.5,
+      "river_score": 0
+    },
+    "1344": {
+      "fault_dist_m": 13241.5,
+      "fault_score": 0,
+      "river_dist_m": 1060.1,
+      "river_score": 0
+    },
+    "1345": {
+      "fault_dist_m": 20554.0,
+      "fault_score": 0,
+      "river_dist_m": 569.2,
+      "river_score": 0
+    },
+    "1346": {
+      "fault_dist_m": 13710.5,
+      "fault_score": 0,
+      "river_dist_m": 705.9,
+      "river_score": 0
+    },
+    "1347": {
+      "fault_dist_m": 9886.6,
+      "fault_score": 0,
+      "river_dist_m": 1998.6,
+      "river_score": 0
+    },
+    "1348": {
+      "fault_dist_m": 24103.3,
+      "fault_score": 0,
+      "river_dist_m": 942.9,
+      "river_score": 0
+    },
+    "1349": {
+      "fault_dist_m": 15725.8,
+      "fault_score": 0,
+      "river_dist_m": 3187.6,
+      "river_score": 0
+    },
+    "1350": {
+      "fault_dist_m": 11138.8,
+      "fault_score": 0,
+      "river_dist_m": 2022.7,
+      "river_score": 0
+    },
+    "1351": {
+      "fault_dist_m": 30325.3,
+      "fault_score": 0,
+      "river_dist_m": 3788.3,
+      "river_score": 0
+    },
+    "1352": {
+      "fault_dist_m": 946.8,
+      "fault_score": 25,
+      "river_dist_m": 1734.4,
+      "river_score": 0
+    },
+    "1353": {
+      "fault_dist_m": 11837.2,
+      "fault_score": 0,
+      "river_dist_m": 69.2,
+      "river_score": 50
+    },
+    "1354": {
+      "fault_dist_m": 11535.4,
+      "fault_score": 0,
+      "river_dist_m": 744.0,
+      "river_score": 0
+    },
+    "1355": {
+      "fault_dist_m": 12095.4,
+      "fault_score": 0,
+      "river_dist_m": 4190.2,
+      "river_score": 0
+    },
+    "1356": {
+      "fault_dist_m": 5028.8,
+      "fault_score": 0,
+      "river_dist_m": 824.3,
+      "river_score": 0
+    },
+    "1357": {
+      "fault_dist_m": 13656.2,
+      "fault_score": 0,
+      "river_dist_m": 3193.7,
+      "river_score": 0
+    },
+    "1358": {
+      "fault_dist_m": 742.6,
+      "fault_score": 25,
+      "river_dist_m": 4520.0,
+      "river_score": 0
+    },
+    "1359": {
+      "fault_dist_m": 8717.3,
+      "fault_score": 0,
+      "river_dist_m": 2429.3,
+      "river_score": 0
+    },
+    "1360": {
+      "fault_dist_m": 5139.7,
+      "fault_score": 0,
+      "river_dist_m": 4253.6,
+      "river_score": 0
+    },
+    "1361": {
+      "fault_dist_m": 15491.8,
+      "fault_score": 0,
+      "river_dist_m": 2073.0,
+      "river_score": 0
+    },
+    "1362": {
+      "fault_dist_m": 362.5,
+      "fault_score": 75,
+      "river_dist_m": 1403.5,
+      "river_score": 0
+    },
+    "1363": {
+      "fault_dist_m": 30007.2,
+      "fault_score": 0,
+      "river_dist_m": 1093.4,
+      "river_score": 0
+    },
+    "1364": {
+      "fault_dist_m": 3492.5,
+      "fault_score": 0,
+      "river_dist_m": 1670.5,
+      "river_score": 0
+    },
+    "1365": {
+      "fault_dist_m": 9942.7,
+      "fault_score": 0,
+      "river_dist_m": 1282.2,
+      "river_score": 0
+    },
+    "1366": {
+      "fault_dist_m": 10941.7,
+      "fault_score": 0,
+      "river_dist_m": 752.4,
+      "river_score": 0
+    },
+    "1367": {
+      "fault_dist_m": 11528.6,
+      "fault_score": 0,
+      "river_dist_m": 2823.4,
+      "river_score": 0
+    },
+    "1368": {
+      "fault_dist_m": 2343.1,
+      "fault_score": 0,
+      "river_dist_m": 5138.7,
+      "river_score": 0
+    },
+    "1369": {
+      "fault_dist_m": 8047.7,
+      "fault_score": 0,
+      "river_dist_m": 3226.8,
+      "river_score": 0
+    },
+    "1370": {
+      "fault_dist_m": 564.7,
+      "fault_score": 25,
+      "river_dist_m": 1257.2,
+      "river_score": 0
+    },
+    "1371": {
+      "fault_dist_m": 11318.9,
+      "fault_score": 0,
+      "river_dist_m": 644.4,
+      "river_score": 0
+    },
+    "1372": {
+      "fault_dist_m": 5775.0,
+      "fault_score": 0,
+      "river_dist_m": 5975.5,
+      "river_score": 0
+    },
+    "1373": {
+      "fault_dist_m": 66323.3,
+      "fault_score": 0,
+      "river_dist_m": 902.7,
+      "river_score": 0
+    },
+    "1374": {
+      "fault_dist_m": 9255.6,
+      "fault_score": 0,
+      "river_dist_m": 1619.0,
+      "river_score": 0
+    },
+    "1375": {
+      "fault_dist_m": 33695.6,
+      "fault_score": 0,
+      "river_dist_m": 1364.1,
+      "river_score": 0
+    },
+    "1376": {
+      "fault_dist_m": 11047.6,
+      "fault_score": 0,
+      "river_dist_m": 2326.1,
+      "river_score": 0
+    },
+    "1377": {
+      "fault_dist_m": 12470.9,
+      "fault_score": 0,
+      "river_dist_m": 2423.4,
+      "river_score": 0
+    },
+    "1378": {
+      "fault_dist_m": 66105.6,
+      "fault_score": 0,
+      "river_dist_m": 760.2,
+      "river_score": 0
+    },
+    "1379": {
+      "fault_dist_m": 4051.8,
+      "fault_score": 0,
+      "river_dist_m": 6313.7,
+      "river_score": 0
+    },
+    "1380": {
+      "fault_dist_m": 7586.4,
+      "fault_score": 0,
+      "river_dist_m": 728.8,
+      "river_score": 0
+    },
+    "1381": {
+      "fault_dist_m": 7221.7,
+      "fault_score": 0,
+      "river_dist_m": 892.5,
+      "river_score": 0
+    },
+    "1382": {
+      "fault_dist_m": 96207.2,
+      "fault_score": 0,
+      "river_dist_m": 74622.7,
+      "river_score": 0
+    },
+    "1383": {
+      "fault_dist_m": 8317.4,
+      "fault_score": 0,
+      "river_dist_m": 50.0,
+      "river_score": 100
+    },
+    "1384": {
+      "fault_dist_m": 14298.2,
+      "fault_score": 0,
+      "river_dist_m": 8152.3,
+      "river_score": 0
+    },
+    "1385": {
+      "fault_dist_m": 7979.6,
+      "fault_score": 0,
+      "river_dist_m": 7394.1,
+      "river_score": 0
+    },
+    "1386": {
+      "fault_dist_m": 14444.0,
+      "fault_score": 0,
+      "river_dist_m": 1706.3,
+      "river_score": 0
+    },
+    "1387": {
+      "fault_dist_m": 9588.4,
+      "fault_score": 0,
+      "river_dist_m": 2347.2,
+      "river_score": 0
+    },
+    "1388": {
+      "fault_dist_m": 6358.6,
+      "fault_score": 0,
+      "river_dist_m": 574.3,
+      "river_score": 0
+    },
+    "1389": {
+      "fault_dist_m": 34553.9,
+      "fault_score": 0,
+      "river_dist_m": 2513.4,
+      "river_score": 0
+    },
+    "1390": {
+      "fault_dist_m": 134.4,
+      "fault_score": 100,
+      "river_dist_m": 2687.6,
+      "river_score": 0
+    },
+    "1391": {
+      "fault_dist_m": 4520.6,
+      "fault_score": 0,
+      "river_dist_m": 3787.5,
+      "river_score": 0
+    },
+    "1392": {
+      "fault_dist_m": 17236.8,
+      "fault_score": 0,
+      "river_dist_m": 13137.2,
+      "river_score": 0
+    },
+    "1393": {
+      "fault_dist_m": 317.8,
+      "fault_score": 75,
+      "river_dist_m": 3201.2,
+      "river_score": 0
+    },
+    "1394": {
+      "fault_dist_m": 14864.4,
+      "fault_score": 0,
+      "river_dist_m": 2369.6,
+      "river_score": 0
+    },
+    "1395": {
+      "fault_dist_m": 15331.4,
+      "fault_score": 0,
+      "river_dist_m": 2567.5,
+      "river_score": 0
+    },
+    "1396": {
+      "fault_dist_m": 3858.3,
+      "fault_score": 0,
+      "river_dist_m": 2890.3,
+      "river_score": 0
+    },
+    "1397": {
+      "fault_dist_m": 7744.5,
+      "fault_score": 0,
+      "river_dist_m": 1903.1,
+      "river_score": 0
+    },
+    "1398": {
+      "fault_dist_m": 34978.6,
+      "fault_score": 0,
+      "river_dist_m": 2513.5,
+      "river_score": 0
+    },
+    "1399": {
+      "fault_dist_m": 11424.2,
+      "fault_score": 0,
+      "river_dist_m": 696.7,
+      "river_score": 0
+    },
+    "1400": {
+      "fault_dist_m": 2573.1,
+      "fault_score": 0,
+      "river_dist_m": 1971.6,
+      "river_score": 0
+    },
+    "1401": {
+      "fault_dist_m": 89779.1,
+      "fault_score": 0,
+      "river_dist_m": 4090.5,
+      "river_score": 0
+    },
+    "1402": {
+      "fault_dist_m": 12834.2,
+      "fault_score": 0,
+      "river_dist_m": 3157.7,
+      "river_score": 0
+    },
+    "1403": {
+      "fault_dist_m": 1508.9,
+      "fault_score": 0,
+      "river_dist_m": 3578.2,
+      "river_score": 0
+    },
+    "1404": {
+      "fault_dist_m": 759.6,
+      "fault_score": 25,
+      "river_dist_m": 1142.9,
+      "river_score": 0
+    },
+    "1405": {
+      "fault_dist_m": 71495.4,
+      "fault_score": 0,
+      "river_dist_m": 2058.3,
+      "river_score": 0
+    },
+    "1406": {
+      "fault_dist_m": 62942.0,
+      "fault_score": 0,
+      "river_dist_m": 276.6,
+      "river_score": 0
+    },
+    "1407": {
+      "fault_dist_m": 5112.0,
+      "fault_score": 0,
+      "river_dist_m": 4624.3,
+      "river_score": 0
+    },
+    "1408": {
+      "fault_dist_m": 2217.1,
+      "fault_score": 0,
+      "river_dist_m": 671.2,
+      "river_score": 0
+    },
+    "1409": {
+      "fault_dist_m": 15099.2,
+      "fault_score": 0,
+      "river_dist_m": 2338.7,
+      "river_score": 0
+    },
+    "1410": {
+      "fault_dist_m": 12000.3,
+      "fault_score": 0,
+      "river_dist_m": 3737.0,
+      "river_score": 0
+    },
+    "1411": {
+      "fault_dist_m": 5027.6,
+      "fault_score": 0,
+      "river_dist_m": 824.4,
+      "river_score": 0
+    },
+    "1412": {
+      "fault_dist_m": 46900.0,
+      "fault_score": 0,
+      "river_dist_m": 1656.5,
+      "river_score": 0
+    },
+    "1413": {
+      "fault_dist_m": 5667.5,
+      "fault_score": 0,
+      "river_dist_m": 1818.8,
+      "river_score": 0
+    },
+    "1414": {
+      "fault_dist_m": 65.3,
+      "fault_score": 100,
+      "river_dist_m": 4789.2,
+      "river_score": 0
+    },
+    "1415": {
+      "fault_dist_m": 1110.3,
+      "fault_score": 0,
+      "river_dist_m": 2555.3,
+      "river_score": 0
+    },
+    "1416": {
+      "fault_dist_m": 206.5,
+      "fault_score": 100,
+      "river_dist_m": 2797.9,
+      "river_score": 0
+    },
+    "1417": {
+      "fault_dist_m": 30998.2,
+      "fault_score": 0,
+      "river_dist_m": 1269.4,
+      "river_score": 0
+    },
+    "1418": {
+      "fault_dist_m": 23813.9,
+      "fault_score": 0,
+      "river_dist_m": 1543.0,
+      "river_score": 0
+    },
+    "1419": {
+      "fault_dist_m": 9924.8,
+      "fault_score": 0,
+      "river_dist_m": 1231.2,
+      "river_score": 0
+    },
+    "1420": {
+      "fault_dist_m": 72171.6,
+      "fault_score": 0,
+      "river_dist_m": 1661.7,
+      "river_score": 0
+    },
+    "1421": {
+      "fault_dist_m": 5910.9,
+      "fault_score": 0,
+      "river_dist_m": 8431.0,
+      "river_score": 0
+    },
+    "1422": {
+      "fault_dist_m": 18511.2,
+      "fault_score": 0,
+      "river_dist_m": 1507.9,
+      "river_score": 0
+    },
+    "1423": {
+      "fault_dist_m": 2679.4,
+      "fault_score": 0,
+      "river_dist_m": 3179.9,
+      "river_score": 0
+    },
+    "1424": {
+      "fault_dist_m": 4295.5,
+      "fault_score": 0,
+      "river_dist_m": 3490.0,
+      "river_score": 0
+    },
+    "1425": {
+      "fault_dist_m": 69229.4,
+      "fault_score": 0,
+      "river_dist_m": 985.3,
+      "river_score": 0
+    },
+    "1426": {
+      "fault_dist_m": 15938.7,
+      "fault_score": 0,
+      "river_dist_m": 3196.5,
+      "river_score": 0
+    },
+    "1427": {
+      "fault_dist_m": 5488.7,
+      "fault_score": 0,
+      "river_dist_m": 1803.0,
+      "river_score": 0
+    },
+    "1428": {
+      "fault_dist_m": 6168.4,
+      "fault_score": 0,
+      "river_dist_m": 2747.8,
+      "river_score": 0
+    },
+    "1429": {
+      "fault_dist_m": 286.5,
+      "fault_score": 75,
+      "river_dist_m": 1429.1,
+      "river_score": 0
+    },
+    "1430": {
+      "fault_dist_m": 86.9,
+      "fault_score": 100,
+      "river_dist_m": 1513.8,
+      "river_score": 0
+    },
+    "1431": {
+      "fault_dist_m": 13628.3,
+      "fault_score": 0,
+      "river_dist_m": 2508.4,
+      "river_score": 0
+    },
+    "1432": {
+      "fault_dist_m": 11638.3,
+      "fault_score": 0,
+      "river_dist_m": 33.0,
+      "river_score": 100
+    },
+    "1433": {
+      "fault_dist_m": 10618.2,
+      "fault_score": 0,
+      "river_dist_m": 2074.5,
+      "river_score": 0
+    },
+    "1434": {
+      "fault_dist_m": 906.6,
+      "fault_score": 25,
+      "river_dist_m": 5610.0,
+      "river_score": 0
+    },
+    "1435": {
+      "fault_dist_m": 34131.7,
+      "fault_score": 0,
+      "river_dist_m": 2037.9,
+      "river_score": 0
+    },
+    "1436": {
+      "fault_dist_m": 4877.1,
+      "fault_score": 0,
+      "river_dist_m": 6250.4,
+      "river_score": 0
+    },
+    "1437": {
+      "fault_dist_m": 13194.7,
+      "fault_score": 0,
+      "river_dist_m": 8781.0,
+      "river_score": 0
+    },
+    "1438": {
+      "fault_dist_m": 11452.5,
+      "fault_score": 0,
+      "river_dist_m": 3256.6,
+      "river_score": 0
+    },
+    "1439": {
+      "fault_dist_m": 4190.6,
+      "fault_score": 0,
+      "river_dist_m": 1520.7,
+      "river_score": 0
+    },
+    "1440": {
+      "fault_dist_m": 5822.7,
+      "fault_score": 0,
+      "river_dist_m": 1395.4,
+      "river_score": 0
+    },
+    "1441": {
+      "fault_dist_m": 3760.3,
+      "fault_score": 0,
+      "river_dist_m": 2650.3,
+      "river_score": 0
+    },
+    "1442": {
+      "fault_dist_m": 92563.1,
+      "fault_score": 0,
+      "river_dist_m": 4506.3,
+      "river_score": 0
+    },
+    "1443": {
+      "fault_dist_m": 8512.1,
+      "fault_score": 0,
+      "river_dist_m": 8934.0,
+      "river_score": 0
+    },
+    "1444": {
+      "fault_dist_m": 8335.9,
+      "fault_score": 0,
+      "river_dist_m": 1802.5,
+      "river_score": 0
+    },
+    "1445": {
+      "fault_dist_m": 6198.2,
+      "fault_score": 0,
+      "river_dist_m": 8672.1,
+      "river_score": 0
+    },
+    "1446": {
+      "fault_dist_m": 11210.5,
+      "fault_score": 0,
+      "river_dist_m": 3378.5,
+      "river_score": 0
+    },
+    "1447": {
+      "fault_dist_m": 9619.8,
+      "fault_score": 0,
+      "river_dist_m": 1428.2,
+      "river_score": 0
+    },
+    "1448": {
+      "fault_dist_m": 12497.9,
+      "fault_score": 0,
+      "river_dist_m": 2517.2,
+      "river_score": 0
+    },
+    "1449": {
+      "fault_dist_m": 12003.6,
+      "fault_score": 0,
+      "river_dist_m": 4220.7,
+      "river_score": 0
+    },
+    "1450": {
+      "fault_dist_m": 821.2,
+      "fault_score": 25,
+      "river_dist_m": 553.9,
+      "river_score": 0
+    },
+    "1451": {
+      "fault_dist_m": 5888.3,
+      "fault_score": 0,
+      "river_dist_m": 2117.4,
+      "river_score": 0
+    },
+    "1452": {
+      "fault_dist_m": 25328.1,
+      "fault_score": 0,
+      "river_dist_m": 1315.9,
+      "river_score": 0
+    },
+    "1453": {
+      "fault_dist_m": 21804.8,
+      "fault_score": 0,
+      "river_dist_m": 3030.6,
+      "river_score": 0
+    },
+    "1454": {
+      "fault_dist_m": 13577.9,
+      "fault_score": 0,
+      "river_dist_m": 1812.5,
+      "river_score": 0
+    },
+    "1455": {
+      "fault_dist_m": 566.1,
+      "fault_score": 25,
+      "river_dist_m": 1026.2,
+      "river_score": 0
+    },
+    "1456": {
+      "fault_dist_m": 58735.9,
+      "fault_score": 0,
+      "river_dist_m": 1870.1,
+      "river_score": 0
+    },
+    "1457": {
+      "fault_dist_m": 34012.1,
+      "fault_score": 0,
+      "river_dist_m": 1711.2,
+      "river_score": 0
+    },
+    "1458": {
+      "fault_dist_m": 58827.9,
+      "fault_score": 0,
+      "river_dist_m": 1718.5,
+      "river_score": 0
+    },
+    "1459": {
+      "fault_dist_m": 3108.3,
+      "fault_score": 0,
+      "river_dist_m": 3639.0,
+      "river_score": 0
+    },
+    "1460": {
+      "fault_dist_m": 5831.5,
+      "fault_score": 0,
+      "river_dist_m": 1388.1,
+      "river_score": 0
+    },
+    "1461": {
+      "fault_dist_m": 11830.2,
+      "fault_score": 0,
+      "river_dist_m": 1191.9,
+      "river_score": 0
+    },
+    "1462": {
+      "fault_dist_m": 12322.8,
+      "fault_score": 0,
+      "river_dist_m": 1382.1,
+      "river_score": 0
+    },
+    "1463": {
+      "fault_dist_m": 14526.7,
+      "fault_score": 0,
+      "river_dist_m": 2358.6,
+      "river_score": 0
+    },
+    "1464": {
+      "fault_dist_m": 13760.3,
+      "fault_score": 0,
+      "river_dist_m": 4798.1,
+      "river_score": 0
+    },
+    "1465": {
+      "fault_dist_m": 75028.0,
+      "fault_score": 0,
+      "river_dist_m": 875.5,
+      "river_score": 0
+    },
+    "1466": {
+      "fault_dist_m": 14779.3,
+      "fault_score": 0,
+      "river_dist_m": 3178.8,
+      "river_score": 0
+    },
+    "1467": {
+      "fault_dist_m": 16248.9,
+      "fault_score": 0,
+      "river_dist_m": 2990.2,
+      "river_score": 0
+    },
+    "1468": {
+      "fault_dist_m": 6318.2,
+      "fault_score": 0,
+      "river_dist_m": 771.3,
+      "river_score": 0
+    },
+    "1469": {
+      "fault_dist_m": 66104.9,
+      "fault_score": 0,
+      "river_dist_m": 1321.3,
+      "river_score": 0
+    },
+    "1470": {
+      "fault_dist_m": 73537.4,
+      "fault_score": 0,
+      "river_dist_m": 3696.6,
+      "river_score": 0
+    },
+    "1471": {
+      "fault_dist_m": 18340.5,
+      "fault_score": 0,
+      "river_dist_m": 174.7,
+      "river_score": 0
+    },
+    "1472": {
+      "fault_dist_m": 2606.2,
+      "fault_score": 0,
+      "river_dist_m": 2397.2,
+      "river_score": 0
+    },
+    "1473": {
+      "fault_dist_m": 4125.7,
+      "fault_score": 0,
+      "river_dist_m": 5260.0,
+      "river_score": 0
+    },
+    "1474": {
+      "fault_dist_m": 34263.9,
+      "fault_score": 0,
+      "river_dist_m": 2095.5,
+      "river_score": 0
+    },
+    "1475": {
+      "fault_dist_m": 90904.0,
+      "fault_score": 0,
+      "river_dist_m": 1298.6,
+      "river_score": 0
+    },
+    "1476": {
+      "fault_dist_m": 16017.3,
+      "fault_score": 0,
+      "river_dist_m": 3114.7,
+      "river_score": 0
+    },
+    "1477": {
+      "fault_dist_m": 10929.2,
+      "fault_score": 0,
+      "river_dist_m": 2329.7,
+      "river_score": 0
+    },
+    "1478": {
+      "fault_dist_m": 67664.5,
+      "fault_score": 0,
+      "river_dist_m": 883.7,
+      "river_score": 0
+    },
+    "1479": {
+      "fault_dist_m": 38011.3,
+      "fault_score": 0,
+      "river_dist_m": 1546.0,
+      "river_score": 0
+    },
+    "1480": {
+      "fault_dist_m": 69110.2,
+      "fault_score": 0,
+      "river_dist_m": 1122.2,
+      "river_score": 0
+    },
+    "1481": {
+      "fault_dist_m": 4800.6,
+      "fault_score": 0,
+      "river_dist_m": 2090.6,
+      "river_score": 0
+    },
+    "1482": {
+      "fault_dist_m": 764.9,
+      "fault_score": 25,
+      "river_dist_m": 2025.0,
+      "river_score": 0
+    },
+    "1483": {
+      "fault_dist_m": 12587.1,
+      "fault_score": 0,
+      "river_dist_m": 2152.6,
+      "river_score": 0
+    },
+    "1484": {
+      "fault_dist_m": 96.7,
+      "fault_score": 100,
+      "river_dist_m": 1168.3,
+      "river_score": 0
+    },
+    "1485": {
+      "fault_dist_m": 2466.5,
+      "fault_score": 0,
+      "river_dist_m": 1557.2,
+      "river_score": 0
+    },
+    "1486": {
+      "fault_dist_m": 15769.7,
+      "fault_score": 0,
+      "river_dist_m": 4728.3,
+      "river_score": 0
+    },
+    "1487": {
+      "fault_dist_m": 14180.4,
+      "fault_score": 0,
+      "river_dist_m": 1656.1,
+      "river_score": 0
+    },
+    "1488": {
+      "fault_dist_m": 2191.3,
+      "fault_score": 0,
+      "river_dist_m": 3614.7,
+      "river_score": 0
+    },
+    "1489": {
+      "fault_dist_m": 9724.9,
+      "fault_score": 0,
+      "river_dist_m": 2399.4,
+      "river_score": 0
+    },
+    "1490": {
+      "fault_dist_m": 13712.3,
+      "fault_score": 0,
+      "river_dist_m": 1608.5,
+      "river_score": 0
+    },
+    "1491": {
+      "fault_dist_m": 27102.8,
+      "fault_score": 0,
+      "river_dist_m": 1689.3,
+      "river_score": 0
+    },
+    "1492": {
+      "fault_dist_m": 7389.3,
+      "fault_score": 0,
+      "river_dist_m": 8248.5,
+      "river_score": 0
+    },
+    "1493": {
+      "fault_dist_m": 15881.3,
+      "fault_score": 0,
+      "river_dist_m": 3110.8,
+      "river_score": 0
+    },
+    "1494": {
+      "fault_dist_m": 6256.1,
+      "fault_score": 0,
+      "river_dist_m": 4680.1,
+      "river_score": 0
+    },
+    "1495": {
+      "fault_dist_m": 16413.7,
+      "fault_score": 0,
+      "river_dist_m": 338.0,
+      "river_score": 0
+    },
+    "1496": {
+      "fault_dist_m": 87026.8,
+      "fault_score": 0,
+      "river_dist_m": 10561.7,
+      "river_score": 0
+    },
+    "1497": {
+      "fault_dist_m": 3500.1,
+      "fault_score": 0,
+      "river_dist_m": 4022.4,
+      "river_score": 0
+    },
+    "1498": {
+      "fault_dist_m": 51126.3,
+      "fault_score": 0,
+      "river_dist_m": 1576.6,
+      "river_score": 0
+    },
+    "1499": {
+      "fault_dist_m": 11895.9,
+      "fault_score": 0,
+      "river_dist_m": 4526.6,
+      "river_score": 0
+    },
+    "1500": {
+      "fault_dist_m": 93.8,
+      "fault_score": 100,
+      "river_dist_m": 1695.9,
+      "river_score": 0
+    },
+    "1501": {
+      "fault_dist_m": 1425.6,
+      "fault_score": 0,
+      "river_dist_m": 1420.3,
+      "river_score": 0
+    },
+    "1502": {
+      "fault_dist_m": 46865.0,
+      "fault_score": 0,
+      "river_dist_m": 1603.4,
+      "river_score": 0
+    },
+    "1503": {
+      "fault_dist_m": 8430.0,
+      "fault_score": 0,
+      "river_dist_m": 1461.5,
+      "river_score": 0
+    },
+    "1504": {
+      "fault_dist_m": 9861.8,
+      "fault_score": 0,
+      "river_dist_m": 1430.0,
+      "river_score": 0
+    },
+    "1505": {
+      "fault_dist_m": 6559.4,
+      "fault_score": 0,
+      "river_dist_m": 1088.9,
+      "river_score": 0
+    },
+    "1506": {
+      "fault_dist_m": 28726.4,
+      "fault_score": 0,
+      "river_dist_m": 1117.5,
+      "river_score": 0
+    },
+    "1507": {
+      "fault_dist_m": 27266.0,
+      "fault_score": 0,
+      "river_dist_m": 1312.7,
+      "river_score": 0
+    },
+    "1508": {
+      "fault_dist_m": 16123.6,
+      "fault_score": 0,
+      "river_dist_m": 1273.2,
+      "river_score": 0
+    },
+    "1509": {
+      "fault_dist_m": 78078.3,
+      "fault_score": 0,
+      "river_dist_m": 1921.9,
+      "river_score": 0
+    },
+    "1510": {
+      "fault_dist_m": 11362.2,
+      "fault_score": 0,
+      "river_dist_m": 1240.1,
+      "river_score": 0
+    },
+    "1511": {
+      "fault_dist_m": 2787.4,
+      "fault_score": 0,
+      "river_dist_m": 1552.6,
+      "river_score": 0
+    },
+    "1512": {
+      "fault_dist_m": 8095.1,
+      "fault_score": 0,
+      "river_dist_m": 2308.5,
+      "river_score": 0
+    },
+    "1513": {
+      "fault_dist_m": 16139.0,
+      "fault_score": 0,
+      "river_dist_m": 1207.6,
+      "river_score": 0
+    },
+    "1514": {
+      "fault_dist_m": 16066.6,
+      "fault_score": 0,
+      "river_dist_m": 3175.1,
+      "river_score": 0
+    },
+    "1515": {
+      "fault_dist_m": 89159.1,
+      "fault_score": 0,
+      "river_dist_m": 1938.1,
+      "river_score": 0
+    },
+    "1516": {
+      "fault_dist_m": 10082.9,
+      "fault_score": 0,
+      "river_dist_m": 1342.7,
+      "river_score": 0
+    },
+    "1517": {
+      "fault_dist_m": 12448.7,
+      "fault_score": 0,
+      "river_dist_m": 2333.2,
+      "river_score": 0
+    },
+    "1518": {
+      "fault_dist_m": 17853.7,
+      "fault_score": 0,
+      "river_dist_m": 4926.3,
+      "river_score": 0
+    },
+    "1519": {
+      "fault_dist_m": 13717.6,
+      "fault_score": 0,
+      "river_dist_m": 3830.1,
+      "river_score": 0
+    },
+    "1520": {
+      "fault_dist_m": 11964.5,
+      "fault_score": 0,
+      "river_dist_m": 981.4,
+      "river_score": 0
+    },
+    "1521": {
+      "fault_dist_m": 58929.8,
+      "fault_score": 0,
+      "river_dist_m": 2029.6,
+      "river_score": 0
+    },
+    "1522": {
+      "fault_dist_m": 8288.3,
+      "fault_score": 0,
+      "river_dist_m": 5135.8,
+      "river_score": 0
+    },
+    "1523": {
+      "fault_dist_m": 8348.8,
+      "fault_score": 0,
+      "river_dist_m": 1343.6,
+      "river_score": 0
+    },
+    "1524": {
+      "fault_dist_m": 693.5,
+      "fault_score": 25,
+      "river_dist_m": 3204.3,
+      "river_score": 0
+    },
+    "1525": {
+      "fault_dist_m": 1205.1,
+      "fault_score": 0,
+      "river_dist_m": 2116.4,
+      "river_score": 0
+    },
+    "1526": {
+      "fault_dist_m": 13765.4,
+      "fault_score": 0,
+      "river_dist_m": 1565.9,
+      "river_score": 0
+    },
+    "1527": {
+      "fault_dist_m": 72039.9,
+      "fault_score": 0,
+      "river_dist_m": 2170.2,
+      "river_score": 0
+    },
+    "1528": {
+      "fault_dist_m": 8990.9,
+      "fault_score": 0,
+      "river_dist_m": 2024.3,
+      "river_score": 0
+    },
+    "1529": {
+      "fault_dist_m": 19958.8,
+      "fault_score": 0,
+      "river_dist_m": 3981.2,
+      "river_score": 0
+    },
+    "1530": {
+      "fault_dist_m": 78005.2,
+      "fault_score": 0,
+      "river_dist_m": 2275.7,
+      "river_score": 0
+    },
+    "1531": {
+      "fault_dist_m": 2610.9,
+      "fault_score": 0,
+      "river_dist_m": 3360.2,
+      "river_score": 0
+    },
+    "1532": {
+      "fault_dist_m": 4153.6,
+      "fault_score": 0,
+      "river_dist_m": 5052.2,
+      "river_score": 0
+    },
+    "1533": {
+      "fault_dist_m": 8384.2,
+      "fault_score": 0,
+      "river_dist_m": 2667.4,
+      "river_score": 0
+    },
+    "1534": {
+      "fault_dist_m": 3187.3,
+      "fault_score": 0,
+      "river_dist_m": 5983.2,
+      "river_score": 0
+    },
+    "1535": {
+      "fault_dist_m": 16910.0,
+      "fault_score": 0,
+      "river_dist_m": 12882.5,
+      "river_score": 0
+    },
+    "1536": {
+      "fault_dist_m": 13688.6,
+      "fault_score": 0,
+      "river_dist_m": 581.7,
+      "river_score": 0
+    },
+    "1537": {
+      "fault_dist_m": 16927.7,
+      "fault_score": 0,
+      "river_dist_m": 2042.1,
+      "river_score": 0
+    },
+    "1538": {
+      "fault_dist_m": 4532.6,
+      "fault_score": 0,
+      "river_dist_m": 2377.8,
+      "river_score": 0
+    },
+    "1539": {
+      "fault_dist_m": 11475.3,
+      "fault_score": 0,
+      "river_dist_m": 1854.0,
+      "river_score": 0
+    },
+    "1540": {
+      "fault_dist_m": 87.2,
+      "fault_score": 100,
+      "river_dist_m": 1333.6,
+      "river_score": 0
+    },
+    "1541": {
+      "fault_dist_m": 14091.1,
+      "fault_score": 0,
+      "river_dist_m": 8661.2,
+      "river_score": 0
+    },
+    "1542": {
+      "fault_dist_m": 6203.5,
+      "fault_score": 0,
+      "river_dist_m": 2590.7,
+      "river_score": 0
+    },
+    "1543": {
+      "fault_dist_m": 68481.8,
+      "fault_score": 0,
+      "river_dist_m": 1385.9,
+      "river_score": 0
+    },
+    "1544": {
+      "fault_dist_m": 78065.6,
+      "fault_score": 0,
+      "river_dist_m": 1374.6,
+      "river_score": 0
+    },
+    "1545": {
+      "fault_dist_m": 67189.4,
+      "fault_score": 0,
+      "river_dist_m": 830.4,
+      "river_score": 0
+    },
+    "1546": {
+      "fault_dist_m": 34158.2,
+      "fault_score": 0,
+      "river_dist_m": 2028.2,
+      "river_score": 0
+    },
+    "1547": {
+      "fault_dist_m": 3777.1,
+      "fault_score": 0,
+      "river_dist_m": 3404.7,
+      "river_score": 0
+    },
+    "1548": {
+      "fault_dist_m": 11811.9,
+      "fault_score": 0,
+      "river_dist_m": 2500.4,
+      "river_score": 0
+    },
+    "1549": {
+      "fault_dist_m": 97456.0,
+      "fault_score": 0,
+      "river_dist_m": 73745.2,
+      "river_score": 0
+    },
+    "1550": {
+      "fault_dist_m": 13486.3,
+      "fault_score": 0,
+      "river_dist_m": 1960.5,
+      "river_score": 0
+    },
+    "1551": {
+      "fault_dist_m": 5195.7,
+      "fault_score": 0,
+      "river_dist_m": 2519.1,
+      "river_score": 0
+    },
+    "1552": {
+      "fault_dist_m": 8204.7,
+      "fault_score": 0,
+      "river_dist_m": 2441.1,
+      "river_score": 0
+    },
+    "1553": {
+      "fault_dist_m": 137.9,
+      "fault_score": 100,
+      "river_dist_m": 3939.3,
+      "river_score": 0
+    },
+    "1554": {
+      "fault_dist_m": 9125.6,
+      "fault_score": 0,
+      "river_dist_m": 2096.7,
+      "river_score": 0
+    },
+    "1555": {
+      "fault_dist_m": 57855.6,
+      "fault_score": 0,
+      "river_dist_m": 2249.5,
+      "river_score": 0
+    },
+    "1556": {
+      "fault_dist_m": 3065.6,
+      "fault_score": 0,
+      "river_dist_m": 7051.8,
+      "river_score": 0
+    },
+    "1557": {
+      "fault_dist_m": 80630.3,
+      "fault_score": 0,
+      "river_dist_m": 2722.5,
+      "river_score": 0
+    },
+    "1558": {
+      "fault_dist_m": 83.9,
+      "fault_score": 100,
+      "river_dist_m": 3335.9,
+      "river_score": 0
+    },
+    "1559": {
+      "fault_dist_m": 2911.4,
+      "fault_score": 0,
+      "river_dist_m": 2572.1,
+      "river_score": 0
+    },
+    "1560": {
+      "fault_dist_m": 2754.5,
+      "fault_score": 0,
+      "river_dist_m": 2227.2,
+      "river_score": 0
+    },
+    "1561": {
+      "fault_dist_m": 1500.9,
+      "fault_score": 0,
+      "river_dist_m": 2998.5,
+      "river_score": 0
+    },
+    "1562": {
+      "fault_dist_m": 92938.5,
+      "fault_score": 0,
+      "river_dist_m": 13888.0,
+      "river_score": 0
+    },
+    "1563": {
+      "fault_dist_m": 18113.5,
+      "fault_score": 0,
+      "river_dist_m": 3014.2,
+      "river_score": 0
+    },
+    "1564": {
+      "fault_dist_m": 10670.0,
+      "fault_score": 0,
+      "river_dist_m": 2383.7,
+      "river_score": 0
+    },
+    "1565": {
+      "fault_dist_m": 4707.8,
+      "fault_score": 0,
+      "river_dist_m": 12801.7,
+      "river_score": 0
+    },
+    "1566": {
+      "fault_dist_m": 17579.1,
+      "fault_score": 0,
+      "river_dist_m": 3399.8,
+      "river_score": 0
+    },
+    "1567": {
+      "fault_dist_m": 2663.6,
+      "fault_score": 0,
+      "river_dist_m": 2138.7,
+      "river_score": 0
+    },
+    "1568": {
+      "fault_dist_m": 20532.9,
+      "fault_score": 0,
+      "river_dist_m": 3940.2,
+      "river_score": 0
+    },
+    "1569": {
+      "fault_dist_m": 8486.5,
+      "fault_score": 0,
+      "river_dist_m": 5744.5,
+      "river_score": 0
+    },
+    "1570": {
+      "fault_dist_m": 3416.9,
+      "fault_score": 0,
+      "river_dist_m": 1816.0,
+      "river_score": 0
+    },
+    "1571": {
+      "fault_dist_m": 12495.9,
+      "fault_score": 0,
+      "river_dist_m": 374.6,
+      "river_score": 0
+    },
+    "1572": {
+      "fault_dist_m": 999.8,
+      "fault_score": 25,
+      "river_dist_m": 2440.1,
+      "river_score": 0
+    },
+    "1573": {
+      "fault_dist_m": 14805.8,
+      "fault_score": 0,
+      "river_dist_m": 2353.8,
+      "river_score": 0
+    },
+    "1574": {
+      "fault_dist_m": 8535.8,
+      "fault_score": 0,
+      "river_dist_m": 2921.4,
+      "river_score": 0
+    },
+    "1575": {
+      "fault_dist_m": 1151.3,
+      "fault_score": 0,
+      "river_dist_m": 2176.1,
+      "river_score": 0
+    },
+    "1576": {
+      "fault_dist_m": 1777.8,
+      "fault_score": 0,
+      "river_dist_m": 3284.8,
+      "river_score": 0
+    },
+    "1577": {
+      "fault_dist_m": 25492.1,
+      "fault_score": 0,
+      "river_dist_m": 2114.6,
+      "river_score": 0
+    },
+    "1578": {
+      "fault_dist_m": 14514.5,
+      "fault_score": 0,
+      "river_dist_m": 2932.7,
+      "river_score": 0
+    },
+    "1579": {
+      "fault_dist_m": 3045.6,
+      "fault_score": 0,
+      "river_dist_m": 3609.3,
+      "river_score": 0
+    },
+    "1580": {
+      "fault_dist_m": 3582.4,
+      "fault_score": 0,
+      "river_dist_m": 3329.0,
+      "river_score": 0
+    },
+    "1581": {
+      "fault_dist_m": 3834.6,
+      "fault_score": 0,
+      "river_dist_m": 2641.4,
+      "river_score": 0
+    },
+    "1582": {
+      "fault_dist_m": 20794.0,
+      "fault_score": 0,
+      "river_dist_m": 15159.6,
+      "river_score": 0
+    },
+    "1583": {
+      "fault_dist_m": 26297.2,
+      "fault_score": 0,
+      "river_dist_m": 2022.9,
+      "river_score": 0
+    },
+    "1584": {
+      "fault_dist_m": 3017.1,
+      "fault_score": 0,
+      "river_dist_m": 2635.2,
+      "river_score": 0
+    },
+    "1585": {
+      "fault_dist_m": 3106.9,
+      "fault_score": 0,
+      "river_dist_m": 5195.1,
+      "river_score": 0
+    },
+    "1586": {
+      "fault_dist_m": 538.7,
+      "fault_score": 25,
+      "river_dist_m": 4718.7,
+      "river_score": 0
+    },
+    "1587": {
+      "fault_dist_m": 5595.8,
+      "fault_score": 0,
+      "river_dist_m": 7142.7,
+      "river_score": 0
+    },
+    "1588": {
+      "fault_dist_m": 3290.5,
+      "fault_score": 0,
+      "river_dist_m": 3277.0,
+      "river_score": 0
+    },
+    "1589": {
+      "fault_dist_m": 8328.0,
+      "fault_score": 0,
+      "river_dist_m": 5744.0,
+      "river_score": 0
+    },
+    "1590": {
+      "fault_dist_m": 3288.0,
+      "fault_score": 0,
+      "river_dist_m": 2941.8,
+      "river_score": 0
+    },
+    "1591": {
+      "fault_dist_m": 9091.1,
+      "fault_score": 0,
+      "river_dist_m": 2857.1,
+      "river_score": 0
+    },
+    "1592": {
+      "fault_dist_m": 19010.3,
+      "fault_score": 0,
+      "river_dist_m": 8946.3,
+      "river_score": 0
+    },
+    "1593": {
+      "fault_dist_m": 11880.2,
+      "fault_score": 0,
+      "river_dist_m": 8964.2,
+      "river_score": 0
+    },
+    "1594": {
+      "fault_dist_m": 13945.5,
+      "fault_score": 0,
+      "river_dist_m": 4644.5,
+      "river_score": 0
+    },
+    "1595": {
+      "fault_dist_m": 73418.0,
+      "fault_score": 0,
+      "river_dist_m": 3102.6,
+      "river_score": 0
+    },
+    "1596": {
+      "fault_dist_m": 824.9,
+      "fault_score": 25,
+      "river_dist_m": 2544.1,
+      "river_score": 0
+    },
+    "1597": {
+      "fault_dist_m": 9005.5,
+      "fault_score": 0,
+      "river_dist_m": 2472.4,
+      "river_score": 0
+    },
+    "1598": {
+      "fault_dist_m": 93631.8,
+      "fault_score": 0,
+      "river_dist_m": 14227.8,
+      "river_score": 0
+    },
+    "1599": {
+      "fault_dist_m": 68.3,
+      "fault_score": 100,
+      "river_dist_m": 3382.0,
+      "river_score": 0
+    },
+    "1600": {
+      "fault_dist_m": 69489.7,
+      "fault_score": 0,
+      "river_dist_m": 2826.9,
+      "river_score": 0
+    },
+    "1601": {
+      "fault_dist_m": 36171.6,
+      "fault_score": 0,
+      "river_dist_m": 3547.9,
+      "river_score": 0
+    },
+    "1602": {
+      "fault_dist_m": 101657.2,
+      "fault_score": 0,
+      "river_dist_m": 8881.5,
+      "river_score": 0
+    },
+    "1603": {
+      "fault_dist_m": 6852.3,
+      "fault_score": 0,
+      "river_dist_m": 1697.2,
+      "river_score": 0
+    },
+    "1604": {
+      "fault_dist_m": 7129.0,
+      "fault_score": 0,
+      "river_dist_m": 5680.0,
+      "river_score": 0
+    },
+    "1605": {
+      "fault_dist_m": 72972.9,
+      "fault_score": 0,
+      "river_dist_m": 7697.5,
+      "river_score": 0
+    },
+    "1606": {
+      "fault_dist_m": 68498.4,
+      "fault_score": 0,
+      "river_dist_m": 2147.8,
+      "river_score": 0
+    },
+    "1607": {
+      "fault_dist_m": 3299.1,
+      "fault_score": 0,
+      "river_dist_m": 2952.2,
+      "river_score": 0
+    },
+    "1608": {
+      "fault_dist_m": 1220.1,
+      "fault_score": 0,
+      "river_dist_m": 3390.5,
+      "river_score": 0
+    },
+    "1609": {
+      "fault_dist_m": 17904.5,
+      "fault_score": 0,
+      "river_dist_m": 4909.6,
+      "river_score": 0
+    },
+    "1610": {
+      "fault_dist_m": 101863.4,
+      "fault_score": 0,
+      "river_dist_m": 9105.1,
+      "river_score": 0
+    },
+    "1611": {
+      "fault_dist_m": 35701.7,
+      "fault_score": 0,
+      "river_dist_m": 1796.4,
+      "river_score": 0
+    },
+    "1612": {
+      "fault_dist_m": 7336.3,
+      "fault_score": 0,
+      "river_dist_m": 2204.7,
+      "river_score": 0
+    },
+    "1613": {
+      "fault_dist_m": 4156.1,
+      "fault_score": 0,
+      "river_dist_m": 5049.8,
+      "river_score": 0
+    },
+    "1614": {
+      "fault_dist_m": 73876.8,
+      "fault_score": 0,
+      "river_dist_m": 3979.7,
+      "river_score": 0
+    },
+    "1615": {
+      "fault_dist_m": 92124.7,
+      "fault_score": 0,
+      "river_dist_m": 1778.9,
+      "river_score": 0
+    },
+    "1616": {
+      "fault_dist_m": 3227.8,
+      "fault_score": 0,
+      "river_dist_m": 2799.9,
+      "river_score": 0
+    },
+    "1617": {
+      "fault_dist_m": 6181.4,
+      "fault_score": 0,
+      "river_dist_m": 2975.3,
+      "river_score": 0
+    },
+    "1618": {
+      "fault_dist_m": 4032.9,
+      "fault_score": 0,
+      "river_dist_m": 5217.2,
+      "river_score": 0
+    },
+    "1619": {
+      "fault_dist_m": 3352.9,
+      "fault_score": 0,
+      "river_dist_m": 3049.1,
+      "river_score": 0
+    },
+    "1620": {
+      "fault_dist_m": 8063.3,
+      "fault_score": 0,
+      "river_dist_m": 2238.8,
+      "river_score": 0
+    },
+    "1621": {
+      "fault_dist_m": 6650.0,
+      "fault_score": 0,
+      "river_dist_m": 3733.9,
+      "river_score": 0
+    },
+    "1622": {
+      "fault_dist_m": 16948.7,
+      "fault_score": 0,
+      "river_dist_m": 2341.1,
+      "river_score": 0
+    },
+    "1623": {
+      "fault_dist_m": 2874.2,
+      "fault_score": 0,
+      "river_dist_m": 2475.9,
+      "river_score": 0
+    },
+    "1624": {
+      "fault_dist_m": 95717.7,
+      "fault_score": 0,
+      "river_dist_m": 13600.5,
+      "river_score": 0
+    },
+    "1625": {
+      "fault_dist_m": 1480.7,
+      "fault_score": 0,
+      "river_dist_m": 2727.7,
+      "river_score": 0
+    },
+    "1626": {
+      "fault_dist_m": 3388.6,
+      "fault_score": 0,
+      "river_dist_m": 5786.3,
+      "river_score": 0
+    },
+    "1627": {
+      "fault_dist_m": 494.6,
+      "fault_score": 75,
+      "river_dist_m": 3623.0,
+      "river_score": 0
+    },
+    "1628": {
+      "fault_dist_m": 4348.5,
+      "fault_score": 0,
+      "river_dist_m": 7877.9,
+      "river_score": 0
+    },
+    "1629": {
+      "fault_dist_m": 1351.2,
+      "fault_score": 0,
+      "river_dist_m": 4897.6,
+      "river_score": 0
+    },
+    "1630": {
+      "fault_dist_m": 3184.5,
+      "fault_score": 0,
+      "river_dist_m": 4194.6,
+      "river_score": 0
+    },
+    "1631": {
+      "fault_dist_m": 15519.0,
+      "fault_score": 0,
+      "river_dist_m": 8778.8,
+      "river_score": 0
+    },
+    "1632": {
+      "fault_dist_m": 5417.5,
+      "fault_score": 0,
+      "river_dist_m": 3973.3,
+      "river_score": 0
+    },
+    "1633": {
+      "fault_dist_m": 12710.3,
+      "fault_score": 0,
+      "river_dist_m": 2809.8,
+      "river_score": 0
+    },
+    "1634": {
+      "fault_dist_m": 61068.4,
+      "fault_score": 0,
+      "river_dist_m": 4245.4,
+      "river_score": 0
+    },
+    "1635": {
+      "fault_dist_m": 27131.5,
+      "fault_score": 0,
+      "river_dist_m": 2362.5,
+      "river_score": 0
+    },
+    "1636": {
+      "fault_dist_m": 8651.8,
+      "fault_score": 0,
+      "river_dist_m": 1567.4,
+      "river_score": 0
+    },
+    "1637": {
+      "fault_dist_m": 10824.3,
+      "fault_score": 0,
+      "river_dist_m": 2200.5,
+      "river_score": 0
+    },
+    "1638": {
+      "fault_dist_m": 87782.1,
+      "fault_score": 0,
+      "river_dist_m": 9334.4,
+      "river_score": 0
+    },
+    "1639": {
+      "fault_dist_m": 70780.1,
+      "fault_score": 0,
+      "river_dist_m": 4835.2,
+      "river_score": 0
+    },
+    "1640": {
+      "fault_dist_m": 7139.2,
+      "fault_score": 0,
+      "river_dist_m": 11175.0,
+      "river_score": 0
+    },
+    "1641": {
+      "fault_dist_m": 3296.6,
+      "fault_score": 0,
+      "river_dist_m": 6961.9,
+      "river_score": 0
+    },
+    "1642": {
+      "fault_dist_m": 9400.2,
+      "fault_score": 0,
+      "river_dist_m": 10390.3,
+      "river_score": 0
+    },
+    "1643": {
+      "fault_dist_m": 6987.8,
+      "fault_score": 0,
+      "river_dist_m": 6971.4,
+      "river_score": 0
+    },
+    "1644": {
+      "fault_dist_m": 2867.7,
+      "fault_score": 0,
+      "river_dist_m": 2491.1,
+      "river_score": 0
+    },
+    "1645": {
+      "fault_dist_m": 6420.4,
+      "fault_score": 0,
+      "river_dist_m": 982.1,
+      "river_score": 0
+    },
+    "1646": {
+      "fault_dist_m": 765.6,
+      "fault_score": 25,
+      "river_dist_m": 5946.9,
+      "river_score": 0
+    },
+    "1647": {
+      "fault_dist_m": 6987.8,
+      "fault_score": 0,
+      "river_dist_m": 6971.4,
+      "river_score": 0
+    },
+    "1648": {
+      "fault_dist_m": 2817.3,
+      "fault_score": 0,
+      "river_dist_m": 4312.1,
+      "river_score": 0
+    },
+    "1649": {
+      "fault_dist_m": 6511.8,
+      "fault_score": 0,
+      "river_dist_m": 6074.8,
+      "river_score": 0
+    },
+    "1650": {
+      "fault_dist_m": 514.8,
+      "fault_score": 25,
+      "river_dist_m": 2715.4,
+      "river_score": 0
+    },
+    "1651": {
+      "fault_dist_m": 580.5,
+      "fault_score": 25,
+      "river_dist_m": 3378.6,
+      "river_score": 0
+    },
+    "1652": {
+      "fault_dist_m": 82319.6,
+      "fault_score": 0,
+      "river_dist_m": 5431.4,
+      "river_score": 0
+    },
+    "1653": {
+      "fault_dist_m": 68399.5,
+      "fault_score": 0,
+      "river_dist_m": 5318.2,
+      "river_score": 0
+    },
+    "1654": {
+      "fault_dist_m": 20577.4,
+      "fault_score": 0,
+      "river_dist_m": 7801.3,
+      "river_score": 0
+    },
+    "1655": {
+      "fault_dist_m": 70811.3,
+      "fault_score": 0,
+      "river_dist_m": 4652.6,
+      "river_score": 0
+    },
+    "1656": {
+      "fault_dist_m": 3260.2,
+      "fault_score": 0,
+      "river_dist_m": 2914.6,
+      "river_score": 0
+    },
+    "1657": {
+      "fault_dist_m": 1501.9,
+      "fault_score": 0,
+      "river_dist_m": 2996.7,
+      "river_score": 0
+    },
+    "1658": {
+      "fault_dist_m": 8479.3,
+      "fault_score": 0,
+      "river_dist_m": 1306.2,
+      "river_score": 0
+    },
+    "1659": {
+      "fault_dist_m": 13806.5,
+      "fault_score": 0,
+      "river_dist_m": 2443.3,
+      "river_score": 0
+    },
+    "1660": {
+      "fault_dist_m": 5841.5,
+      "fault_score": 0,
+      "river_dist_m": 7596.4,
+      "river_score": 0
+    },
+    "1661": {
+      "fault_dist_m": 101996.1,
+      "fault_score": 0,
+      "river_dist_m": 9238.8,
+      "river_score": 0
+    },
+    "1662": {
+      "fault_dist_m": 2818.3,
+      "fault_score": 0,
+      "river_dist_m": 4312.3,
+      "river_score": 0
+    },
+    "1663": {
+      "fault_dist_m": 10821.4,
+      "fault_score": 0,
+      "river_dist_m": 2817.4,
+      "river_score": 0
+    },
+    "1664": {
+      "fault_dist_m": 20230.2,
+      "fault_score": 0,
+      "river_dist_m": 13377.2,
+      "river_score": 0
+    },
+    "1665": {
+      "fault_dist_m": 1633.8,
+      "fault_score": 0,
+      "river_dist_m": 3360.1,
+      "river_score": 0
+    },
+    "1666": {
+      "fault_dist_m": 11002.9,
+      "fault_score": 0,
+      "river_dist_m": 11872.0,
+      "river_score": 0
+    },
+    "1667": {
+      "fault_dist_m": 20948.4,
+      "fault_score": 0,
+      "river_dist_m": 5169.6,
+      "river_score": 0
+    },
+    "1668": {
+      "fault_dist_m": 21153.4,
+      "fault_score": 0,
+      "river_dist_m": 4107.6,
+      "river_score": 0
+    },
+    "1669": {
+      "fault_dist_m": 3996.9,
+      "fault_score": 0,
+      "river_dist_m": 4850.6,
+      "river_score": 0
+    },
+    "1670": {
+      "fault_dist_m": 4742.2,
+      "fault_score": 0,
+      "river_dist_m": 5850.6,
+      "river_score": 0
+    },
+    "1671": {
+      "fault_dist_m": 71249.4,
+      "fault_score": 0,
+      "river_dist_m": 4051.7,
+      "river_score": 0
+    },
+    "1672": {
+      "fault_dist_m": 5530.0,
+      "fault_score": 0,
+      "river_dist_m": 3885.8,
+      "river_score": 0
+    },
+    "1673": {
+      "fault_dist_m": 71489.2,
+      "fault_score": 0,
+      "river_dist_m": 4306.3,
+      "river_score": 0
+    },
+    "1674": {
+      "fault_dist_m": 20148.6,
+      "fault_score": 0,
+      "river_dist_m": 8021.0,
+      "river_score": 0
+    },
+    "1675": {
+      "fault_dist_m": 66306.0,
+      "fault_score": 0,
+      "river_dist_m": 4251.5,
+      "river_score": 0
+    },
+    "1676": {
+      "fault_dist_m": 3089.4,
+      "fault_score": 0,
+      "river_dist_m": 12001.6,
+      "river_score": 0
+    },
+    "1677": {
+      "fault_dist_m": 3366.6,
+      "fault_score": 0,
+      "river_dist_m": 1061.5,
+      "river_score": 0
+    },
+    "1678": {
+      "fault_dist_m": 32167.6,
+      "fault_score": 0,
+      "river_dist_m": 10418.3,
+      "river_score": 0
+    },
+    "1679": {
+      "fault_dist_m": 15528.4,
+      "fault_score": 0,
+      "river_dist_m": 2719.3,
+      "river_score": 0
+    },
+    "1680": {
+      "fault_dist_m": 42233.6,
+      "fault_score": 0,
+      "river_dist_m": 4668.2,
+      "river_score": 0
+    },
+    "1681": {
+      "fault_dist_m": 71452.9,
+      "fault_score": 0,
+      "river_dist_m": 4348.1,
+      "river_score": 0
+    },
+    "1682": {
+      "fault_dist_m": 46.6,
+      "fault_score": 100,
+      "river_dist_m": 10707.1,
+      "river_score": 0
+    },
+    "1683": {
+      "fault_dist_m": 4702.2,
+      "fault_score": 0,
+      "river_dist_m": 964.3,
+      "river_score": 0
+    },
+    "1684": {
+      "fault_dist_m": 1314.9,
+      "fault_score": 0,
+      "river_dist_m": 6701.1,
+      "river_score": 0
+    },
+    "1685": {
+      "fault_dist_m": 66.3,
+      "fault_score": 100,
+      "river_dist_m": 3814.3,
+      "river_score": 0
+    },
+    "1686": {
+      "fault_dist_m": 19168.5,
+      "fault_score": 0,
+      "river_dist_m": 9625.7,
+      "river_score": 0
+    },
+    "1687": {
+      "fault_dist_m": 8541.6,
+      "fault_score": 0,
+      "river_dist_m": 2856.5,
+      "river_score": 0
+    },
+    "1688": {
+      "fault_dist_m": 28109.4,
+      "fault_score": 0,
+      "river_dist_m": 6961.3,
+      "river_score": 0
+    },
+    "1689": {
+      "fault_dist_m": 17331.8,
+      "fault_score": 0,
+      "river_dist_m": 13171.2,
+      "river_score": 0
+    },
+    "1690": {
+      "fault_dist_m": 12448.4,
+      "fault_score": 0,
+      "river_dist_m": 221.8,
+      "river_score": 0
+    },
+    "1691": {
+      "fault_dist_m": 8721.7,
+      "fault_score": 0,
+      "river_dist_m": 2998.3,
+      "river_score": 0
+    },
+    "1692": {
+      "fault_dist_m": 17344.7,
+      "fault_score": 0,
+      "river_dist_m": 9920.1,
+      "river_score": 0
+    },
+    "1693": {
+      "fault_dist_m": 29200.5,
+      "fault_score": 0,
+      "river_dist_m": 37475.9,
+      "river_score": 0
+    },
+    "1694": {
+      "fault_dist_m": 387.2,
+      "fault_score": 75,
+      "river_dist_m": 9154.5,
+      "river_score": 0
+    },
+    "1695": {
+      "fault_dist_m": 8422.1,
+      "fault_score": 0,
+      "river_dist_m": 2777.3,
+      "river_score": 0
+    },
+    "1696": {
+      "fault_dist_m": 29228.5,
+      "fault_score": 0,
+      "river_dist_m": 3310.9,
+      "river_score": 0
+    },
+    "1697": {
+      "fault_dist_m": 6136.7,
+      "fault_score": 0,
+      "river_dist_m": 4985.8,
+      "river_score": 0
+    },
+    "1698": {
+      "fault_dist_m": 3120.4,
+      "fault_score": 0,
+      "river_dist_m": 11678.5,
+      "river_score": 0
+    },
+    "1699": {
+      "fault_dist_m": 8659.8,
+      "fault_score": 0,
+      "river_dist_m": 2715.6,
+      "river_score": 0
+    },
+    "1700": {
+      "fault_dist_m": 7343.3,
+      "fault_score": 0,
+      "river_dist_m": 6756.9,
+      "river_score": 0
+    },
+    "1701": {
+      "fault_dist_m": 27326.9,
+      "fault_score": 0,
+      "river_dist_m": 35841.2,
+      "river_score": 0
+    },
+    "1702": {
+      "fault_dist_m": 8355.3,
+      "fault_score": 0,
+      "river_dist_m": 2687.4,
+      "river_score": 0
+    },
+    "1703": {
+      "fault_dist_m": 17384.8,
+      "fault_score": 0,
+      "river_dist_m": 4163.7,
+      "river_score": 0
+    },
+    "1704": {
+      "fault_dist_m": 20776.2,
+      "fault_score": 0,
+      "river_dist_m": 15128.2,
+      "river_score": 0
+    },
+    "1705": {
+      "fault_dist_m": 4315.8,
+      "fault_score": 0,
+      "river_dist_m": 14223.8,
+      "river_score": 0
+    },
+    "1706": {
+      "fault_dist_m": 24077.6,
+      "fault_score": 0,
+      "river_dist_m": 15720.8,
+      "river_score": 0
+    },
+    "1707": {
+      "fault_dist_m": 8461.6,
+      "fault_score": 0,
+      "river_dist_m": 2803.1,
+      "river_score": 0
+    },
+    "1708": {
+      "fault_dist_m": 8545.6,
+      "fault_score": 0,
+      "river_dist_m": 2904.6,
+      "river_score": 0
+    },
+    "1709": {
+      "fault_dist_m": 185.7,
+      "fault_score": 100,
+      "river_dist_m": 3048.2,
+      "river_score": 0
+    },
+    "1710": {
+      "fault_dist_m": 42352.1,
+      "fault_score": 0,
+      "river_dist_m": 38627.2,
+      "river_score": 0
+    },
+    "1711": {
+      "fault_dist_m": 8628.0,
+      "fault_score": 0,
+      "river_dist_m": 2995.8,
+      "river_score": 0
+    },
+    "1712": {
+      "fault_dist_m": 42236.7,
+      "fault_score": 0,
+      "river_dist_m": 4681.4,
+      "river_score": 0
+    },
+    "1713": {
+      "fault_dist_m": 23684.8,
+      "fault_score": 0,
+      "river_dist_m": 1297.1,
+      "river_score": 0
+    },
+    "1714": {
+      "fault_dist_m": 936.4,
+      "fault_score": 25,
+      "river_dist_m": 3243.4,
+      "river_score": 0
+    },
+    "1715": {
+      "fault_dist_m": 9068.0,
+      "fault_score": 0,
+      "river_dist_m": 3127.7,
+      "river_score": 0
+    },
+    "1716": {
+      "fault_dist_m": 4349.4,
+      "fault_score": 0,
+      "river_dist_m": 3155.5,
+      "river_score": 0
+    },
+    "1717": {
+      "fault_dist_m": 8598.9,
+      "fault_score": 0,
+      "river_dist_m": 2679.1,
+      "river_score": 0
+    },
+    "1718": {
+      "fault_dist_m": 21342.6,
+      "fault_score": 0,
+      "river_dist_m": 17393.5,
+      "river_score": 0
+    },
+    "1719": {
+      "fault_dist_m": 646.7,
+      "fault_score": 25,
+      "river_dist_m": 2253.5,
+      "river_score": 0
+    },
+    "1720": {
+      "fault_dist_m": 8061.4,
+      "fault_score": 0,
+      "river_dist_m": 11507.7,
+      "river_score": 0
+    },
+    "1721": {
+      "fault_dist_m": 50631.0,
+      "fault_score": 0,
+      "river_dist_m": 3013.5,
+      "river_score": 0
+    },
+    "1722": {
+      "fault_dist_m": 4785.2,
+      "fault_score": 0,
+      "river_dist_m": 8945.6,
+      "river_score": 0
+    },
+    "1723": {
+      "fault_dist_m": 10116.4,
+      "fault_score": 0,
+      "river_dist_m": 6149.9,
+      "river_score": 0
+    },
+    "1724": {
+      "fault_dist_m": 9655.3,
+      "fault_score": 0,
+      "river_dist_m": 9873.5,
+      "river_score": 0
+    },
+    "1725": {
+      "fault_dist_m": 14223.2,
+      "fault_score": 0,
+      "river_dist_m": 1663.4,
+      "river_score": 0
+    },
+    "1726": {
+      "fault_dist_m": 89009.9,
+      "fault_score": 0,
+      "river_dist_m": 94878.8,
+      "river_score": 0
+    },
+    "1727": {
+      "fault_dist_m": 82157.4,
+      "fault_score": 0,
+      "river_dist_m": 91802.2,
+      "river_score": 0
+    },
+    "1728": {
+      "fault_dist_m": 224019.8,
+      "fault_score": 0,
+      "river_dist_m": 227333.8,
+      "river_score": 0
+    },
+    "1729": {
+      "fault_dist_m": 38868.2,
+      "fault_score": 0,
+      "river_dist_m": 6231.4,
+      "river_score": 0
+    },
+    "1730": {
+      "fault_dist_m": 216363.1,
+      "fault_score": 0,
+      "river_dist_m": 219635.6,
+      "river_score": 0
+    },
+    "1731": {
+      "fault_dist_m": 90489.9,
+      "fault_score": 0,
+      "river_dist_m": 101001.9,
+      "river_score": 0
+    },
+    "1732": {
+      "fault_dist_m": 88066.1,
+      "fault_score": 0,
+      "river_dist_m": 93880.1,
+      "river_score": 0
+    },
+    "1733": {
+      "fault_dist_m": 13420.1,
+      "fault_score": 0,
+      "river_dist_m": 2633.1,
+      "river_score": 0
+    },
+    "1734": {
+      "fault_dist_m": 16317.5,
+      "fault_score": 0,
+      "river_dist_m": 13859.4,
+      "river_score": 0
+    },
+    "1735": {
+      "fault_dist_m": 2240.7,
+      "fault_score": 0,
+      "river_dist_m": 4026.6,
+      "river_score": 0
+    },
+    "1736": {
+      "fault_dist_m": 13974.5,
+      "fault_score": 0,
+      "river_dist_m": 3366.6,
+      "river_score": 0
+    },
+    "1737": {
+      "fault_dist_m": 1281.2,
+      "fault_score": 0,
+      "river_dist_m": 5938.1,
+      "river_score": 0
+    }
+  }
+};
