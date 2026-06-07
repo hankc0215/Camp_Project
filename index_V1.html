@@ -92,7 +92,7 @@
       <div>坡度 5.6%<div class="bar"><i style="width:5.6%"></i></div></div>
       <div>河川距離 5.6%<div class="bar"><i style="width:5.6%"></i></div><div style="color:#94a3b8;font-size:11px;margin-top:3px">已用 riverlin.shp / riverpoly.shp 重新計算距離</div></div>
       <div>斷層 2.0%<div class="bar"><i style="width:2%"></i></div></div>
-      <div style="color:#94a3b8;margin-top:6px">權重參考「權重計算.xlsx」與截圖分類準則；目前套用法規、坡度、雨量、斷層、土石流、事件型崩塌、河川距離、聯外道路 8 項。即時雨量版門檻：75/60/40 分。</div>
+      <div style="color:#94a3b8;margin-top:6px">權重參考「權重計算.xlsx」與截圖分類準則；目前套用法規、坡度、雨量、斷層、土石流、事件型崩塌、河川距離、聯外道路 8 項。分級採「綜合分數＋關鍵條件」判定，避免單一平均分數稀釋高風險情境。</div>
     </div></div>
   </aside>
   <main>
@@ -158,7 +158,32 @@
   function rainLabel(c){ return Number.isFinite(Number(c.rain_24h_mm_real)) ? '實測雨量' : '示範雨量'; }
   function rainStationText(c){ return c.rain_station_name ? `${c.rain_station_name}${c.rain_station_distance_km==null?'':`，距營區 ${fmtDist(Number(c.rain_station_distance_km)*1000)}`}` : '尚未套用真實測站'; }
   function scoreDist(d){ if(d===null || d===undefined) return 0; if(d<=0) return 100; if(d<=100) return 90; if(d<=250) return 75; if(d<=500) return 55; if(d<=1000) return 30; if(d<=2000) return 12; return 0; }
-  function classify(score){ if(score>=75) return '立即撤離'; if(score>=60) return '預警撤離'; if(score>=40) return '加強監測'; return '正常監測'; }
+  function lteDist(value, threshold){
+    const n = Number(value);
+    return Number.isFinite(n) && n <= threshold;
+  }
+  function hasLegalIssue(c){
+    return String(c.law_status||'').includes('違反') || String(c.law_issue||'').match(/待|未|尚|不符合|違反/);
+  }
+  function classifyRisk(c, score, rain){
+    const debrisInside = lteDist(c.debris_dist_m, 0);
+    const debris250 = lteDist(c.debris_dist_m, 250);
+    const debris500 = lteDist(c.debris_dist_m, 500);
+    const landslide100 = lteDist(c.event_dist_m, 100) || lteDist(c.lswarn_dist_m, 0) || lteDist(c.lspot_dist_m, 100);
+    const landslide250 = lteDist(c.event_dist_m, 250) || lteDist(c.lswarn_dist_m, 250) || lteDist(c.lspot_dist_m, 250);
+    const landslide500 = lteDist(c.event_dist_m, 500) || lteDist(c.lswarn_dist_m, 500) || lteDist(c.lspot_dist_m, 500);
+    const river50 = lteDist(c.river_dist_m, 50);
+    const river100 = lteDist(c.river_dist_m, 100);
+    const roadLimited = roadAccessScore(c) >= 75;
+    const steep = (slopePercent(c.slope_deg) || 0) >= 30;
+    const hazard250 = debris250 || landslide250 || river50;
+    const hazard500 = debris500 || landslide500 || river100;
+
+    if(score >= 65 || rain >= 350 || (rain >= 200 && (debrisInside || landslide100 || river50 || roadLimited || steep))) return '立即撤離';
+    if(score >= 55 || rain >= 200 || (rain >= 80 && (hazard250 || roadLimited || steep)) || (debrisInside && (river50 || roadLimited))) return '預警撤離';
+    if(score >= 40 || rain >= 80 || (rain >= 40 && (hazard500 || roadLimited || steep)) || hazard250 || (roadLimited && (debris250 || landslide250 || river50)) || (steep && hazard500)) return '加強監測';
+    return '正常監測';
+  }
   const AHP_WEIGHTS = {
     legal: 14.3,
     slope: 5.6,
@@ -186,11 +211,11 @@
     const faultScore = Number.isFinite(Number(c.fault_score)) ? Number(c.fault_score) : faultDistanceScore(c.fault_dist_m);
     const eventScore = eventDistanceScore(c.event_dist_m);
     const riverScore = Number.isFinite(Number(c.river_score)) ? Number(c.river_score) : riverDistanceScore(c.river_dist_m);
-    const legalScore = String(c.law_status||'').includes('違反') || String(c.law_issue||'').match(/待|未|尚|不符合|違反/) ? 50 : 0;
+    const legalScore = hasLegalIssue(c) ? 50 : 0;
     const roadScore = roadAccessScore(c);
     let score = weighted('legal', legalScore) + weighted('slope', slopeScore) + weighted('rain', rainScore) + weighted('fault', faultScore) + weighted('debris', debrisScore) + weighted('event', eventScore) + weighted('river', riverScore) + weighted('road', roadScore);
     score = Math.min(100, score);
-    return {score, level: classify(score), rain};
+    return {score, level: classifyRisk(c, score, rain), rain};
   }
   function isIllegal(c){
     const text = `${c.law_status||''} ${c.law_issue||''}`;
@@ -381,8 +406,8 @@
     if(!topRows.length) return '<div class="popup-breakdown">主要加權因子：目前皆未達加分門檻</div>';
     return `<div class="popup-breakdown"><b>主要加權因子</b>${topRows.map(r=>`<div><span>${r.label} ${r.weight.toFixed(1)}%</span><b>+${r.contribution.toFixed(1)}</b></div>`).join('')}</div>`;
   }
-  function markerSize(score){ return score>=75?18:score>=60?16:score>=40?13:11; }
-  function iconFor(calc){ const size=markerSize(calc.score); const cls=calc.level==='立即撤離'?'critical':''; return L.divIcon({className:'camp-marker-wrap', html:`<div class="camp-marker ${cls}" style="--s:${size}px;--c:${COLORS[calc.level]}"></div>`, iconSize:[size,size], iconAnchor:[size/2,size/2]}); }
+  function markerSize(calc){ if(calc.level==='立即撤離') return 18; if(calc.level==='預警撤離') return 16; if(calc.level==='加強監測') return 13; return 11; }
+  function iconFor(calc){ const size=markerSize(calc); const cls=calc.level==='立即撤離'?'critical':''; return L.divIcon({className:'camp-marker-wrap', html:`<div class="camp-marker ${cls}" style="--s:${size}px;--c:${COLORS[calc.level]}"></div>`, iconSize:[size,size], iconAnchor:[size/2,size/2]}); }
   function popupHTML(c, calc){ return `<b>${c.name}</b><br>${c.county||''}${c.town||''}<br><span class="level ${LVCLASS[calc.level]}" style="margin-top:6px">${calc.level}｜${calc.score.toFixed(1)} 分</span>${popupBreakdownHTML(c, calc)}<button onclick="window.showDetailsById('${c.priority_rank}')" style="margin-top:8px;border:0;border-radius:8px;padding:5px 8px;background:#38bdf8;color:#082f49;font-weight:900;cursor:pointer">查看完整權重明細</button>`; }
   function render(){
     campLayer.clearLayers(); markerById.clear(); lastBounds=[];
