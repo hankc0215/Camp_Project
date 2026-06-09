@@ -90,7 +90,7 @@
       <div>法規 14.3%<div class="bar"><i style="width:14.3%"></i></div></div>
       <div>聯外道路 14.3%<div class="bar"><i style="width:14.3%"></i></div></div>
       <div>坡度 5.6%<div class="bar"><i style="width:5.6%"></i></div></div>
-      <div>河川距離 5.6%<div class="bar"><i style="width:5.6%"></i></div><div style="color:#94a3b8;font-size:11px;margin-top:3px">已用 riverlin.shp / riverpoly.shp 重新計算距離</div></div>
+      <div>河川距離 5.6%<div class="bar"><i style="width:5.6%"></i></div><div style="color:#94a3b8;font-size:11px;margin-top:3px">已用 riverlin.shp / riverpoly.shp / 土石流潛勢溪流重新計算距離</div></div>
       <div>斷層 2.0%<div class="bar"><i style="width:2%"></i></div></div>
       <div style="color:#94a3b8;margin-top:6px">權重參考「權重計算.xlsx」與截圖分類準則；目前套用法規、坡度、雨量、斷層、土石流、事件型崩塌、河川距離、聯外道路 8 項。分級採「綜合分數＋關鍵條件」判定，避免單一平均分數稀釋高風險情境。</div>
     </div></div>
@@ -421,7 +421,7 @@
       legal: {raw: legalRiskScore(c), value: c.law_status || '未標示', rule:'符合相關法規=0；違反/非法=50；law_status 未標示時才參考 law_issue'},
       road: {raw: roadAccessScore(c), value: Number.isFinite(Number(c.road_count_1km)) ? `1 km 內道路數 ${Number(c.road_count_1km).toFixed(0)}` : '道路資料未套用，暫以 0 分處理', rule:'道路越少代表撤離替代性越低'},
       slope: {raw: slopePercentScore(c.slope_deg), value: `${fmt(c.slope_deg,'°',1)}（坡度 ${slopePercent(c.slope_deg)===null?'無資料':slopePercent(c.slope_deg).toFixed(0)+'%'}）`, rule:'坡度百分比 ≥30%=100；10–29%=50'},
-      river: {raw: Number.isFinite(Number(c.river_score)) ? Number(c.river_score) : riverDistanceScore(c.river_dist_m), value: `距河川 ${fmtDist(c.river_dist_m)}${c.nearest_river_name ? '｜最近：'+c.nearest_river_name : ''}${c.river_source ? '｜資料：'+c.river_source : ''}`, rule:'<50m=100；<100m=50；使用 riverlin.shp / riverpoly.shp 最近距離'},
+      river: {raw: Number.isFinite(Number(c.river_score)) ? Number(c.river_score) : riverDistanceScore(c.river_dist_m), value: `距河川/潛勢溪流 ${fmtDist(c.river_dist_m)}${c.nearest_river_name ? '｜最近：'+c.nearest_river_name : ''}${c.nearest_debris_stream_no ? '｜編號：'+c.nearest_debris_stream_no : ''}${c.river_source ? '｜資料：'+c.river_source : ''}`, rule:'<50m=100；<100m=50；取 riverlin.shp、riverpoly.shp、土石流潛勢溪流最近距離'},
       fault: {raw: Number.isFinite(Number(c.fault_score)) ? Number(c.fault_score) : faultDistanceScore(c.fault_dist_m), value: `距斷層 ${fmtDist(c.fault_dist_m)}`, rule:'≤250m=100；≤500m=75；<1000m=25'}
     };
     return AHP_ORDER.map(key=>{
@@ -478,7 +478,7 @@
         <div class="metric"><b>${fmt(c.elevation_m,' m',0)}</b><span>高程</span></div>
         <div class="metric"><b>${fmtDist(c.debris_dist_m)}</b><span>最近土石流影響範圍</span></div>
         <div class="metric"><b>${fmtDist(c.event_dist_m)}</b><span>最近 2025 事件型崩塌</span></div>
-        <div class="metric"><b>${fmtDist(c.river_dist_m)}</b><span>最近河川距離（riverlin/riverpoly）</span></div>
+        <div class="metric"><b>${fmtDist(c.river_dist_m)}</b><span>最近河川/潛勢溪流距離</span></div>
         <div class="metric"><b>${fmtDist(c.fault_dist_m)}</b><span>最近斷層／地質敏感區</span></div>
         <div class="metric"><b>${Number.isFinite(Number(c.road_count_1km)) ? Number(c.road_count_1km).toFixed(0) : '無資料'}</b><span>1 km 內聯外道路數</span></div>
         <div class="metric"><b>${c.aspect_dir||'無資料'} ${c.aspect_deg==null?'':Number(c.aspect_deg).toFixed(0)+'°'}</b><span>坡向，僅作背景資訊</span></div>
@@ -487,7 +487,7 @@
       <h2 style="margin-top:14px">預警訊息草稿</h2>
       <div class="alertbox" id="alertText">${alert}</div>
       <button class="btn copybtn" onclick="navigator.clipboard && navigator.clipboard.writeText(document.getElementById('alertText').innerText)">複製預警文字</button>
-      <div class="method"><b>雨量備註：</b>${rainfallMeta ? `中央氣象署 ${rainfallMeta.source}，更新 ${fmtTime(rainfallMeta.generated_at)}` : '目前未載入 real_rainfall.json，使用備援雨量值。'}<br><b>權重備註：</b>左側欄位與此明細皆使用同一套 AHP/MCDA 權重：雨量 28.8%、土石流 14.7%、事件型崩塌 14.7%、法規 14.3%、聯外道路 14.3%、坡度 5.6%、河川距離 5.6%、斷層 2.0%。<br><b>河川距離備註：</b>本版已將營區點位投影至 EPSG:3826，並以 riverlin.shp 與 riverpoly.shp 重新計算最近距離。<br><b>法規/治理備註：</b>${c.law_issue||'無或未標示'}<br><b>原民區：</b>${c.indigenous_area||'未標示'}</div>`;
+      <div class="method"><b>雨量備註：</b>${rainfallMeta ? `中央氣象署 ${rainfallMeta.source}，更新 ${fmtTime(rainfallMeta.generated_at)}` : '目前未載入 real_rainfall.json，使用備援雨量值。'}<br><b>權重備註：</b>左側欄位與此明細皆使用同一套 AHP/MCDA 權重：雨量 28.8%、土石流 14.7%、事件型崩塌 14.7%、法規 14.3%、聯外道路 14.3%、坡度 5.6%、河川距離 5.6%、斷層 2.0%。<br><b>河川距離備註：</b>本版已將營區點位投影至 EPSG:3826，並以 riverlin.shp、riverpoly.shp 與 1753 條土石流潛勢溪流取最近距離。<br><b>法規/治理備註：</b>${c.law_issue||'無或未標示'}<br><b>原民區：</b>${c.indigenous_area||'未標示'}</div>`;
   }
   
   window.focusCamp = function(id){ const m=markerById.get(String(id)); if(m){ if(!$('layerCamps').checked){ $('layerCamps').checked=true; campLayer.addTo(map); } map.setView(m.getLatLng(), 14); m.openPopup(); } };
