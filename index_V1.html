@@ -155,7 +155,16 @@
     el.innerHTML = `資料更新：<b>${fmtTime(rainfall.generated_at)}</b><br>最新測站觀測：<b>${fmtTime(observedAt)}</b><br>來源：${rainfall.source || 'CWA'}，${matched.toLocaleString()} 個營區，方法：${rainfall.interpolation_method || '未標示'}`;
   }
   function rainValue(c){ return Number.isFinite(Number(c.rain_24h_mm_real)) ? Number(c.rain_24h_mm_real) : Number(c.rain_24h_mm_demo)||0; }
-  function rainLabel(c){ return Number.isFinite(Number(c.rain_24h_mm_real)) ? '實測雨量' : '示範雨量'; }
+  function rainMetrics(c){
+    const hasReal = Number.isFinite(Number(c.rain_24h_mm_real)) || Number.isFinite(Number(c.rain_3h_mm_real)) || Number.isFinite(Number(c.rain_1h_mm_real));
+    return {
+      hasReal,
+      h1: Number.isFinite(Number(c.rain_1h_mm_real)) ? Number(c.rain_1h_mm_real) : null,
+      h3: Number.isFinite(Number(c.rain_3h_mm_real)) ? Number(c.rain_3h_mm_real) : null,
+      h24: Number.isFinite(Number(c.rain_24h_mm_real)) ? Number(c.rain_24h_mm_real) : Number(c.rain_24h_mm_demo)||0
+    };
+  }
+  function rainLabel(c){ return rainMetrics(c).hasReal ? '實測雨量' : '示範雨量'; }
   function rainStationText(c){ return c.rain_station_name ? `${c.rain_station_name}${c.rain_station_distance_km==null?'':`，距營區 ${fmtDist(Number(c.rain_station_distance_km)*1000)}`}` : '尚未套用真實測站'; }
   function scoreDist(d){ if(d===null || d===undefined) return 0; if(d<=0) return 100; if(d<=100) return 90; if(d<=250) return 75; if(d<=500) return 55; if(d<=1000) return 30; if(d<=2000) return 12; return 0; }
   function lteDist(value, threshold){
@@ -169,7 +178,7 @@
     if(status.includes('違反') || status.includes('非法')) return true;
     return /待|未|尚|不符合|違反|非法/.test(issue);
   }
-  function classifyRisk(c, score, rain){
+  function classifyRisk(c, score, rainCategory){
     const debrisInside = lteDist(c.debris_dist_m, 0);
     const debris250 = lteDist(c.debris_dist_m, 250);
     const debris500 = lteDist(c.debris_dist_m, 500);
@@ -183,9 +192,10 @@
     const hazard250 = debris250 || landslide250 || river50;
     const hazard500 = debris500 || landslide500 || river100;
 
-    if(score >= 65 || rain >= 350 || (rain >= 200 && (debrisInside || landslide100 || river50 || roadLimited || steep))) return '立即撤離';
-    if(score >= 55 || rain >= 200 || (rain >= 80 && (hazard250 || roadLimited || steep)) || (debrisInside && (river50 || roadLimited))) return '預警撤離';
-    if(score >= 40 || rain >= 80 || (rain >= 40 && (hazard500 || roadLimited || steep)) || hazard250 || (roadLimited && (debris250 || landslide250 || river50)) || (steep && hazard500)) return '加強監測';
+    const rainScore = rainCategory && Number.isFinite(Number(rainCategory.score)) ? Number(rainCategory.score) : 0;
+    if(score >= 65 || rainScore >= 75 || (rainScore >= 50 && (debrisInside || landslide100 || river50 || roadLimited || steep))) return '立即撤離';
+    if(score >= 55 || rainScore >= 50 || (rainScore >= 25 && (hazard250 || roadLimited || steep)) || (debrisInside && (river50 || roadLimited))) return '預警撤離';
+    if(score >= 40 || rainScore >= 25 || hazard250 || (roadLimited && (debris250 || landslide250 || river50)) || (steep && hazard500)) return '加強監測';
     return '正常監測';
   }
   const AHP_WEIGHTS = {
@@ -200,14 +210,24 @@
   };
   const AHP_WEIGHT_TOTAL = 100;
   function weighted(part, score){ return AHP_WEIGHTS[part] / AHP_WEIGHT_TOTAL * score; }
-  function rainCategoryScore(rain){ if(rain>=500) return 100; if(rain>=350) return 75; if(rain>=200) return 50; if(rain>=80) return 25; return 0; }
-  function rainCategoryLabel(rain){
-    rain = Number(rain) || 0;
-    if(rain >= 500) return '超大豪雨';
-    if(rain >= 350) return '大豪雨';
-    if(rain >= 200) return '豪雨';
-    if(rain >= 80) return '大雨';
-    return '未達大雨';
+  function rainCategoryScore(rain){ return rainCategoryFromMetrics({h24: rain, h3: null, h1: null}).score; }
+  function rainCategoryLabel(rain){ return rainCategoryFromMetrics({h24: rain, h3: null, h1: null}).label; }
+  function rainCategoryFromMetrics(metrics){
+    const h24 = Number.isFinite(Number(metrics.h24)) ? Number(metrics.h24) : 0;
+    const h3 = Number.isFinite(Number(metrics.h3)) ? Number(metrics.h3) : null;
+    const h1 = Number.isFinite(Number(metrics.h1)) ? Number(metrics.h1) : null;
+    if(h24 >= 500) return {label:'超大豪雨', score:100, trigger:`24h ${h24.toFixed(0)} mm >= 500`};
+    if(h24 >= 350 || (h3 !== null && h3 >= 200)) return {label:'大豪雨', score:75, trigger:h24 >= 350 ? `24h ${h24.toFixed(0)} mm >= 350` : `3h ${h3.toFixed(0)} mm >= 200`};
+    if(h24 >= 200 || (h3 !== null && h3 >= 100)) return {label:'豪雨', score:50, trigger:h24 >= 200 ? `24h ${h24.toFixed(0)} mm >= 200` : `3h ${h3.toFixed(0)} mm >= 100`};
+    if(h24 >= 80 || (h1 !== null && h1 >= 40)) return {label:'大雨', score:25, trigger:h24 >= 80 ? `24h ${h24.toFixed(0)} mm >= 80` : `1h ${h1.toFixed(0)} mm >= 40`};
+    return {label:'未達大雨', score:0, trigger:'未達 80mm/24h 或 40mm/h'};
+  }
+  function rainSummaryText(c, category){
+    const m = rainMetrics(c);
+    const parts = [`24h ${Number(m.h24||0).toFixed(0)} mm`];
+    if(m.h3 !== null) parts.push(`3h ${m.h3.toFixed(0)} mm`);
+    if(m.h1 !== null) parts.push(`1h ${m.h1.toFixed(0)} mm`);
+    return `${rainLabel(c)} ${parts.join(' / ')}｜${category.label}`;
   }
   function slopePercentScore(deg){ const pct = Math.tan((Number(deg)||0) * Math.PI / 180) * 100; if(pct>=30) return 100; if(pct>=10) return 50; return 0; }
   function binaryInsideScore(d){ d=Number(d); return Number.isFinite(d) && d<=0 ? 100 : 0; }
@@ -217,7 +237,8 @@
   function roadAccessScore(c){ if(Number.isFinite(Number(c.road_score))) return Number(c.road_score); const count = Number(c.road_count_1km); if(!Number.isFinite(count)) return 0; if(count<=1) return 100; if(count===2) return 50; return 0; }
   function recalc(c){
     const rain = rainValue(c);
-    const rainScore = rainCategoryScore(rain);
+    const rainCategory = rainCategoryFromMetrics(rainMetrics(c));
+    const rainScore = rainCategory.score;
     const slopeScore = slopePercentScore(c.slope_deg);
     const debrisScore = binaryInsideScore(c.debris_dist_m);
     const faultScore = Number.isFinite(Number(c.fault_score)) ? Number(c.fault_score) : faultDistanceScore(c.fault_dist_m);
@@ -227,7 +248,7 @@
     const roadScore = roadAccessScore(c);
     let score = weighted('legal', legalScore) + weighted('slope', slopeScore) + weighted('rain', rainScore) + weighted('fault', faultScore) + weighted('debris', debrisScore) + weighted('event', eventScore) + weighted('river', riverScore) + weighted('road', roadScore);
     score = Math.min(100, score);
-    return {score, level: classifyRisk(c, score, rain), rain};
+    return {score, level: classifyRisk(c, score, rainCategory), rain, rainCategory};
   }
   function isIllegal(c){
     return hasLegalIssue(c);
@@ -286,7 +307,7 @@
   function makeAlert(c, calc){
     const place = `${c.county||''}${c.town||''}`;
     const reasons = [];
-    if(calc.rain>=300) reasons.push(`${rainLabel(c)} ${calc.rain.toFixed(0)} mm/24h`); else if(calc.rain>=200) reasons.push(`雨量偏高 ${calc.rain.toFixed(0)} mm/24h`);
+    if(calc.rainCategory && calc.rainCategory.score >= 50) reasons.push(`${calc.rainCategory.label}（${calc.rainCategory.trigger}）`);
     if(c.slope_deg!==null && c.slope_deg>=30) reasons.push(`坡度 ${Number(c.slope_deg).toFixed(0)}°`);
     if(c.debris_dist_m!==null && c.debris_dist_m<=500) reasons.push(`距土石流影響範圍 ${fmtDist(c.debris_dist_m)}`);
     const lsVals = [c.lswarn_dist_m,c.lspot_dist_m,c.event_dist_m].filter(x=>x!==null && x!==undefined && !Number.isNaN(Number(x)));
@@ -392,8 +413,9 @@
   function slopePercent(deg){ const n = numOrNull(deg); return n===null ? null : Math.tan(n * Math.PI / 180) * 100; }
   function riskBreakdown(c, calc){
     const rain = calc && Number.isFinite(Number(calc.rain)) ? Number(calc.rain) : rainValue(c);
+    const rainCategory = calc && calc.rainCategory ? calc.rainCategory : rainCategoryFromMetrics(rainMetrics(c));
     const parts = {
-      rain: {raw: rainCategoryScore(rain), value: `${rainLabel(c)} ${Number(rain||0).toFixed(0)} mm/24h｜${rainCategoryLabel(rain)}`, rule:'未達大雨(<80)=0；大雨80–199=25；豪雨200–349=50；大豪雨350–499=75；超大豪雨≥500=100'},
+      rain: {raw: rainCategory.score, value: `${rainSummaryText(c, rainCategory)}｜觸發：${rainCategory.trigger}`, rule:'未達大雨=0；大雨(>=80mm/24h 或 >=40mm/h)=25；豪雨(>=200mm/24h 或 >=100mm/3h)=50；大豪雨(>=350mm/24h 或 >=200mm/3h)=75；超大豪雨(>=500mm/24h)=100'},
       debris: {raw: binaryInsideScore(c.debris_dist_m), value: `距土石流 ${fmtDist(c.debris_dist_m)}`, rule:'位於影響範圍內＝100；範圍外＝0'},
       event: {raw: eventDistanceScore(c.event_dist_m), value: `距事件型崩塌 ${fmtDist(c.event_dist_m)}`, rule:'≤100m=100；≤250m=75；<500m=25'},
       legal: {raw: legalRiskScore(c), value: c.law_status || '未標示', rule:'符合相關法規=0；違反/非法=50；law_status 未標示時才參考 law_issue'},

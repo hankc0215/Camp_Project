@@ -49,25 +49,46 @@ function getNested(obj, keys) {
   return cur;
 }
 
+function readRainValue(element, candidates) {
+  for (const keys of candidates) {
+    const value = toNumber(getNested(element, keys));
+    if (value !== null) return { value, field: keys.join(".") };
+  }
+  return { value: null, field: null };
+}
+
 function readRain(station) {
   const element = station.RainfallElement || station.WeatherElement || {};
-  const candidates = [
+  const rain24h = readRainValue(element, [
     ["Past24hr", "Precipitation"],
     ["Past24hr", "Accumulation"],
     ["Past24hr"],
+  ]);
+  const rain3h = readRainValue(element, [
+    ["Past3hr", "Precipitation"],
+    ["Past3hr", "Accumulation"],
+    ["Past3hr"],
+  ]);
+  const rain1h = readRainValue(element, [
+    ["Past1hr", "Precipitation"],
+    ["Past1hr", "Accumulation"],
+    ["Past1hr"],
+    ["Now", "Precipitation"],
+  ]);
+  const fallback = readRainValue(element, [
     ["Past12hr", "Precipitation"],
     ["Past6hr", "Precipitation"],
-    ["Past3hr", "Precipitation"],
-    ["Past1hr", "Precipitation"],
-    ["Now", "Precipitation"],
-  ];
-  for (const keys of candidates) {
-    const value = toNumber(getNested(element, keys));
-    if (value !== null) {
-      return { rain24hMm: value, field: keys.join(".") };
-    }
-  }
-  return { rain24hMm: null, field: null };
+  ]);
+  return {
+    rain1hMm: rain1h.value,
+    rain3hMm: rain3h.value,
+    rain24hMm: rain24h.value ?? fallback.value,
+    fields: {
+      rain1h: rain1h.field,
+      rain3h: rain3h.field,
+      rain24h: rain24h.field ?? fallback.field,
+    },
+  };
 }
 
 function readStationPosition(station) {
@@ -127,8 +148,10 @@ async function fetchCwaRainfall(apiKey) {
         obsTime: station.ObsTime?.DateTime || station.ObsTime || station.obsTime || "",
         lat: pos.lat,
         lon: pos.lon,
+        rain1hMm: rain.rain1hMm ?? 0,
+        rain3hMm: rain.rain3hMm ?? 0,
         rain24hMm: rain.rain24hMm,
-        rainField: rain.field,
+        rainFields: rain.fields,
       };
     })
     .filter((station) => station.lat !== null && station.lon !== null && station.rain24hMm !== null);
@@ -153,6 +176,8 @@ async function main() {
     const match = nearestStation({ lat: Number(camp.lat), lon: Number(camp.lon) }, stations);
     if (!match) continue;
     byPriorityRank[String(camp.priority_rank)] = {
+      rain_1h_mm_real: Number(match.station.rain1hMm.toFixed(1)),
+      rain_3h_mm_real: Number(match.station.rain3hMm.toFixed(1)),
       rain_24h_mm_real: Number(match.station.rain24hMm.toFixed(1)),
       rain_station_id: match.station.id,
       rain_station_name: match.station.name,
@@ -160,7 +185,7 @@ async function main() {
       rain_station_town: match.station.town,
       rain_station_distance_km: Number(match.distanceKm.toFixed(2)),
       rain_observed_at: match.station.obsTime,
-      rain_source_field: match.station.rainField,
+      rain_source_fields: match.station.rainFields,
     };
   }
 

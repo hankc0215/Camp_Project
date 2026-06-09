@@ -55,6 +55,13 @@ def clean_rain_value(value):
         return 0.0
 
 
+def read_rainfall_element(station, key):
+    value = station.get("RainfallElement", {}).get(key, {})
+    if isinstance(value, dict):
+        return clean_rain_value(value.get("Precipitation", 0))
+    return clean_rain_value(value)
+
+
 def fetch_cwa_stations(api_key):
     query = urllib.parse.urlencode({"Authorization": api_key, "format": "JSON"})
     with urllib.request.urlopen(f"{CWA_URL}?{query}", timeout=30) as response:
@@ -73,11 +80,9 @@ def fetch_cwa_stations(api_key):
         if lat is None or lon is None:
             continue
 
-        rain = 0.0
-        for key, value in station.get("RainfallElement", {}).items():
-            if key.lower() == "past24hr":
-                rain = clean_rain_value(value.get("Precipitation", 0))
-                break
+        rain_1h = read_rainfall_element(station, "Past1hr")
+        rain_3h = read_rainfall_element(station, "Past3hr")
+        rain_24h = read_rainfall_element(station, "Past24hr")
 
         valid.append(
             {
@@ -88,7 +93,9 @@ def fetch_cwa_stations(api_key):
                 "obs_time": station.get("ObsTime", {}).get("DateTime", ""),
                 "lon": float(lon),
                 "lat": float(lat),
-                "rain": rain,
+                "rain_1h": rain_1h,
+                "rain_3h": rain_3h,
+                "rain_24h": rain_24h,
             }
         )
 
@@ -122,10 +129,10 @@ def nearest_station(camp_lon, camp_lat, stations_df):
     return row, float(distances[idx])
 
 
-def idw_interpolate(stations_df, camps_lon, camps_lat, power=2):
+def idw_interpolate(stations_df, camps_lon, camps_lat, value_col, power=2):
     station_lon = stations_df["lon"].to_numpy()
     station_lat = stations_df["lat"].to_numpy()
-    station_rain = stations_df["rain"].to_numpy()
+    station_rain = stations_df[value_col].to_numpy()
     values = []
 
     for lon, lat in zip(camps_lon, camps_lat):
@@ -139,18 +146,18 @@ def idw_interpolate(stations_df, camps_lon, camps_lat, power=2):
     return np.array(values)
 
 
-def interpolate_rain(stations_df, camps_lon, camps_lat):
-    max_rain = float(stations_df["rain"].max())
+def interpolate_rain(stations_df, camps_lon, camps_lat, value_col):
+    max_rain = float(stations_df[value_col].max())
     if max_rain == 0:
         return np.zeros(len(camps_lon)), "zero_rain"
 
     if OrdinaryKriging is None:
-        return idw_interpolate(stations_df, camps_lon, camps_lat), "idw_fallback"
+        return idw_interpolate(stations_df, camps_lon, camps_lat, value_col), "idw_fallback"
 
     ok = OrdinaryKriging(
         x=stations_df["lon"].to_numpy(),
         y=stations_df["lat"].to_numpy(),
-        z=stations_df["rain"].to_numpy(),
+        z=stations_df[value_col].to_numpy(),
         variogram_model="spherical",
         enable_plotting=False,
     )
@@ -168,13 +175,20 @@ def build_rainfall(write_files=True):
     camps_df = pd.read_csv(CSV_PATH).dropna(subset=["lon", "lat"]).copy()
     camps_lon = camps_df["lon"].astype(float).to_numpy()
     camps_lat = camps_df["lat"].astype(float).to_numpy()
-    rain_values, method = interpolate_rain(stations_df, camps_lon, camps_lat)
-    camps_df["rain_24h_mm_real"] = np.round(rain_values, 2)
+    rain_1h_values, method_1h = interpolate_rain(stations_df, camps_lon, camps_lat, "rain_1h")
+    rain_3h_values, method_3h = interpolate_rain(stations_df, camps_lon, camps_lat, "rain_3h")
+    rain_24h_values, method_24h = interpolate_rain(stations_df, camps_lon, camps_lat, "rain_24h")
+    method = method_24h
+    camps_df["rain_1h_mm_real"] = np.round(rain_1h_values, 2)
+    camps_df["rain_3h_mm_real"] = np.round(rain_3h_values, 2)
+    camps_df["rain_24h_mm_real"] = np.round(rain_24h_values, 2)
 
     by_priority_rank = {}
     for idx, row in camps_df.iterrows():
         station, station_distance_km = nearest_station(float(row["lon"]), float(row["lat"]), stations_df)
         by_priority_rank[str(row["priority_rank"])] = {
+            "rain_1h_mm_real": float(row["rain_1h_mm_real"]),
+            "rain_3h_mm_real": float(row["rain_3h_mm_real"]),
             "rain_24h_mm_real": float(row["rain_24h_mm_real"]),
             "rain_interpolation_method": method,
             "rain_station_id": station["id"],
@@ -189,8 +203,15 @@ def build_rainfall(write_files=True):
         "source": "CWA O-A0002-001",
         "generated_at": pd.Timestamp.now(tz="Asia/Taipei").isoformat(),
         "interpolation_method": method,
+        "interpolation_methods": {
+            "rain_1h_mm_real": method_1h,
+            "rain_3h_mm_real": method_3h,
+            "rain_24h_mm_real": method_24h,
+        },
         "station_count": int(len(stations_df)),
-        "station_max_24h_mm": float(stations_df["rain"].max()),
+        "station_max_1h_mm": float(stations_df["rain_1h"].max()),
+        "station_max_3h_mm": float(stations_df["rain_3h"].max()),
+        "station_max_24h_mm": float(stations_df["rain_24h"].max()),
         "campsite_count": int(len(by_priority_rank)),
         "by_priority_rank": by_priority_rank,
     }
