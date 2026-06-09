@@ -163,7 +163,11 @@
     return Number.isFinite(n) && n <= threshold;
   }
   function hasLegalIssue(c){
-    return String(c.law_status||'').includes('違反') || String(c.law_issue||'').match(/待|未|尚|不符合|違反/);
+    const status = String(c.law_status || '');
+    const issue = String(c.law_issue || '');
+    if(status.includes('符合')) return false;
+    if(status.includes('違反') || status.includes('非法')) return true;
+    return /待|未|尚|不符合|違反|非法/.test(issue);
   }
   function classifyRisk(c, score, rain){
     const debrisInside = lteDist(c.debris_dist_m, 0);
@@ -197,6 +201,14 @@
   const AHP_WEIGHT_TOTAL = 100;
   function weighted(part, score){ return AHP_WEIGHTS[part] / AHP_WEIGHT_TOTAL * score; }
   function rainCategoryScore(rain){ if(rain>=500) return 100; if(rain>=350) return 75; if(rain>=200) return 50; if(rain>=80) return 25; return 0; }
+  function rainCategoryLabel(rain){
+    rain = Number(rain) || 0;
+    if(rain >= 500) return '超大豪雨';
+    if(rain >= 350) return '大豪雨';
+    if(rain >= 200) return '豪雨';
+    if(rain >= 80) return '大雨';
+    return '未達大雨';
+  }
   function slopePercentScore(deg){ const pct = Math.tan((Number(deg)||0) * Math.PI / 180) * 100; if(pct>=30) return 100; if(pct>=10) return 50; return 0; }
   function binaryInsideScore(d){ d=Number(d); return Number.isFinite(d) && d<=0 ? 100 : 0; }
   function eventDistanceScore(d){ d=Number(d); if(!Number.isFinite(d)) return 0; if(d<=100) return 100; if(d<=250) return 75; if(d<500) return 25; return 0; }
@@ -218,8 +230,7 @@
     return {score, level: classifyRisk(c, score, rain), rain};
   }
   function isIllegal(c){
-    const text = `${c.law_status||''} ${c.law_issue||''}`;
-    return text.includes('違反') || /待|未|尚|不符合/.test(text);
+    return hasLegalIssue(c);
   }
   function computeDynamicSummary(list){
     const summary = {
@@ -281,7 +292,7 @@
     const lsVals = [c.lswarn_dist_m,c.lspot_dist_m,c.event_dist_m].filter(x=>x!==null && x!==undefined && !Number.isNaN(Number(x)));
     const minLs = lsVals.length ? Math.min(...lsVals) : Infinity;
     if(Number.isFinite(minLs) && minLs<=500) reasons.push('鄰近崩塌/警戒範圍');
-    if(String(c.law_status||'').includes('違反')) reasons.push('法規狀態需注意');
+    if(hasLegalIssue(c)) reasons.push('法規狀態需注意');
     const reason = reasons.slice(0,4).join('、') || '目前未達主要高風險條件';
     if(['立即撤離','預警撤離'].includes(calc.level)) return `【露營安全預警】${place}「${c.name}」目前評估為「${calc.level}」。主因：${reason}。請營主立即通知遊客，確認人員、車輛與聯外道路狀況，必要時依地方政府指示提前撤離。`;
     if(calc.level==='加強監測') return `【露營安全提醒】${place}「${c.name}」目前為「加強監測」。主因：${reason}。請持續注意雨勢、溪水與邊坡狀況，先完成撤離路線與聯絡名冊確認。`;
@@ -376,16 +387,16 @@
   }
   const AHP_ORDER = ['rain','debris','event','legal','road','slope','river','fault'];
   const AHP_LABELS = {rain:'雨量', debris:'土石流', event:'事件型崩塌', legal:'法規', road:'聯外道路', slope:'坡度', river:'河川距離', fault:'斷層'};
-  function legalRiskScore(c){ return String(c.law_status||'').includes('違反') || String(c.law_issue||'').match(/待|未|尚|不符合|違反/) ? 50 : 0; }
+  function legalRiskScore(c){ return hasLegalIssue(c) ? 50 : 0; }
   function numOrNull(v){ const n = Number(v); return Number.isFinite(n) ? n : null; }
   function slopePercent(deg){ const n = numOrNull(deg); return n===null ? null : Math.tan(n * Math.PI / 180) * 100; }
   function riskBreakdown(c, calc){
     const rain = calc && Number.isFinite(Number(calc.rain)) ? Number(calc.rain) : rainValue(c);
     const parts = {
-      rain: {raw: rainCategoryScore(rain), value: `${rainLabel(c)} ${Number(rain||0).toFixed(0)} mm/24h`, rule:'≥500=100；350–499=75；200–349=50；80–199=25'},
+      rain: {raw: rainCategoryScore(rain), value: `${rainLabel(c)} ${Number(rain||0).toFixed(0)} mm/24h｜${rainCategoryLabel(rain)}`, rule:'未達大雨(<80)=0；大雨80–199=25；豪雨200–349=50；大豪雨350–499=75；超大豪雨≥500=100'},
       debris: {raw: binaryInsideScore(c.debris_dist_m), value: `距土石流 ${fmtDist(c.debris_dist_m)}`, rule:'位於影響範圍內＝100；範圍外＝0'},
       event: {raw: eventDistanceScore(c.event_dist_m), value: `距事件型崩塌 ${fmtDist(c.event_dist_m)}`, rule:'≤100m=100；≤250m=75；<500m=25'},
-      legal: {raw: legalRiskScore(c), value: c.law_status || '未標示', rule:'違反／待查／不符合等狀態納入治理風險'},
+      legal: {raw: legalRiskScore(c), value: c.law_status || '未標示', rule:'符合相關法規=0；違反/非法=50；law_status 未標示時才參考 law_issue'},
       road: {raw: roadAccessScore(c), value: Number.isFinite(Number(c.road_count_1km)) ? `1 km 內道路數 ${Number(c.road_count_1km).toFixed(0)}` : '道路資料未套用，暫以 0 分處理', rule:'道路越少代表撤離替代性越低'},
       slope: {raw: slopePercentScore(c.slope_deg), value: `${fmt(c.slope_deg,'°',1)}（坡度 ${slopePercent(c.slope_deg)===null?'無資料':slopePercent(c.slope_deg).toFixed(0)+'%'}）`, rule:'坡度百分比 ≥30%=100；10–29%=50'},
       river: {raw: Number.isFinite(Number(c.river_score)) ? Number(c.river_score) : riverDistanceScore(c.river_dist_m), value: `距河川 ${fmtDist(c.river_dist_m)}${c.nearest_river_name ? '｜最近：'+c.nearest_river_name : ''}${c.river_source ? '｜資料：'+c.river_source : ''}`, rule:'<50m=100；<100m=50；使用 riverlin.shp / riverpoly.shp 最近距離'},
